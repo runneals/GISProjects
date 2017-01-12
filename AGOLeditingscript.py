@@ -44,7 +44,7 @@ portalUrl=pref+t
 
 restURL='http://services.arcgis.com/ORGIDTHING/arcgis/rest/admin/services/SERVICENAME/FeatureServer/updateDefinition' #modify URL
 #defCapabilities= '{"hasStaticData":false,"capabilities":"Query,Editing,Create,Update,Delete,Extract"}' #editing enabled (uncomment this before updating a service)
-#defCapabilities= '{"capabilities":"Query"}' #editing disabled (uncomment this after updating a service)
+#defCapabilities= '{"capabilities":"Query,Extract"}' #editing disabled (uncomment this after updating a service)
 data = {'updateDefinition': defCapabilities,
             'token':token[0],
             'f': 'json'}
