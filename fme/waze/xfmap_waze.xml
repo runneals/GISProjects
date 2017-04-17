@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<xfMap>
+ <feature-map multi-feature-construction="true">
+    <mapping match="item">
+       <feature-type> <literal expr="Feature"/> </feature-type>
+    </mapping>
+ </feature-map>
+ <feature-content-map>
+<mapping match="pubDate">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="pubDate"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="georss:point">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="XYPOINT"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<!-- <mapping match="georss:point">
+	<geometry activate="xml-point">
+		<data name="data-string">
+			<extract expr="."/>
+		</data>
+	</geometry>
+</mapping> -->
+<mapping match="linqmap:uuid">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="UUID"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:magvar">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="MAGVAR"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:type">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="TYPE"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:subtype">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="SUBTYPE"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:reportDescription">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="DESCRIPTION"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:street">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="STREET"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:city">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="CITY"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:country">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="COUNTRY"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:roadType">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="ROADTYPE"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:reportRating">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="REPORTRATING"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:jamUuid">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="JAMUUID"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:reliability">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="RELIABILITY"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:imageUrl">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="IMAGEURL"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<!-- For Automated Jams -->
+<mapping match="georss:line">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="XYLINE"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:speed">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="SPEED"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:length">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="LENGTH"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:delay">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="DELAY"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:startNode">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="STARTNODE"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:endNode">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="ENDNODE"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:level">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="LEVEL"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:turnLine">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="TURNLINE"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:turnType">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="TURNTYPE"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+<mapping match="linqmap:blockingAlertUuid">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="BLOCKINGALERTUUID"/> </name>
+           	<value> <extract expr="." /> </value>
+           </attribute>           
+        </attributes>
+</mapping>
+
+
+</feature-content-map>	  	
+</xfMap>

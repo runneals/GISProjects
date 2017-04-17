@@ -1,0 +1,126 @@
+<rss xmlns:georss="http://www.georss.org/georss" xmlns:linqmap="http://www.linqmap.com" version="2.0">
+<channel>
+<item>
+<title>alert</title>
+<pubDate>Mon Apr 17 21:26:50 +0000 2017</pubDate>
+<georss:point>41.652474 -93.707827</georss:point>
+<linqmap:uuid>000001</linqmap:uuid>
+<linqmap:magvar>511</linqmap:magvar>
+<linqmap:type>ACCIDENT</linqmap:type>
+<linqmap:subtype>ACCIDENT_MAJOR</linqmap:subtype>
+<linqmap:street>I-80 E</linqmap:street>
+<linqmap:country>US</linqmap:country>
+<linqmap:roadType>3</linqmap:roadType>
+<linqmap:reportRating>0</linqmap:reportRating>
+<confidence>0</confidence>
+<linqmap:reliability>10</linqmap:reliability>
+</item>
+<item>
+<title>alert</title>
+<pubDate>Thu Apr 13 06:19:19 +0000 2017</pubDate>
+<georss:point>41.228521 -95.95535</georss:point>
+<linqmap:uuid>000002</linqmap:uuid>
+<linqmap:magvar>0</linqmap:magvar>
+<linqmap:type>ROAD_CLOSED</linqmap:type>
+<linqmap:subtype>ROAD_CLOSED_EVENT</linqmap:subtype>
+<linqmap:reportDescription>Road Construction</linqmap:reportDescription>
+<linqmap:street>to I-80 E / Des Moines</linqmap:street>
+<linqmap:city>Omaha, NE</linqmap:city>
+<linqmap:country>US</linqmap:country>
+<linqmap:reportRating>0</linqmap:reportRating>
+<confidence>0</confidence>
+<linqmap:reliability>7</linqmap:reliability>
+</item>
+<item>
+<title>alert</title>
+<pubDate>Mon Apr 17 18:56:54 +0000 2017</pubDate>
+<georss:point>42.155351 -93.569936</georss:point>
+<linqmap:uuid>000004</linqmap:uuid>
+<linqmap:magvar>511</linqmap:magvar>
+<linqmap:type>JAM</linqmap:type>
+<linqmap:subtype>JAM_STAND_STILL_TRAFFIC</linqmap:subtype>
+<linqmap:street>I-35 S</linqmap:street>
+<linqmap:country>US</linqmap:country>
+<linqmap:roadType>3</linqmap:roadType>
+<linqmap:reportRating>0</linqmap:reportRating>
+<confidence>0</confidence>
+<linqmap:reliability>8</linqmap:reliability>
+</item>
+<item>
+<title>alert</title>
+<pubDate>Mon Apr 17 19:04:34 +0000 2017</pubDate>
+<georss:point>42.119701 -93.552508</georss:point>
+<linqmap:uuid>000005</linqmap:uuid>
+<linqmap:magvar>1</linqmap:magvar>
+<linqmap:type>JAM</linqmap:type>
+<linqmap:subtype>JAM_HEAVY_TRAFFIC</linqmap:subtype>
+<linqmap:reportDescription>Construction 🚧</linqmap:reportDescription>
+<linqmap:street>I-35 N</linqmap:street>
+<linqmap:country>US</linqmap:country>
+<linqmap:roadType>3</linqmap:roadType>
+<linqmap:reportRating>1</linqmap:reportRating>
+<confidence>0</confidence>
+<linqmap:reliability>4</linqmap:reliability>
+</item>
+<item>
+<title>alert</title>
+<pubDate>Mon Apr 17 18:50:00 +0000 2017</pubDate>
+<georss:point>41.698683 -93.216012</georss:point>
+<linqmap:uuid>000006</linqmap:uuid>
+<linqmap:magvar>1</linqmap:magvar>
+<linqmap:type>WEATHERHAZARD</linqmap:type>
+<linqmap:subtype>HAZARD_ON_SHOULDER_CAR_STOPPED</linqmap:subtype>
+<linqmap:street>I-80 W</linqmap:street>
+<linqmap:country>US</linqmap:country>
+<linqmap:roadType>3</linqmap:roadType>
+<linqmap:reportRating>1</linqmap:reportRating>
+<confidence>1</confidence>
+<linqmap:reliability>8</linqmap:reliability>
+</item>
+<item>
+<title>alert</title>
+<pubDate>Mon Apr 17 18:58:41 +0000 2017</pubDate>
+<georss:point>41.695983 -93.227838</georss:point>
+<linqmap:uuid>000007</linqmap:uuid>
+<linqmap:magvar>1</linqmap:magvar>
+<linqmap:type>WEATHERHAZARD</linqmap:type>
+<linqmap:subtype>HAZARD_ON_SHOULDER_CAR_STOPPED</linqmap:subtype>
+<linqmap:street>I-80 E</linqmap:street>
+<linqmap:country>US</linqmap:country>
+<linqmap:roadType>3</linqmap:roadType>
+<linqmap:reportRating>4</linqmap:reportRating>
+<confidence>0</confidence>
+<linqmap:reliability>5</linqmap:reliability>
+</item>
+<item>
+<title>alert</title>
+<pubDate>Mon Apr 17 19:16:07 +0000 2017</pubDate>
+<georss:point>41.695084 -92.831419</georss:point>
+<linqmap:uuid>000008</linqmap:uuid>
+<linqmap:magvar>1</linqmap:magvar>
+<linqmap:type>WEATHERHAZARD</linqmap:type>
+<linqmap:subtype>HAZARD_ON_SHOULDER_CAR_STOPPED</linqmap:subtype>
+<linqmap:street>I-80 E</linqmap:street>
+<linqmap:country>US</linqmap:country>
+<linqmap:roadType>3</linqmap:roadType>
+<linqmap:reportRating>4</linqmap:reportRating>
+<confidence>0</confidence>
+<linqmap:reliability>5</linqmap:reliability>
+</item>
+<item>
+<title>alert</title>
+<pubDate>Mon Apr 17 18:34:16 +0000 2017</pubDate>
+<georss:point>41.681663 -93.320437</georss:point>
+<linqmap:uuid>000009</linqmap:uuid>
+<linqmap:magvar>1</linqmap:magvar>
+<linqmap:type>WEATHERHAZARD</linqmap:type>
+<linqmap:subtype>HAZARD_ON_SHOULDER_CAR_STOPPED</linqmap:subtype>
+<linqmap:street>I-80 W</linqmap:street>
+<linqmap:country>US</linqmap:country>
+<linqmap:roadType>3</linqmap:roadType>
+<linqmap:reportRating>1</linqmap:reportRating>
+<confidence>2</confidence>
+<linqmap:reliability>10</linqmap:reliability>
+</item>
+</channel>
+</rss>
