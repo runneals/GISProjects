@@ -1,0 +1,128 @@
+RouteDesignator,LinkDirectionPositive,LinkDirectionNegative
+I-29,Northbound,Southbound
+I-35,Northbound,Southbound
+I-74,Eastbound,Westbound
+I-80,Eastbound,Westbound
+I-129,Eastbound,Westbound
+I-235,Eastbound,Westbound
+I-280,Northbound,Southbound
+I-380,Northbound,Southbound
+I-480,Eastbound,Westbound
+I-680,Eastbound,Westbound
+US 6,Eastbound,Westbound
+US 18,Eastbound,Westbound
+US 20,Eastbound,Westbound
+US 30,Eastbound,Westbound
+US 34,Eastbound,Westbound
+US 52,Northbound,Southbound
+US 59,Northbound,Southbound
+US 61,Northbound,Southbound
+US 63,Northbound,Southbound
+US 65,Northbound,Southbound
+US 67,Northbound,Southbound
+US 69,Northbound,Southbound
+US 71,Northbound,Southbound
+US 75,Northbound,Southbound
+US 77,Northbound,Southbound
+US 136,Eastbound,Westbound
+US 151,Northbound,Southbound
+US 169,Northbound,Southbound
+US 218,Northbound,Southbound
+US 275,Northbound,Southbound
+IA 1,Northbound,Southbound
+IA 2,Eastbound,Westbound
+IA 3,Eastbound,Westbound
+IA 4,Northbound,Southbound
+IA 5,Northbound,Southbound
+IA 7,Eastbound,Westbound
+IA 8,Eastbound,Westbound
+IA 9,Eastbound,Westbound
+IA 10,Eastbound,Westbound
+IA 12,Northbound,Southbound
+IA 13,Northbound,Southbound
+IA 14,Northbound,Southbound
+IA 15,Northbound,Southbound
+IA 16,Eastbound,Westbound
+IA 17,Northbound,Southbound
+IA 21,Northbound,Southbound
+IA 22,Eastbound,Westbound
+IA 23,Northbound,Southbound
+IA 24,Eastbound,Westbound
+IA 25,Northbound,Southbound
+IA 26,Northbound,Southbound
+IA 27,Northbound,Southbound
+IA 28,Northbound,Southbound
+IA 31,Northbound,Southbound
+IA 32,Northbound,Southbound
+IA 37,Eastbound,Westbound
+IA 38,Northbound,Southbound
+IA 39,Northbound,Southbound
+IA 44,Eastbound,Westbound
+IA 48,Northbound,Southbound
+IA 51,Northbound,Southbound
+IA 56,Eastbound,Westbound
+IA 57,Eastbound,Westbound
+IA 58,Northbound,Southbound
+IA 60,Northbound,Southbound
+IA 62,Eastbound,Westbound
+IA 64,Eastbound,Westbound
+IA 70,Northbound,Southbound
+IA 76,Northbound,Southbound
+IA 78,Eastbound,Westbound
+IA 81,Northbound,Southbound
+IA 83,Eastbound,Westbound
+IA 85,Eastbound,Westbound
+IA 86,Northbound,Southbound
+IA 92,Eastbound,Westbound
+IA 93,Eastbound,Westbound
+IA 96,Eastbound,Westbound
+IA 98,Northbound,Southbound
+IA 100,Eastbound,Westbound
+IA 110,Northbound,Southbound
+IA 116,Northbound,Southbound
+IA 117,Northbound,Southbound
+IA 122,Eastbound,Westbound
+IA 127,Eastbound,Westbound
+IA 128,Eastbound,Westbound
+IA 130,Eastbound,Westbound
+IA 136,Northbound,Southbound
+IA 137,Northbound,Southbound
+IA 139,Northbound,Southbound
+IA 140,Northbound,Southbound
+IA 141,Eastbound,Westbound
+IA 143,Northbound,Southbound
+IA 144,Northbound,Southbound
+IA 146,Northbound,Southbound
+IA 148,Northbound,Southbound
+IA 149,Northbound,Southbound
+IA 150,Northbound,Southbound
+IA 160,Eastbound,Westbound
+IA 163,Eastbound,Westbound
+IA 173,Northbound,Southbound
+IA 175,Eastbound,Westbound
+IA 182,Northbound,Southbound
+IA 183,Northbound,Southbound
+IA 187,Northbound,Southbound
+IA 188,Eastbound,Westbound
+IA 191,Northbound,Southbound
+IA 192,Northbound,Southbound
+IA 196,Northbound,Southbound
+IA 202,Northbound,Southbound
+IA 210,Eastbound,Westbound
+IA 212,Eastbound,Westbound
+IA 220,Eastbound,Westbound
+IA 224,Northbound,Southbound
+IA 281,Eastbound,Westbound
+IA 316,Northbound,Southbound
+IA 330,Northbound,Southbound
+IA 333,Eastbound,Westbound
+IA 346,Eastbound,Westbound
+IA 376,Northbound,Southbound
+IA 404,Northbound,Southbound
+IA 415,Northbound,Southbound
+IA 922,Northbound,Southbound
+IA 930,Eastbound,Westbound
+IA 934,Eastbound,Westbound
+IA 946,Northbound,Southbound
+IA 965,Northbound,Southbound
+Business US 61,Northbound,Southbound
