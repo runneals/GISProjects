@@ -1,0 +1,2182 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files\FME\fme.exe" "C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Nebraska_Road_Conditions_To_JSON.fmw"
+#          --SourceDataset_XML_9 "http://ne.carsprogram.org/hub/data/feu-g.xml"
+#          --SourceDataset_JSON "C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Segment\Nebraska.json"
+#          --DestDataset_JSON_4 "C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\Nebraska.json"
+#          --UTC_Offset "6"
+#    
+#    
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   IGNORE_READER_FAILURE="No"
+#!   USE_MARKDOWN="YES"
+#!   FME_BUILD_NUM="17652"
+#!   DESTINATION="NONE"
+#!   DOC_TOP_LEFT="-483.132 -1237.51"
+#!   MARKDOWN_USAGE=""
+#!   FME_DOCUMENT_GUID="0a1092f9-e3e1-487c-af04-6d74db0a3f90"
+#!   MAX_LOG_FEATURES="200"
+#!   SHOW_INFO_NODES="true"
+#!   END_PYTHON=""
+#!   DESCRIPTION="&lt;p&gt;This FME job reads the CARS 511 feed for Nebraska Road Conditions and writes them to a local JSON file. &lt;/p&gt;&#10;&lt;p&gt;REQUIRED: Obtain XML feed credentials here: https://iowadot.gov/511/xmlrequestform&lt;/p&gt;"
+#!   SOURCE_ROUTING_FILE=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   SOURCE="NONE"
+#!   BEGIN_TCL=""
+#!   DESTINATION_ROUTING_FILE=""
+#!   FME_SERVER_SERVICES=""
+#!   USAGE=""
+#!   MARKDOWN_DESCRIPTION="This FME job reads the CARS 511 feed for Nebraska Road Conditions and writes them to a local JSON file. &#10;&#10;REQUIRED: Obtain XML feed credentials here: https://iowadot.gov/511/xmlrequestform"
+#!   SHOW_ANNOTATIONS="true"
+#!   VIEW_POSITION="703.132 481.09"
+#!   FME_DOCUMENT_PRIORGUID="d95292ad-d426-4e93-9322-4120156dfbb0,d397df10-c934-489e-9409-9fba8772c76a,72d6a87d-d5b5-4616-92cd-5dc1ea439c97,75e8e034-16c8-43ea-8e82-15711efeb226,79da8f2a-d404-439b-a1d4-aa7034843157,bdc38abb-82cf-4d14-a313-80635e3b898f,3e38ace9-768d-4acc-adc2-c4bebbfdd5e5,c6ac71da-38d7-4066-b665-ee5f3aa63f68,857deb80-87bd-4a54-8374-691a4c235b05,6d10925b-aa1e-4b70-8277-029bd310e76e,adeff06b-0e48-4f0c-9d01-59ec2fbaffcf,5e7deea8-f15f-4b48-87a2-28a6165d0ddc,4ecd1726-7e32-4ce9-b686-d90b34247148,f8df111f-63cf-4951-b0db-a01fa0adc39d,a5a2b3be-336b-4c13-aa3c-552e857f22a0,a42c9ac3-9963-4b3d-b90e-f9859d537ced,4902453f-598d-4354-9176-16bd715340f1,add39c6e-dc12-42fc-83a0-f8feef754b1f,ab43272c-14c3-4239-a3eb-1c6483cdca7e,664e44ff-8404-41cf-a035-beb412471001,0db8aef2-25a9-45df-8b3d-c9f0966a0e9d,790a7af2-c6a5-4d7b-a08d-bbab1fe30fc4,ae9e5757-ace5-44c0-8f14-d99e8f0833ca,3a51e88c-cfb7-4ff1-a770-b9dd6e355126,897693ce-d74a-4348-a7aa-e212beb936da,dd596809-c2c0-4ee6-b663-39828c2042ba,a15b7e5e-4703-43e2-9c84-71914c188a2b,43d2569f-455b-4391-afd9-fe0efbe0ada9,263054e9-cc8c-439d-b11e-e267716f0cb2"
+#!   LOG_FILE=""
+#!   HISTORY=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   CATEGORY="Road Conditions"
+#!   DOC_EXTENTS="3716.25 1491.17"
+#!   LAST_SAVE_BUILD="FME(R) 2017.1.1.1 (20171014 - Build 17652 - WIN64)"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   TITLE="Nebraska Road Conditions to GeoJSON"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   TERMINATE_REJECTED="NO"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   PASSWORD=""
+#!   END_TCL=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   LAST_SAVE_DATE="2017-12-05T09:19:56"
+#!   BEGIN_PYTHON=""
+#!   ZOOM_SCALE="76"
+#!   PYTHON_COMPATIBILITY="27"
+#!   WORKSPACE_VERSION="1"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="XML"
+#!   DATASET="$(SourceDataset_XML_9)"
+#!   KEYWORD="XML_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_color xml_char(50) fme_primary_axis xml_real64 fme_geometry fme_char(50) multi_reader_type xml_char(50) fme_text_size xml_real64 multi_reader_id xml_int32 fme_type xml_char(50) fme_start_angle xml_real64 fme_feature_type xml_char(50) fme_sweep_angle xml_real64 xml_type xml_char(50) fme_dataset xml_char(50) multi_reader_keyword xml_char(50) fme_fill_color xml_char(50) fme_basename xml_char(50) fme_text_string xml_char(50) fme_rotation xml_real64 multi_reader_full_id xml_int32 fme_secondary_axis xml_real64"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE_OR_URL"
+#!   GENERATE_FME_BUILD_NUM="16492"
+#!   NAME="Nebraska 511 XML Feed"
+#!   START_FEATURE=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   MAX_FEATURES=""
+#!   COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_AUTHENTICATION"
+#!   VALUE="YES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="XML_IN_SEARCH_ENVELOPE_MINX XML_IN_SEARCH_ENVELOPE_MINY XML_IN_SEARCH_ENVELOPE_MAXX XML_IN_SEARCH_ENVELOPE_MAXY XML_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the XML file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/XML"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_PROXY"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the XML file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="xml file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="JSON"
+#!   DATASET="$(SourceDataset_JSON)"
+#!   KEYWORD="JSON_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_color string fme_primary_axis float fme_geometry fme_char(50) multi_reader_type string fme_text_size float multi_reader_id int fme_type string fme_start_angle float fme_feature_type string fme_sweep_angle float fme_dataset string multi_reader_keyword string fme_fill_color string fme_basename string fme_text_string string fme_rotation float multi_reader_full_id int fme_secondary_axis float"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="16492"
+#!   START_FEATURE=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   MAX_FEATURES=""
+#!   COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="JSON_IN_SEARCH_ENVELOPE_MINX JSON_IN_SEARCH_ENVELOPE_MINY JSON_IN_SEARCH_ENVELOPE_MAXX JSON_IN_SEARCH_ENVELOPE_MAXY JSON_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the JSON file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the JSON file(s) or Specify the JSON URL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="json file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="JSON"
+#!   DATASET="$(DestDataset_JSON_4)"
+#!   KEYWORD="JSON_2"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="600"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_fill_color string fme_basename string fme_color string fme_sweep_angle float fme_start_angle float fme_text_string string fme_text_size float fme_dataset string fme_secondary_axis float fme_geometry fme_char(50) fme_feature_type string fme_primary_axis float fme_type string fme_rotation float"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="16492"
+#!   FANOUT_GROUP="NO"
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the JSON file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the JSON file(s) or Specify the JSON URL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="json file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="object"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="array"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="object_or_array"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_xml"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_datetime"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_date"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_time"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_int64"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_uint64"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_int32"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_uint32"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_int16"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_uint16"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_byte"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_ubyte"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_real32"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_real64"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_decimal(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_char(8)"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_geometry"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="XML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="object"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="array"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="object_or_array"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_aggregate"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_surface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_solid"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_mesh"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="XML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="JSON"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Feature"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="1"
+#!   FEAT_GEOMTYPE="xml_no_geom"
+#!   POSITION="-338.682 -47.0665"
+#!   BOUNDING_RECT="-338.682 -47.0665 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="XML_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS="EndTimeTime Warnings ph_closure CrossRoad1 hd_systeminfo Longitude2 ca_roadwork StartTimeUTCoffset ph_roadwork EndTimeUTCoffset Latitude2 hd_roadwork Priority ph_systeminfo Longitude1 EndTimeDate ph_restriction Latitude1 ca_pavementcond Ownership SpeedLimit hd_restriction ph_obstruction MessageExpiryDate MessageNumber RestrictionWidth hd_mobsit hd_obstruction ph_mobsit StartTimeDate Update RestrictionLength MessageExpiryTime StartTimeTime Status hd_closure"
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ID" ATTR_TYPE="xml_char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LinkDirection" ATTR_TYPE="xml_char(19)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MessageIssueDate" ATTR_TYPE="xml_decimal(9,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MessageIssueTime" ATTR_TYPE="xml_decimal(7,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RouteDesignator" ATTR_TYPE="xml_char(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="UpdateTimeDate" ATTR_TYPE="xml_decimal(9,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="UpdateTimeTime" ATTR_TYPE="xml_decimal(7,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hd_pavementcond" ATTR_TYPE="xml_char(31)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ph_pavementcond" ATTR_TYPE="xml_char(31)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LinearReference1" ATTR_TYPE="xml_decimal(31,18)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LinearReference2" ATTR_TYPE="xml_decimal(19,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Descriptions" ATTR_TYPE="xml_char(374)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OrganizationID" ATTR_TYPE="xml_char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Latitude1" ATTR_TYPE="xml_decimal(9,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Latitude2" ATTR_TYPE="xml_decimal(9,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MessageNumber" ATTR_TYPE="xml_decimal(7,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CrossRoad1" ATTR_TYPE="xml_char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="EndTimeDate" ATTR_TYPE="xml_decimal(9,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="EndTimeTime" ATTR_TYPE="xml_decimal(7,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="EndTimeUTCoffset" ATTR_TYPE="xml_decimal(6,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MessageExpiryDate" ATTR_TYPE="xml_decimal(9,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MessageExpiryTime" ATTR_TYPE="xml_decimal(7,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MessageIssueUTCoffset" ATTR_TYPE="xml_decimal(6,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Ownership" ATTR_TYPE="xml_char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Priority" ATTR_TYPE="xml_decimal(3,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RestrictionLength" ATTR_TYPE="xml_decimal(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RestrictionWidth" ATTR_TYPE="xml_decimal(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SpeedLimit" ATTR_TYPE="xml_decimal(3,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StartTimeDate" ATTR_TYPE="xml_decimal(9,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StartTimeTime" ATTR_TYPE="xml_decimal(7,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StartTimeUTCoffset" ATTR_TYPE="xml_decimal(6,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Status" ATTR_TYPE="xml_char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Update" ATTR_TYPE="xml_decimal(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="UpdateTimeUTCoffset" ATTR_TYPE="xml_decimal(6,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Warnings" ATTR_TYPE="xml_char(21)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hd_closure" ATTR_TYPE="xml_char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hd_mobsit" ATTR_TYPE="xml_char(32)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hd_obstruction" ATTR_TYPE="xml_char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hd_restriction" ATTR_TYPE="xml_char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hd_roadwork" ATTR_TYPE="xml_char(28)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hd_systeminfo" ATTR_TYPE="xml_char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ph_closure" ATTR_TYPE="xml_char(26)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ph_mobsit" ATTR_TYPE="xml_char(32)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ph_obstruction" ATTR_TYPE="xml_char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ph_restriction" ATTR_TYPE="xml_char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ph_roadwork" ATTR_TYPE="xml_char(28)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ph_systeminfo" ATTR_TYPE="xml_char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Longitude1" ATTR_TYPE="xml_decimal(11,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ca_roadwork" ATTR_TYPE="xml_char(28)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Longitude2" ATTR_TYPE="xml_decimal(11,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ca_pavementcond" ATTR_TYPE="xml_char(31)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Nebraska"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="32"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="918.37 -525.05"
+#!   BOUNDING_RECT="918.37 -525.05 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS="json_ogc_wkt_crs json_geometry"
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_OID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYLAT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYLONG" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYLAT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYLONG" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_DATE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="json_ogc_wkt_crs" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="json_geometry" ATTR_TYPE="object" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="Nebraska"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="38"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="3233.12 -325.911"
+#!   BOUNDING_RECT="3233.12 -325.911 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_2"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_OID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYLAT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYLONG" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYLAT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYLONG" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_UPDATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_CREATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_DATE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#!   NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE="XML_1"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#!   NAME="Road Conditions"
+#! />
+#! <ITEM
+#!   NAME="Nebraska_Road_Conditions_To_JSON.fmw"
+#! />
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_XML_9 XML/GML/Compressed_XML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|XML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_XML_Files(*.gz)|*.gz|All_Files(*)|* Source XML File(s):"
+#!   DEFAULT_VALUE="http://ne.carsprogram.org/hub/data/feu-g.xml"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILE_OR_URL SourceDataset_JSON JSON_Documents(*.json)|*.json|All_Files|* Source JSON (JavaScript Object Notation) File or URL:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)Segment\Nebraska.json"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME DestDataset_JSON_4 JSON_Files(*.json)|*.json|All_Files|* Destination JSON (JavaScript Object Notation) File:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)Data\Nebraska.json"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI CHOICE_OR_ATTR UTC_Offset 5%6 UTC Offset:"
+#!   DEFAULT_VALUE="6"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="34"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Filter out only Road Conditions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="227.385 78.3361"
+#!   TOP_LEFT="227.385 78.3361"
+#!   BOTTOM_RIGHT="226.385 79.3361"
+#!   BOUNDING_RECT="227.385 78.3361 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="4"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="17"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Nebraska Segment Geometry&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;with AGOL Objects IDs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="848.902 -334.049"
+#!   TOP_LEFT="848.902 -334.049"
+#!   BOTTOM_RIGHT="847.902 -333.049"
+#!   BOUNDING_RECT="848.902 -334.049 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="32"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="18"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Date/Time + Length formatting&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="853.014 74.2516"
+#!   TOP_LEFT="853.014 74.2516"
+#!   BOTTOM_RIGHT="852.014 75.2516"
+#!   BOUNDING_RECT="853.014 74.2516 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="40"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="25"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Standardize Attributes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2020.63 -176.806"
+#!   TOP_LEFT="2020.63 -176.806"
+#!   BOTTOM_RIGHT="2019.63 -175.806"
+#!   BOUNDING_RECT="2020.63 -176.806 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="20"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="26"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Standardize Attributes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2589.98 -757.408"
+#!   TOP_LEFT="2589.98 -757.408"
+#!   BOTTOM_RIGHT="2588.98 -756.408"
+#!   BOUNDING_RECT="2589.98 -757.408 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="23"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="41"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Write out to json file with attributes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="3152.87 -178.66"
+#!   TOP_LEFT="3152.87 -178.66"
+#!   BOTTOM_RIGHT="3151.87 -177.66"
+#!   BOUNDING_RECT="3152.87 -178.66 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="38"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="42"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Attempt to Merge attributes&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;with AGOL Object IDs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1440.45 253.667"
+#!   TOP_LEFT="1440.45 253.667"
+#!   BOTTOM_RIGHT="1439.45 254.667"
+#!   BOUNDING_RECT="1440.45 253.667 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="8"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="27"
+#!   NAME="NEBRASKA 511 XML FEED"
+#!   DESCRIPTION="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connection for NE CARS 511 Production XML Feed (http://ne.carsprogram.org/hub/data/feu-g.xml )&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="-483.132 78.3635"
+#!   BOTTOM_RIGHT="190.495 -397.266"
+#!   BOUNDING_RECT="-483.132 78.3635 673.627 475.629"
+#!   STICKY="true"
+#!   COLOUR="0.176471,0.403922,0.494118"
+#!   CONTENTS="1 "
+#! />
+#! <BOOKMARK
+#!   IDENTIFIER="28"
+#!   NAME="Merged Records"
+#!   DESCRIPTION="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="1970.6 -54.5265"
+#!   BOTTOM_RIGHT="2519.39 -489.363"
+#!   BOUNDING_RECT="1970.6 -54.5265 548.786 434.836"
+#!   STICKY="true"
+#!   COLOUR="0.74902,0.682353,0.729412"
+#!   CONTENTS="20 25 "
+#! />
+#! <BOOKMARK
+#!   IDENTIFIER="29"
+#!   NAME="No Merged Records - Null out segments"
+#!   DESCRIPTION="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="1970.6 -570.73"
+#!   BOTTOM_RIGHT="3088.02 -1237.51"
+#!   BOUNDING_RECT="1970.6 -570.73 1117.42 666.777"
+#!   STICKY="true"
+#!   COLOUR="0.784314,0.356863,0.74902"
+#!   CONTENTS="23 21 36 24 26 22 "
+#! />
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="4"
+#!   TYPE="TestFilter"
+#!   VERSION="1"
+#!   POSITION="301.385 -50.4146"
+#!   BOUNDING_RECT="301.385 -50.4146 521.319 71"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17491"
+#! >
+#!     <OUTPUT_FEAT NAME="NE&lt;space&gt;Road&lt;space&gt;Conditions"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinkDirection" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueDate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueTime" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="RouteDesignator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeDate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeTime" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hd_pavementcond" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ph_pavementcond" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinearReference1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinearReference2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Descriptions" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OrganizationID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="ID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LinkDirection" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueDate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueTime" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="RouteDesignator" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeDate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeTime" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hd_pavementcond" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ph_pavementcond" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LinearReference1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LinearReference2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Descriptions" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="OrganizationID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Filter_Road_Conditions"/>
+#!     <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;OrganizationID&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;NESEG&lt;quote&gt;,NE&lt;space&gt;Road&lt;space&gt;Conditions"/>
+#!     <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="InlineQuerier"
+#!   VERSION="1"
+#!   POSITION="1498.02 -54.5265"
+#!   BOUNDING_RECT="1498.02 -54.5265 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17491"
+#! >
+#!     <OUTPUT_FEAT NAME="Merging"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROUTE_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinearReference1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinearReference2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="RouteDesignator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_UPDATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_CREATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_OID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinkDirection" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueDate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueTime" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeDate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeTime" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hd_pavementcond" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ph_pavementcond" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Descriptions" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OrganizationID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="FMEDATA_READ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="No&lt;space&gt;Data"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="QUERY_DEF" PARM_VALUE="Merging,SELECT&lt;space&gt;*&lt;lf&gt;FROM&lt;space&gt;GEOM&lt;comma&gt;&lt;space&gt;CARS&lt;lf&gt;WHERE&lt;space&gt;&lt;openparen&gt;GEOM.ROUTE_NAME=CARS.RouteDesignator&lt;closeparen&gt;&lt;space&gt;AND&lt;space&gt;&lt;openparen&gt;GEOM.PRIMARYMP&lt;space&gt;BETWEEN&lt;space&gt;CARS.LinearReference1&lt;space&gt;AND&lt;space&gt;CARS.LinearReference2&lt;closeparen&gt;&lt;space&gt;AND&lt;space&gt;&lt;openparen&gt;GEOM.SECONDARYMP&lt;space&gt;BETWEEN&lt;space&gt;CARS.LinearReference1&lt;space&gt;AND&lt;space&gt;CARS.LinearReference2&lt;closeparen&gt;&lt;semicolon&gt;,FIRST,No&lt;space&gt;Data,SELECT&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;as&lt;space&gt;count&lt;space&gt;FROM&lt;space&gt;CARS&lt;semicolon&gt;,FIRST"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="InlineQuerier"/>
+#!     <XFORM_PARM PARM_NAME="QUERY_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="QUERY_SCHEMA" PARM_VALUE="Merging,PRIMARYMP&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;6&lt;comma&gt;2&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;SECONDARYMP&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;6&lt;comma&gt;2&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;ROUTE_NAME&lt;comma&gt;text&lt;comma&gt;GEOM.fme_feature_content&lt;comma&gt;fme_feature_content&lt;comma&gt;LinearReference1&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;6&lt;comma&gt;2&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;LinearReference2&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;6&lt;comma&gt;2&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;RouteDesignator&lt;comma&gt;text&lt;comma&gt;REPORT_UPDATED&lt;comma&gt;text&lt;comma&gt;REPORT_CREATED&lt;comma&gt;text&lt;comma&gt;CARS.fme_feature_content&lt;comma&gt;fme_feature_content,No&lt;space&gt;Data,count&lt;comma&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TABLE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TABLE_DEF" PARM_VALUE="GEOM,PRIMARYMP&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;6&lt;comma&gt;2&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;SECONDARYMP&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;6&lt;comma&gt;2&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;ROUTE_NAME&lt;comma&gt;text,CARS,LinearReference1&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;6&lt;comma&gt;2&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;LinearReference2&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;6&lt;comma&gt;2&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;RouteDesignator&lt;comma&gt;text&lt;comma&gt;REPORT_UPDATED&lt;comma&gt;text&lt;comma&gt;REPORT_CREATED&lt;comma&gt;text"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="40"
+#!   TYPE="AttributeManager"
+#!   VERSION="1"
+#!   POSITION="936.838 -51.1784"
+#!   BOUNDING_RECT="936.838 -51.1784 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17650"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinkDirection" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueDate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueTime" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="RouteDesignator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeDate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeTime" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hd_pavementcond" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ph_pavementcond" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinearReference1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LinearReference2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Descriptions" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OrganizationID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="FMEDATA_READ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_UPDATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_CREATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DateTimeFormat"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="ID ID  NO_OP LinkDirection LinkDirection  NO_OP MessageIssueDate MessageIssueDate  NO_OP MessageIssueTime MessageIssueTime  NO_OP RouteDesignator RouteDesignator  NO_OP UpdateTimeDate UpdateTimeDate  NO_OP UpdateTimeTime UpdateTimeTime  NO_OP hd_pavementcond hd_pavementcond  NO_OP ph_pavementcond ph_pavementcond  NO_OP LinearReference1 LinearReference1  NO_OP LinearReference2 LinearReference2  NO_OP Descriptions Descriptions  NO_OP OrganizationID OrganizationID  NO_OP  FMEDATA_READ &lt;at&gt;DateTimeAdd&lt;openparen&gt;&lt;at&gt;Timestamp&lt;openparen&gt;^Y^m^d^H^M^S&lt;closeparen&gt;&lt;comma&gt;PT&lt;at&gt;Left&lt;openparen&gt;&lt;at&gt;Right&lt;openparen&gt;&lt;at&gt;DateTimeNow&lt;openparen&gt;local&lt;closeparen&gt;&lt;comma&gt;4&lt;closeparen&gt;&lt;comma&gt;1&lt;closeparen&gt;H&lt;closeparen&gt; SET_TO  REPORT_UPDATED &lt;at&gt;DateTimeAdd&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;UpdateTimeDate&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;UpdateTimeTime&lt;closeparen&gt;&lt;comma&gt;PT&lt;at&gt;Right&lt;openparen&gt;&lt;at&gt;Left&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;UpdateTimeUTCoffset&lt;closeparen&gt;&lt;comma&gt;3&lt;closeparen&gt;&lt;comma&gt;1&lt;closeparen&gt;H&lt;closeparen&gt; SET_TO  REPORT_CREATED &lt;at&gt;DateTimeAdd&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;MessageIssueDate&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;MessageIssueTime&lt;closeparen&gt;&lt;comma&gt;PT&lt;at&gt;Right&lt;openparen&gt;&lt;at&gt;Left&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;MessageIssueUTCoffset&lt;closeparen&gt;&lt;comma&gt;3&lt;closeparen&gt;&lt;comma&gt;1&lt;closeparen&gt;H&lt;closeparen&gt; SET_TO MessageIssueUTCoffset MessageIssueUTCoffset  NO_OP UpdateTimeUTCoffset UpdateTimeUTCoffset  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="20"
+#!   TYPE="AttributeManager"
+#!   VERSION="1"
+#!   POSITION="2046.88 -309.367"
+#!   BOUNDING_RECT="2046.88 -309.367 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17652"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="ROAD_CONDITION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE_LINK" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROUTE_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_OID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_UPDATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_CREATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HEADLINE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DESCRIPTION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="FMEDATA_READ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MessageIssueUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="UpdateTimeUTCoffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; ROAD_CONDITION &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;Data&lt;space&gt;Not&lt;space&gt;Available&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = dry&lt;space&gt;pavement;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = wet;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = seasonal&lt;space&gt;roadway&lt;space&gt;conditions;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = seasonal;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = Seasonal;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = normal&lt;space&gt;driving&lt;space&gt;conditions&apos;Seasonal&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = impassable;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = Impassable&apos;Impassable&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = travel&lt;space&gt;not&lt;space&gt;advised;TEST &lt;at&gt;Value&lt;openparen&gt;ph_pavementcond&lt;closeparen&gt; = travel&lt;space&gt;not&lt;space&gt;advised&apos;Travel&lt;space&gt;Not&lt;space&gt;Advised&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; BEGINS_WITH completely&apos;Completely&lt;space&gt;Covered&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; BEGINS_WITH partially;TEST &lt;at&gt;Value&lt;openparen&gt;hd_pavementcond&lt;closeparen&gt; = icy&lt;space&gt;bridges&apos;Partially&lt;space&gt;Covered&apos;FME_NUM_CONDITIONS6___&quot; SET_TO  SOURCE Nebraska&lt;space&gt;DOT SET_TO  SOURCE_LINK https:&lt;solidus&gt;&lt;solidus&gt;hb.511.nebraska.gov&lt;solidus&gt;#roadReports&lt;solidus&gt;eventAlbum&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;ID&lt;closeparen&gt;?timeFrame=TODAY&lt;amp&gt;layers=winterDriving SET_TO PRIMARYMP PRIMARYMP  NO_OP SECONDARYMP SECONDARYMP  NO_OP ROUTE_NAME ROUTE_NAME  NO_OP LinearReference1 LinearReference1  REMOVE LinearReference2 LinearReference2  REMOVE RouteDesignator RouteDesignator  REMOVE SEGMENT_NAME SEGMENT_NAME  NO_OP SEGMENT_ID SEGMENT_ID  NO_OP SEGMENT_OID SEGMENT_OID  NO_OP PRIMARYLAT PRIMARYLAT  NO_OP PRIMARYLONG PRIMARYLONG  NO_OP SECONDARYLAT SECONDARYLAT  NO_OP SECONDARYLONG SECONDARYLONG  NO_OP REPORT_UPDATED REPORT_UPDATED  NO_OP REPORT_CREATED REPORT_CREATED  NO_OP Descriptions Descriptions  REMOVE ID REPORT_ID  RENAME_SET_VALUE LinkDirection LinkDirection  REMOVE MessageIssueDate MessageIssueDate  REMOVE MessageIssueTime MessageIssueTime  REMOVE OrganizationID OrganizationID  REMOVE UpdateTimeDate UpdateTimeDate  REMOVE UpdateTimeTime UpdateTimeTime  REMOVE hd_pavementcond HEADLINE  RENAME_SET_VALUE ph_pavementcond DESCRIPTION  RENAME_SET_VALUE FMEDATA_READ FMEDATA_READ  NO_OP SOURCE SOURCE  NO_OP OBJECTID OBJECTID  NO_OP SEGMENT_DATE SEGMENT_DATE  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="21"
+#!   TYPE="Tester"
+#!   VERSION="2"
+#!   POSITION="2052.82 -665.158"
+#!   BOUNDING_RECT="2052.82 -665.158 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17491"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CountTester"/>
+#!     <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &lt;at&gt;Value&lt;openparen&gt;count&lt;closeparen&gt; = 0"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
+#!     <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="Test&lt;space&gt;if&lt;space&gt;sql&lt;space&gt;count&lt;space&gt;has&lt;space&gt;0&lt;space&gt;records"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="22"
+#!   TYPE="InlineQuerier"
+#!   VERSION="1"
+#!   POSITION="2052.82 -890.008"
+#!   BOUNDING_RECT="2052.82 -890.008 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17491"
+#! >
+#!     <OUTPUT_FEAT NAME="Merging"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROUTE_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_OID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="QUERY_DEF" PARM_VALUE="Merging,SELECT&lt;space&gt;*&lt;space&gt;FROM&lt;space&gt;GEOM&lt;comma&gt;&lt;space&gt;Count&lt;space&gt;WHERE&lt;space&gt;Count.count&lt;space&gt;=&lt;space&gt;&lt;apos&gt;0&lt;apos&gt;&lt;semicolon&gt;,FIRST"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="NullMerger"/>
+#!     <XFORM_PARM PARM_NAME="QUERY_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="QUERY_SCHEMA" PARM_VALUE="Merging,PRIMARYMP&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;31&lt;comma&gt;15&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;SECONDARYMP&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;13&lt;comma&gt;8&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;ROUTE_NAME&lt;comma&gt;text&lt;comma&gt;GEOM.fme_feature_content&lt;comma&gt;fme_feature_content&lt;comma&gt;count&lt;comma&gt;varchar&lt;openparen&gt;200&lt;closeparen&gt;&lt;comma&gt;Count.fme_feature_content&lt;comma&gt;fme_feature_content"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TABLE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TABLE_DEF" PARM_VALUE="GEOM,PRIMARYMP&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;31&lt;comma&gt;15&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;SECONDARYMP&lt;comma&gt;&lt;quote&gt;real&lt;openparen&gt;13&lt;comma&gt;8&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;ROUTE_NAME&lt;comma&gt;text,Count,count&lt;comma&gt;varchar&lt;openparen&gt;200&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="23"
+#!   TYPE="AttributeManager"
+#!   VERSION="1"
+#!   POSITION="2616.23 -890.008"
+#!   BOUNDING_RECT="2616.23 -890.008 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17652"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="ROAD_CONDITION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE_LINK" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROUTE_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_OID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HEADLINE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DESCRIPTION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_UPDATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_CREATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="FMEDATA_READ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_3"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; ROAD_CONDITION 0 SET_TO  SOURCE Nebraska&lt;space&gt;DOT SET_TO  SOURCE_LINK https:&lt;solidus&gt;&lt;solidus&gt;hb.511.nebraska.gov SET_TO PRIMARYMP PRIMARYMP  NO_OP SECONDARYMP SECONDARYMP  NO_OP ROUTE_NAME ROUTE_NAME  NO_OP SEGMENT_NAME SEGMENT_NAME  NO_OP SEGMENT_ID SEGMENT_ID  NO_OP SEGMENT_OID SEGMENT_OID  NO_OP PRIMARYLAT PRIMARYLAT  NO_OP PRIMARYLONG PRIMARYLONG  NO_OP SECONDARYLAT SECONDARYLAT  NO_OP SECONDARYLONG SECONDARYLONG  NO_OP SOURCE SOURCE  REMOVE OBJECTID OBJECTID  NO_OP count count  NO_OP  HEADLINE FME_NULL_VALUE SET_TO  DESCRIPTION FME_NULL_VALUE SET_TO  REPORT_ID FME_NULL_VALUE SET_TO  REPORT_UPDATED FME_NULL_VALUE SET_TO  REPORT_CREATED FME_NULL_VALUE SET_TO  FMEDATA_READ &lt;at&gt;Timestamp&lt;openparen&gt;^Y^m^d^H^M^S&lt;closeparen&gt; SET_TO SEGMENT_DATE SEGMENT_DATE  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="14"
+#!   SOURCE_NODE="1"
+#!   TARGET_NODE="4"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="33"
+#!   SOURCE_NODE="32"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 GEOM"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="37"
+#!   SOURCE_NODE="32"
+#!   TARGET_NODE="22"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 GEOM"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="16"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="40"
+#!   SOURCE_PORT_DESC="fo 0 NE&lt;lt&gt;space&lt;gt&gt;Road&lt;lt&gt;space&lt;gt&gt;Conditions"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="30"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="20"
+#!   SOURCE_PORT_DESC="fo 0 Merging"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="31"
+#!   SOURCE_NODE="20"
+#!   TARGET_NODE="38"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="36"
+#!   SOURCE_NODE="21"
+#!   TARGET_NODE="22"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 1 Count"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="24"
+#!   SOURCE_NODE="22"
+#!   TARGET_NODE="23"
+#!   SOURCE_PORT_DESC="fo 0 Merging"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="39"
+#!   SOURCE_NODE="23"
+#!   TARGET_NODE="38"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="19"
+#!   SOURCE_NODE="40"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 1 CARS"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="35"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="21"
+#!   SOURCE_PORT_DESC="fo 1 No&lt;lt&gt;space&lt;gt&gt;Data"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+FME_PYTHON_VERSION 27
+GUI IGNORE SourceDataset_XML_1,XML_IN_XFMAP_FEATURE_PATHS_STRUCTURE_XML_1,XML_IN_XFMAP_XML_1,XML_IN_XRS_XML_1,XML_IN_CONTINUE_ON_GEOM_ERROR_XML_1,XML_IN_EXPOSE_ATTRS_GROUP_XML_1,XML_IN_SEARCH_ENVELOPE_MINX_XML_1,XML_IN_SEARCH_ENVELOPE_MINY_XML_1,XML_IN_SEARCH_ENVELOPE_MAXX_XML_1,XML_IN_SEARCH_ENVELOPE_MAXY_XML_1,XML_IN_CLIP_TO_ENVELOPE_XML_1,XML_IN_NETWORK_AUTHENTICATION_XML_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_XML_1,XFMAP_FEATURE_PATHS_XML_1,_VALIDATE_XFMAP_XML_1,_VALIDATE_DATASET_XML_1,_SYSTEM_ENCODING_XML_1,SourceDataset_JSON_1,JSON_IN_SCAN_MODE_JSON_1,JSON_IN_SCHEMA_SCAN_QUERY_JSON_1,JSON_IN_FEATURE_TYPE_KEY_JSON_1,JSON_IN_GEOMETRY_FORMAT_JSON_1,JSON_IN_GEOMETRY_KEY_JSON_1,JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1,JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1,JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1,JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1,JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1,JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1,JSON_IN_CLIP_TO_ENVELOPE_JSON_1,JSON_IN_NETWORK_AUTHENTICATION_JSON_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1,DestDataset_JSON_2,JSON_OUT_WRITE_FEATURE_TYPE_KEY_JSON_2,JSON_OUT_FEATURE_TYPE_KEY_JSON_2,JSON_OUT_WRITE_GEOMETRY_JSON_2,JSON_OUT_GEOMETRY_KEY_JSON_2,JSON_OUT_GEOMETRY_FORMAT_JSON_2,JSON_OUT_WRITE_COORDINATE_SYSTEM_JSON_2,JSON_OUT_COORDINATE_SYSTEM_KEY_JSON_2,JSON_OUT_COORDINATE_SYSTEM_FORMAT_JSON_2,JSON_OUT_WRITER_CHARSET_JSON_2,JSON_OUT_WRITE_BOM_JSON_2,JSON_OUT_JSONP_FUNC_NAME_JSON_2
+DEFAULT_MACRO SourceDataset_XML_9 http://ne.carsprogram.org/hub/data/feu-g.xml
+GUI MULTIFILE SourceDataset_XML_9 XML/GML/Compressed_XML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|XML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_XML_Files(*.gz)|*.gz|All_Files(*)|* Source XML File(s):
+DEFAULT_MACRO SourceDataset_JSON $(FME_MF_DIR)Segment\Nebraska.json
+GUI FILE_OR_URL SourceDataset_JSON JSON_Documents(*.json)|*.json|All_Files|* Source JSON (JavaScript Object Notation) File or URL:
+DEFAULT_MACRO DestDataset_JSON_4 $(FME_MF_DIR)Data\Nebraska.json
+GUI FILENAME DestDataset_JSON_4 JSON_Files(*.json)|*.json|All_Files|* Destination JSON (JavaScript Object Notation) File:
+DEFAULT_MACRO UTC_Offset 6
+GUI CHOICE UTC_Offset 5%6 UTC Offset:
+INCLUDE [ if {{$(SourceDataset_XML_9)} == {}} { puts_real {Parameter 'SourceDataset_XML_9' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_JSON)} == {}} { puts_real {Parameter 'SourceDataset_JSON' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_JSON_4)} == {}} { puts_real {Parameter 'DestDataset_JSON_4' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(UTC_Offset)} == {}} { puts_real {Parameter 'UTC_Offset' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} XML
+MULTI_READER_KEYWORD{0} XML_1
+MULTI_READER_GEN_DIRECTIVES{0} SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MINY,0,MAX_SCHEMA_SCAN_FEATURES,,USE_SEARCH_ENVELOPE,NO,XRS,,SEARCH_ENVELOPE_MAXY,0,SEARCH_ENVELOPE_MINX,0,CLIP_TO_ENVELOPE,NO,XFMAP_FEATURE_PATHS_EXCEPT,,CONTINUE_ON_GEOM_ERROR,no,XFMAP_FEATURE_PATHS,,FILE_TYPE,xfMap,XFMAP,<backslash><backslash>ntgeofme<backslash>FMEData<backslash>Traffic<space>Operations<backslash>511<backslash>xfmap_CARS.xml,EXPOSE_ATTRS_GROUP,,NETWORK_AUTHENTICATION,AUTH_INFO_GROUP<comma>YES<comma>AUTH_METHOD<comma>Basic<comma>NAMED_CONNECTION<comma><lt>lt<gt>Unused<lt>gt<gt><comma>AUTH_USERNAME<comma>iowadot<comma>AUTH_PASSWORD<comma>fme_decrypt<openparen>MDowfCN8I3xcG3GQ<solidus>TeRRUJUZ5LDPtdvpscbh7Nj9gG<solidus>INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl<solidus>0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07<solidus>nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D<solidus>WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszCRcVmH3g7pUy7ViIvSUTAzXxkiaXs46cYo<solidus>5FaSIw6fsu07Agmd2VMw6WIU7Oq8eBlPkoAFQdsyTkh9cZYMSpLTWHxtyk72X2iDGOWYuDLjG5X<solidus>ipVmtJE2lTGxpl7b+vWD3DIYrpIVX0OU9DFKO44Wl8imhWGXe3YVKDBAMGNr0X7ZgHBiFyHXouQLCaQFODxcKuDItR5gCnpzvV4kgXe<solidus>+cwfncVAIA2v8pxLHKJBucZLyLleD09Juorz8dr8zF5teubp+DiCDYD6EL12wGWm7h721vMhEw5vKnfHfFjyO2mGCgAPfv2XVtd5kBoVOknDmsrHBuYp5SuNdlYZGdxxR1hzYT3Ij<closeparen>,XML_EXPOSE_FORMAT_ATTRS,,XFMAP_FEATURE_PATHS_STRUCTURE,,XFMAP_FEATURE_PATHS_SUB_FRAGMENTS,,_MERGE_SCHEMAS,YES
+MULTI_READER_TYPE{1} JSON
+MULTI_READER_KEYWORD{1} JSON_1
+MULTI_READER_GEN_DIRECTIVES{1} _MERGE_SCHEMAS,YES,USE_SEARCH_ENVELOPE,NO,DECODE_TEXT_STRINGS,Yes,GEOMETRY_FORMAT,None,GEOMETRY_KEY,<lt>Unused<gt>,SEARCH_ENVELOPE_MAXX,0,COORDINATE_SYSTEM_KEY,<lt>Unused<gt>,SCAN_MODE,AUTO,SEARCH_ENVELOPE_MINY,0,FEATURE_TYPE_KEY,json_featuretype,USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,No,SEARCH_ENVELOPE_MINX,0,EXPOSE_ATTRS_GROUP,,SEARCH_ENVELOPE_MAXY,0,JSON_EXPOSE_FORMAT_ATTRS,,SCHEMA_SCAN_QUERY,<lt>Unused<gt>,CLIP_TO_ENVELOPE,NO
+
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} JSON
+MULTI_WRITER_KEYWORD{0} JSON_2
+#! END_WB_HEADER
+
+#! START_WB_HEADER
+FACTORY_DEF * BranchingFactory                                         \
+  FACTORY_NAME "Source Feature Router"                                 \
+  INPUT FEATURE_TYPE *                                                 \
+  TARGET_FACTORY @Concatenate("Source Catcher ", &multi_reader_id)     \
+  FALLBACK_TARGET_FACTORY "Branching Catcher"
+
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "XML_1"
+FACTORY_DEF * TeeFactory                                               \
+  FACTORY_NAME "Source Catcher 0"                                      \
+  INPUT FEATURE_TYPE *                                                 \
+  OUTPUT FEATURE_TYPE *
+
+#! END_WB_HEADER
+#! START_SOURCE_HEADER XML XML_1
+# ============================================================================
+# The following GUI line prompts for the XML file
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_XML_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER XML XML_1
+DEFAULT_MACRO SourceDataset_XML_1 $(SourceDataset_XML_9)
+GUI MULTIFILE SourceDataset_XML_1 XML/GML/Compressed_XML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|XML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_XML_Files(*.gz)|*.gz|All_Files(*)|* Source XML File(s):
+# ============================================================================
+#
+# ============================================================================
+# Include the deaggregate factory that will break XML aggregrate
+# into simpler features
+INCLUDE "$(FME_HOME)/pipeline/xml_read.fmi"
+# =================================================================
+# =================================================================
+DEFAULT_MACRO XML_IN_XFMAP_FEATURE_PATHS_EXCEPT_XML_1 
+XML_1_XFMAP_FEATURE_PATHS_EXCEPT "$(XML_IN_XFMAP_FEATURE_PATHS_EXCEPT_XML_1)"
+# =================================================================
+# NOTE: Any changes made should be made to XMLFlattener, XMLFragmenter and XML Reader metafile
+DEFAULT_MACRO XML_IN_XFMAP_FEATURE_PATHS_STRUCTURE_XML_1 
+XML_1_XFMAP_FEATURE_PATHS_STRUCTURE "$(XML_IN_XFMAP_FEATURE_PATHS_STRUCTURE_XML_1)"
+GUI OPTIONAL XML_FLATTEN_OPTIONS XML_IN_XFMAP_FEATURE_PATHS_STRUCTURE_XML_1 Flatten Options:
+# =================================================================
+# NOTE: Any changes made should be made to XMLFlattener, XMLFragmenter and XML Reader metafile
+DEFAULT_MACRO XML_IN_XFMAP_FEATURE_PATHS_SUB_FRAGMENTS_XML_1 
+XML_1_XFMAP_FEATURE_PATHS_SUB_FRAGMENTS "$(XML_IN_XFMAP_FEATURE_PATHS_SUB_FRAGMENTS_XML_1)"
+# =================================================================
+DEFAULT_MACRO XML_IN_XFMAP_XML_1 $(FME_MF_DIR)xfmap_CARS.xml
+XML_1_XFMAP "$(XML_IN_XFMAP_XML_1)"
+GUI OPTIONAL MULTIFILE XML_IN_XFMAP_XML_1 XML_Map_File(*.xmp;*.xml)|*.xmp;*.xml|All_Files(*)|* xfMap File:
+# =================================================================
+DEFAULT_MACRO XML_IN_XRS_XML_1 
+XML_1_XRS "$(XML_IN_XRS_XML_1)"
+GUI OPTIONAL FILENAME_MUSTEXIST XML_IN_XRS_XML_1 XRS_File(*.xml;*.xrs)|*.xml;*.xrs|All_Files(*)|* XRS File:
+# =================================================================
+DEFAULT_MACRO XML_IN_CONTINUE_ON_GEOM_ERROR_XML_1 no
+XML_1_CONTINUE_ON_GEOM_ERROR "$(XML_IN_CONTINUE_ON_GEOM_ERROR_XML_1)"
+GUI CHOICE XML_IN_CONTINUE_ON_GEOM_ERROR_XML_1 yes%no Continue on Geometry Error:
+DEFAULT_MACRO XML_IN_EXPOSE_ATTRS_GROUP_XML_1 
+XML_1_EXPOSE_ATTRS_GROUP "$(XML_IN_EXPOSE_ATTRS_GROUP_XML_1)"
+GUI OPTIONAL DISCLOSUREGROUP XML_IN_EXPOSE_ATTRS_GROUP_XML_1 XML_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO XML_IN_SEARCH_ENVELOPE_MINX_XML_1 0
+XML_1_SEARCH_ENVELOPE "$(XML_IN_SEARCH_ENVELOPE_MINX_XML_1)"
+GUI OPTIONAL FLOAT XML_IN_SEARCH_ENVELOPE_MINX_XML_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO XML_IN_SEARCH_ENVELOPE_MINY_XML_1 0
+XML_1_SEARCH_ENVELOPE "$(XML_IN_SEARCH_ENVELOPE_MINY_XML_1)"
+GUI OPTIONAL FLOAT XML_IN_SEARCH_ENVELOPE_MINY_XML_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO XML_IN_SEARCH_ENVELOPE_MAXX_XML_1 0
+XML_1_SEARCH_ENVELOPE "$(XML_IN_SEARCH_ENVELOPE_MAXX_XML_1)"
+GUI OPTIONAL FLOAT XML_IN_SEARCH_ENVELOPE_MAXX_XML_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO XML_IN_SEARCH_ENVELOPE_MAXY_XML_1 0
+XML_1_SEARCH_ENVELOPE "$(XML_IN_SEARCH_ENVELOPE_MAXY_XML_1)"
+GUI OPTIONAL FLOAT XML_IN_SEARCH_ENVELOPE_MAXY_XML_1 Maximum Y:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+DEFAULT_MACRO XML_IN_CLIP_TO_ENVELOPE_XML_1 NO
+XML_1_CLIP_TO_ENVELOPE "$(XML_IN_CLIP_TO_ENVELOPE_XML_1)"
+GUI OPTIONAL CHECKBOX XML_IN_CLIP_TO_ENVELOPE_XML_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO XML_IN_NETWORK_AUTHENTICATION_XML_1 AUTH_INFO_GROUP,NO,AUTH_METHOD,<lt>Unused<gt>,NAMED_CONNECTION,<lt>Unused<gt>,AUTH_USERNAME,<lt>Unused<gt>,AUTH_PASSWORD,<Unused>
+XML_1_NETWORK_AUTHENTICATION "$(XML_IN_NETWORK_AUTHENTICATION_XML_1)"
+GUI OPTIONAL AUTHENTICATOR XML_IN_NETWORK_AUTHENTICATION_XML_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO XML_IN_ATTRIBUTE_READING_XML_1 ALL
+XML_1_ATTRIBUTE_READING "$(XML_IN_ATTRIBUTE_READING_XML_1)"
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_XML_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_XML_1 Search Envelope Coordinate System:
+XML_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_XML_1)"
+# ===========================================================================
+DEFAULT_MACRO XFMAP_FEATURE_PATHS_XML_1 
+GUI OPTIONAL STRING_ENCODED XFMAP_FEATURE_PATHS_XML_1 Elements to Match:
+XML_1_XFMAP_FEATURE_PATHS $(XFMAP_FEATURE_PATHS_XML_1)
+# ============================================================================
+# This specifies whether the xfMap document should be validated against its
+# DTD file. If set to 'auto', the xfMap document will only be validated if
+# its DTD file is available.
+DEFAULT_MACRO _VALIDATE_XFMAP_XML_1 no
+GUI CHOICE _VALIDATE_XFMAP_XML_1 yes%no%auto Validate XML Map File:
+XML_1_VALIDATE_XFMAP $(_VALIDATE_XFMAP_XML_1)
+# ============================================================================
+# This specifies whether the XML dataset should be validated against its
+# DTD file. If set to 'auto', the XML document will only be validated if
+# its DTD file is available.
+DEFAULT_MACRO _VALIDATE_DATASET_XML_1 no
+GUI CHOICE _VALIDATE_DATASET_XML_1 yes%no%auto Validate XML Dataset File:
+XML_1_VALIDATE_DATASET $(_VALIDATE_DATASET_XML_1)
+# ============================================================================
+# This optional parameter specifies the system encoding. If no value is specified
+# then the system's encoding is used.
+DEFAULT_MACRO _SYSTEM_ENCODING_XML_1 
+GUI OPTIONAL TEXT _SYSTEM_ENCODING_XML_1 System Encoding:
+XML_1_SYSTEM_ENCODING $(_SYSTEM_ENCODING_XML_1)
+XML_1_DATASET "$(SourceDataset_XML_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+FACTORY_DEF * BranchingFactory                                         \
+  FACTORY_NAME "Source Brancher 0"                                     \
+  INPUT FEATURE_TYPE *                                                 \
+    @SupplyAttributes(multi_reader_type,XML)                           \
+  TARGET_FACTORY "Branching Catcher"
+
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "JSON_1"
+FACTORY_DEF * TeeFactory                                               \
+  FACTORY_NAME "Source Catcher 1"                                      \
+  INPUT FEATURE_TYPE *                                                 \
+  OUTPUT FEATURE_TYPE *
+
+#! END_WB_HEADER
+#! START_SOURCE_HEADER JSON JSON_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_JSON_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER JSON JSON_1
+DEFAULT_MACRO SourceDataset_JSON_1 $(SourceDataset_JSON)
+GUI FILE_OR_URL SourceDataset_JSON_1 JSON_Documents(*.json)|*.json|All_Files|* Source JSON (JavaScript Object Notation) File or URL:
+DEFAULT_MACRO JSON_IN_SCAN_MODE_JSON_1 AUTO
+JSON_1_SCAN_MODE "$(JSON_IN_SCAN_MODE_JSON_1)"
+GUI ACTIVECHOICE_LOOKUP JSON_IN_SCAN_MODE_JSON_1 Auto,AUTO,JSON_IN_SCHEMA_SCAN_QUERY%JSON<space>Query,QUERY Schema Scan Mode
+DEFAULT_MACRO JSON_IN_SCHEMA_SCAN_QUERY_JSON_1 <Unused>
+JSON_1_SCHEMA_SCAN_QUERY "$(JSON_IN_SCHEMA_SCAN_QUERY_JSON_1)"
+GUI TEXT_ENCODED JSON_IN_SCHEMA_SCAN_QUERY_JSON_1 JSON Query for Feature Objects:
+DEFAULT_MACRO JSON_IN_FEATURE_TYPE_KEY_JSON_1 json_featuretype
+JSON_1_FEATURE_TYPE_KEY "$(JSON_IN_FEATURE_TYPE_KEY_JSON_1)"
+GUI OPTIONAL TEXT JSON_IN_FEATURE_TYPE_KEY_JSON_1 Feature Type Key Name:
+DEFAULT_MACRO JSON_IN_GEOMETRY_FORMAT_JSON_1 None
+JSON_1_GEOMETRY_FORMAT "$(JSON_IN_GEOMETRY_FORMAT_JSON_1)"
+GUI ACTIVECHOICE JSON_IN_GEOMETRY_FORMAT_JSON_1 GeoJSON%OGC-WKT%None,JSON_IN_GEOMETRY_KEY,JSON_IN_COORDINATE_SYSTEM_KEY Geometry Format:
+DEFAULT_MACRO JSON_IN_GEOMETRY_KEY_JSON_1 <Unused>
+JSON_1_GEOMETRY_KEY "$(JSON_IN_GEOMETRY_KEY_JSON_1)"
+GUI OPTIONAL TEXT JSON_IN_GEOMETRY_KEY_JSON_1 Geometry Key Name:
+DEFAULT_MACRO JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1 <Unused>
+JSON_1_COORDINATE_SYSTEM_KEY "$(JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1)"
+GUI TEXT JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1 Coordinate System Key Name:
+DEFAULT_MACRO JSON_IN_DECODE_TEXT_STRINGS_JSON_1 Yes
+JSON_1_DECODE_TEXT_STRINGS "$(JSON_IN_DECODE_TEXT_STRINGS_JSON_1)"
+DEFAULT_MACRO JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1 
+JSON_1_EXPOSE_ATTRS_GROUP "$(JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1)"
+GUI OPTIONAL DISCLOSUREGROUP JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1 JSON_EXPOSE_FORMAT_ATTRS Schema Attributes
+DEFAULT_MACRO JSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_JSON_1 No
+JSON_1_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE "$(JSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_JSON_1)"
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1 Maximum Y:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+DEFAULT_MACRO JSON_IN_CLIP_TO_ENVELOPE_JSON_1 NO
+JSON_1_CLIP_TO_ENVELOPE "$(JSON_IN_CLIP_TO_ENVELOPE_JSON_1)"
+GUI OPTIONAL CHECKBOX JSON_IN_CLIP_TO_ENVELOPE_JSON_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_NETWORK_AUTHENTICATION_JSON_1 
+JSON_1_NETWORK_AUTHENTICATION "$(JSON_IN_NETWORK_AUTHENTICATION_JSON_1)"
+GUI OPTIONAL AUTHENTICATOR JSON_IN_NETWORK_AUTHENTICATION_JSON_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_ATTRIBUTE_READING_JSON_1 ALL
+JSON_1_ATTRIBUTE_READING "$(JSON_IN_ATTRIBUTE_READING_JSON_1)"
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1 Search Envelope Coordinate System:
+JSON_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1)"
+# ===========================================================================
+JSON_1_DATASET "$(SourceDataset_JSON_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+FACTORY_DEF * BranchingFactory                                         \
+  FACTORY_NAME "Source Brancher 1"                                     \
+  INPUT FEATURE_TYPE *                                                 \
+    @SupplyAttributes(multi_reader_type,JSON)                          \
+  TARGET_FACTORY "Branching Catcher"
+
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "JSON_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER JSON JSON_2
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_JSON_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER JSON JSON_2
+DEFAULT_MACRO DestDataset_JSON_2 $(DestDataset_JSON_4)
+GUI FILENAME DestDataset_JSON_2 JSON_Files(*.json)|*.json|All_Files|* Destination JSON (JavaScript Object Notation) File:
+DEFAULT_MACRO JSON_OUT_WRITE_FEATURE_TYPE_KEY_JSON_2 YES
+JSON_2_WRITE_FEATURE_TYPE_KEY "$(JSON_OUT_WRITE_FEATURE_TYPE_KEY_JSON_2)"
+GUI ACTIVEDISCLOSUREGROUP JSON_OUT_WRITE_FEATURE_TYPE_KEY_JSON_2 FEATURE_TYPE_KEY Write Feature Type Key
+DEFAULT_MACRO JSON_OUT_FEATURE_TYPE_KEY_JSON_2 json_featuretype
+JSON_2_FEATURE_TYPE_KEY "$(JSON_OUT_FEATURE_TYPE_KEY_JSON_2)"
+GUI TEXT JSON_OUT_FEATURE_TYPE_KEY_JSON_2 Feature Type Key Name:
+DEFAULT_MACRO JSON_OUT_WRITE_GEOMETRY_JSON_2 NO
+JSON_2_WRITE_GEOMETRY "$(JSON_OUT_WRITE_GEOMETRY_JSON_2)"
+GUI ACTIVEDISCLOSUREGROUP JSON_OUT_WRITE_GEOMETRY_JSON_2 GEOMETRY_KEY%GEOMETRY_FORMAT%WRITE_COORDINATE_SYSTEM Write Geometry
+DEFAULT_MACRO JSON_OUT_GEOMETRY_KEY_JSON_2 json_geometry
+JSON_2_GEOMETRY_KEY "$(JSON_OUT_GEOMETRY_KEY_JSON_2)"
+GUI TEXT JSON_OUT_GEOMETRY_KEY_JSON_2 Geometry Key Name:
+DEFAULT_MACRO JSON_OUT_GEOMETRY_FORMAT_JSON_2 GeoJSON
+JSON_2_GEOMETRY_FORMAT "$(JSON_OUT_GEOMETRY_FORMAT_JSON_2)"
+GUI CHOICE JSON_OUT_GEOMETRY_FORMAT_JSON_2 GeoJSON%OGC-WKT%None Geometry Format:
+DEFAULT_MACRO JSON_OUT_WRITE_COORDINATE_SYSTEM_JSON_2 <Unused>
+JSON_2_WRITE_COORDINATE_SYSTEM "$(JSON_OUT_WRITE_COORDINATE_SYSTEM_JSON_2)"
+GUI ACTIVEDISCLOSUREGROUP JSON_OUT_WRITE_COORDINATE_SYSTEM_JSON_2 COORDINATE_SYSTEM_KEY%COORDINATE_SYSTEM_FORMAT Write Coordinate System
+DEFAULT_MACRO JSON_OUT_COORDINATE_SYSTEM_KEY_JSON_2 <Unused>
+JSON_2_COORDINATE_SYSTEM_KEY "$(JSON_OUT_COORDINATE_SYSTEM_KEY_JSON_2)"
+GUI TEXT JSON_OUT_COORDINATE_SYSTEM_KEY_JSON_2 Coordinate System Key Name:
+DEFAULT_MACRO JSON_OUT_COORDINATE_SYSTEM_FORMAT_JSON_2 <Unused>
+JSON_2_COORDINATE_SYSTEM_FORMAT "$(JSON_OUT_COORDINATE_SYSTEM_FORMAT_JSON_2)"
+GUI CHOICE JSON_OUT_COORDINATE_SYSTEM_FORMAT_JSON_2 OGC-WKT%"Name only" Coordinate System Format:
+DEFAULT_MACRO JSON_OUT_WRITER_CHARSET_JSON_2 UTF-8
+JSON_2_WRITER_CHARSET "$(JSON_OUT_WRITER_CHARSET_JSON_2)"
+GUI CHOICE JSON_OUT_WRITER_CHARSET_JSON_2 UTF-8%UTF-16%UTF-16BE%UTF-16LE%UTF-32%UTF-32BE%UTF-32LE Output Character Set:
+DEFAULT_MACRO JSON_OUT_WRITE_BOM_JSON_2 No
+JSON_2_WRITE_BOM "$(JSON_OUT_WRITE_BOM_JSON_2)"
+GUI CHOICE JSON_OUT_WRITE_BOM_JSON_2 Yes%No Byte Order Marker:
+DEFAULT_MACRO JSON_OUT_JSONP_FUNC_NAME_JSON_2 
+JSON_2_JSONP_FUNC_NAME "$(JSON_OUT_JSONP_FUNC_NAME_JSON_2)"
+GUI OPTIONAL TEXT JSON_OUT_JSONP_FUNC_NAME_JSON_2 JSONP Function Name:
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO JSON_OUT_DESTINATION_DATASETTYPE_VALIDATION_JSON_2 Yes
+JSON_2_DESTINATION_DATASETTYPE_VALIDATION "$(JSON_OUT_DESTINATION_DATASETTYPE_VALIDATION_JSON_2)"
+JSON_2_DATASET "$(DestDataset_JSON_2)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! START_WB_HEADER
+FACTORY_DEF * TeeFactory                                               \
+  FACTORY_NAME "Branching Catcher"                                     \
+  INPUT FEATURE_TYPE *                                                 \
+  OUTPUT FEATURE_TYPE *
+
+#! END_WB_HEADER
+
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)Nebraska_Road_Conditions_To_JSON.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+MAPPING_FILE_ID Nebraska<space>Road<space>Conditions<space>to<space>GeoJSON
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_XML_1 XML_1
+DEFAULT_MACRO DATASET_KEYWORD_JSON_1 JSON_1
+DEFAULT_MACRO DATASET_KEYWORD_JSON_2 JSON_2
+# -------------------------------------------------------------------------
+
+XML_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+JSON_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME Nebraska_Road_Conditions_To_JSON
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+XML_1_DEF Feature   ID                           xml_char(13)   LinkDirection                xml_char(19)   MessageIssueDate             xml_decimal(9,0)   MessageIssueTime             xml_decimal(7,0)   RouteDesignator              xml_char(12)   UpdateTimeDate               xml_decimal(9,0)   UpdateTimeTime               xml_decimal(7,0)   hd_pavementcond              xml_char(31)   ph_pavementcond              xml_char(31)   LinearReference1             xml_decimal(31,18)   LinearReference2             xml_decimal(19,15)   Descriptions                 xml_char(374)   OrganizationID               xml_char(8)   Latitude1                    xml_decimal(9,0)   Latitude2                    xml_decimal(9,0)   MessageNumber                xml_decimal(7,0)   CrossRoad1                   xml_char(8)   EndTimeDate                  xml_decimal(9,0)   EndTimeTime                  xml_decimal(7,0)   EndTimeUTCoffset             xml_decimal(6,0)   MessageExpiryDate            xml_decimal(9,0)   MessageExpiryTime            xml_decimal(7,0)   MessageIssueUTCoffset        xml_decimal(6,0)   Ownership                    xml_char(11)   Priority                     xml_decimal(3,0)   RestrictionLength            xml_decimal(5,0)   RestrictionWidth             xml_decimal(4,0)   SpeedLimit                   xml_decimal(3,0)   StartTimeDate                xml_decimal(9,0)   StartTimeTime                xml_decimal(7,0)   StartTimeUTCoffset           xml_decimal(6,0)   Status                       xml_char(8)   Update                       xml_decimal(4,0)   UpdateTimeUTCoffset          xml_decimal(6,0)   Warnings                     xml_char(21)   hd_closure                   xml_char(20)   hd_mobsit                    xml_char(32)   hd_obstruction               xml_char(11)   hd_restriction               xml_char(13)   hd_roadwork                  xml_char(28)   hd_systeminfo                xml_char(13)   ph_closure                   xml_char(26)   ph_mobsit                    xml_char(32)   ph_obstruction               xml_char(11)   ph_restriction               xml_char(13)   ph_roadwork                  xml_char(28)   ph_systeminfo                xml_char(13)   Longitude1                   xml_decimal(11,0)   ca_roadwork                  xml_char(28)   Longitude2                   xml_decimal(11,0)   ca_pavementcond              xml_char(31)
+# -------------------------------------------------------------------------
+JSON_1_DEF Nebraska   SEGMENT_NAME                 string   SEGMENT_OID                  string   PRIMARYMP                    string   PRIMARYLAT                   string   PRIMARYLONG                  string   SECONDARYMP                  string   SECONDARYLAT                 string   SECONDARYLONG                string   ROUTE_NAME                   string   SEGMENT_DATE                 string   SOURCE                       string   OBJECTID                     int   SEGMENT_ID                   string   json_ogc_wkt_crs             string   json_geometry                object
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE XML XML_1::Feature multi_reader_keyword,$(DATASET_KEYWORD_XML_1) TO FME_GENERIC ::Feature ALIAS_GEOMETRY    ROUTE JSON JSON_1::Nebraska multi_reader_keyword,$(DATASET_KEYWORD_JSON_1) TO FME_GENERIC ::Nebraska ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+XML_1_MERGE_DEF XML_1::Feature EXACT Feature
+JSON_1_MERGE_DEF JSON_1::Nebraska EXACT Nebraska
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Feature (XML_1) Splitter"    INPUT FEATURE_TYPE Feature    OUTPUT FEATURE_TYPE Feature_XML_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Nebraska (JSON_1) Splitter"    INPUT FEATURE_TYPE Nebraska    OUTPUT FEATURE_TYPE Nebraska_JSON_1_0_cc93SIDKEaQ=    OUTPUT FEATURE_TYPE Nebraska_JSON_1_1_D6PaTIdHTKk=
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME Filter_Road_Conditions    INPUT  FEATURE_TYPE Feature_XML_1    OUTPUT FEATURE_TYPE Filter_Road_Conditions_TESTFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME Filter_Road_Conditions_TestFactory_0 INPUT FEATURE_TYPE Filter_Road_Conditions_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>OrganizationID<closeparen>,Filter_Road_Conditions) CONTAINS NESEG ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE Filter_Road_Conditions_NE<space>Road<space>Conditions OUTPUT FAILED FEATURE_TYPE Filter_Road_Conditions_TESTFILTERINPUTLINE_1
+FACTORY_DEF * TeeFactory FACTORY_NAME Filter_Road_Conditions_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE Filter_Road_Conditions_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE Filter_Road_Conditions_<lt>UNFILTERED<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Filter_Road_Conditions <lt>UNFILTERED<gt> Output Nuker"   INPUT FEATURE_TYPE Filter_Road_Conditions_<lt>UNFILTERED<gt>
+# -------------------------------------------------------------------------
+
+
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME DateTimeFormat    INPUT  FEATURE_TYPE Filter_Road_Conditions_NE<space>Road<space>Conditions    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "FMEDATA_READ" "<at>DateTimeAdd<openparen><at>Timestamp<openparen>^Y^m^d^H^M^S<closeparen><comma>PT<at>Left<openparen><at>Right<openparen><at>DateTimeNow<openparen>local<closeparen><comma>4<closeparen><comma>1<closeparen>H<closeparen>" "SET_TO" }      ATTR_ACTION { "" "REPORT_UPDATED" "<at>DateTimeAdd<openparen><at>Value<openparen>UpdateTimeDate<closeparen><at>Value<openparen>UpdateTimeTime<closeparen><comma>PT<at>Right<openparen><at>Left<openparen><at>Value<openparen>UpdateTimeUTCoffset<closeparen><comma>3<closeparen><comma>1<closeparen>H<closeparen>" "SET_TO" }      ATTR_ACTION { "" "REPORT_CREATED" "<at>DateTimeAdd<openparen><at>Value<openparen>MessageIssueDate<closeparen><at>Value<openparen>MessageIssueTime<closeparen><comma>PT<at>Right<openparen><at>Left<openparen><at>Value<openparen>MessageIssueUTCoffset<closeparen><comma>3<closeparen><comma>1<closeparen>H<closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE DateTimeFormat_OUTPUT
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * InlineQueryFactory FACTORY_NAME InlineQuerier TABLE_DEF GEOM PRIMARYMP<comma><quote>real<openparen>6<comma>2<closeparen><quote><comma>SECONDARYMP<comma><quote>real<openparen>6<comma>2<closeparen><quote><comma>ROUTE_NAME<comma>text TABLE_DEF CARS LinearReference1<comma><quote>real<openparen>6<comma>2<closeparen><quote><comma>LinearReference2<comma><quote>real<openparen>6<comma>2<closeparen><quote><comma>RouteDesignator<comma>text<comma>REPORT_UPDATED<comma>text<comma>REPORT_CREATED<comma>text QUERY_DEF Merging SQL_ENCODED SELECT<space>*<lf>FROM<space>GEOM<comma><space>CARS<lf>WHERE<space><openparen>GEOM.ROUTE_NAME=CARS.RouteDesignator<closeparen><space>AND<space><openparen>GEOM.PRIMARYMP<space>BETWEEN<space>CARS.LinearReference1<space>AND<space>CARS.LinearReference2<closeparen><space>AND<space><openparen>GEOM.SECONDARYMP<space>BETWEEN<space>CARS.LinearReference1<space>AND<space>CARS.LinearReference2<closeparen><semicolon> GEOMETRY_SELECTION FIRST QUERY_DEF No<space>Data SQL_ENCODED SELECT<space>count<openparen>*<closeparen><space>as<space>count<space>FROM<space>CARS<semicolon> GEOMETRY_SELECTION FIRST INPUT CARS FEATURE_TYPE DateTimeFormat_OUTPUT INPUT GEOM FEATURE_TYPE Nebraska_JSON_1_0_cc93SIDKEaQ= OUTPUT No<space>Data FEATURE_TYPE InlineQuerier_No<space>Data OUTPUT Merging FEATURE_TYPE InlineQuerier_Merging
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME CountTester    INPUT  FEATURE_TYPE InlineQuerier_No<space>Data    TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>count<closeparen>,CountTester) = 0 ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE CountTester_PASSED
+# -------------------------------------------------------------------------
+FACTORY_DEF * InlineQueryFactory FACTORY_NAME NullMerger TABLE_DEF GEOM PRIMARYMP<comma><quote>real<openparen>31<comma>15<closeparen><quote><comma>SECONDARYMP<comma><quote>real<openparen>13<comma>8<closeparen><quote><comma>ROUTE_NAME<comma>text TABLE_DEF Count count<comma>varchar<openparen>200<closeparen> QUERY_DEF Merging SQL_ENCODED SELECT<space>*<space>FROM<space>GEOM<comma><space>Count<space>WHERE<space>Count.count<space>=<space><apos>0<apos><semicolon> GEOMETRY_SELECTION FIRST INPUT Count FEATURE_TYPE CountTester_PASSED INPUT GEOM FEATURE_TYPE Nebraska_JSON_1_1_D6PaTIdHTKk= OUTPUT Merging FEATURE_TYPE NullMerger_Merging
+# -------------------------------------------------------------------------
+
+
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME AttributeManager_3    INPUT  FEATURE_TYPE NullMerger_Merging    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "ROAD_CONDITION" "0" "SET_TO" }      ATTR_ACTION { "" "SOURCE" "Nebraska<space>DOT" "SET_TO" }      ATTR_ACTION { "" "SOURCE_LINK" "https:<solidus><solidus>hb.511.nebraska.gov" "SET_TO" }      ATTR_ACTION { "SOURCE" "SOURCE" "" "REMOVE" }      ATTR_ACTION { "" "HEADLINE" "FME_NULL_VALUE" "SET_TO" }      ATTR_ACTION { "" "DESCRIPTION" "FME_NULL_VALUE" "SET_TO" }      ATTR_ACTION { "" "REPORT_ID" "FME_NULL_VALUE" "SET_TO" }      ATTR_ACTION { "" "REPORT_UPDATED" "FME_NULL_VALUE" "SET_TO" }      ATTR_ACTION { "" "REPORT_CREATED" "FME_NULL_VALUE" "SET_TO" }      ATTR_ACTION { "" "FMEDATA_READ" "<at>Timestamp<openparen>^Y^m^d^H^M^S<closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE AttributeManager_3_OUTPUT
+
+# -------------------------------------------------------------------------
+
+
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME AttributeManager    INPUT  FEATURE_TYPE InlineQuerier_Merging    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "ROAD_CONDITION" "FME_CONDITIONAL:DEFAULT_VALUE'Data<space>Not<space>Available'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>hd_pavementcond<closeparen> = dry<space>pavement;TEST <at>Value<openparen>hd_pavementcond<closeparen> = wet;TEST <at>Value<openparen>hd_pavementcond<closeparen> = seasonal<space>roadway<space>conditions;TEST <at>Value<openparen>hd_pavementcond<closeparen> = seasonal;TEST <at>Value<openparen>hd_pavementcond<closeparen> = Seasonal;TEST <at>Value<openparen>hd_pavementcond<closeparen> = normal<space>driving<space>conditions'Seasonal'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>hd_pavementcond<closeparen> = impassable;TEST <at>Value<openparen>hd_pavementcond<closeparen> = Impassable'Impassable'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>hd_pavementcond<closeparen> = travel<space>not<space>advised;TEST <at>Value<openparen>ph_pavementcond<closeparen> = travel<space>not<space>advised'Travel<space>Not<space>Advised'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>hd_pavementcond<closeparen> BEGINS_WITH completely'Completely<space>Covered'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>hd_pavementcond<closeparen> BEGINS_WITH partially;TEST <at>Value<openparen>hd_pavementcond<closeparen> = icy<space>bridges'Partially<space>Covered'FME_NUM_CONDITIONS6___" "SET_TO" }      ATTR_ACTION { "" "SOURCE" "Nebraska<space>DOT" "SET_TO" }      ATTR_ACTION { "" "SOURCE_LINK" "https:<solidus><solidus>hb.511.nebraska.gov<solidus>#roadReports<solidus>eventAlbum<solidus><at>Value<openparen>ID<closeparen>?timeFrame=TODAY<amp>layers=winterDriving" "SET_TO" }      ATTR_ACTION { "LinearReference1" "LinearReference1" "" "REMOVE" }      ATTR_ACTION { "LinearReference2" "LinearReference2" "" "REMOVE" }      ATTR_ACTION { "RouteDesignator" "RouteDesignator" "" "REMOVE" }      ATTR_ACTION { "Descriptions" "Descriptions" "" "REMOVE" }      ATTR_ACTION { "ID" "REPORT_ID" "" "RENAME_SET_VALUE" }      ATTR_ACTION { "LinkDirection" "LinkDirection" "" "REMOVE" }      ATTR_ACTION { "MessageIssueDate" "MessageIssueDate" "" "REMOVE" }      ATTR_ACTION { "MessageIssueTime" "MessageIssueTime" "" "REMOVE" }      ATTR_ACTION { "OrganizationID" "OrganizationID" "" "REMOVE" }      ATTR_ACTION { "UpdateTimeDate" "UpdateTimeDate" "" "REMOVE" }      ATTR_ACTION { "UpdateTimeTime" "UpdateTimeTime" "" "REMOVE" }      ATTR_ACTION { "hd_pavementcond" "HEADLINE" "" "RENAME_SET_VALUE" }      ATTR_ACTION { "ph_pavementcond" "DESCRIPTION" "" "RENAME_SET_VALUE" }    OUTPUT OUTPUT FEATURE_TYPE AttributeManager_OUTPUT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC AttributeManager_OUTPUT TO JSON __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Nebraska<closeparen> GEOMETRY    ROUTE FME_GENERIC AttributeManager_3_OUTPUT TO JSON __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Nebraska<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+JSON_2_DEF Nebraska   ROAD_CONDITION               string   SOURCE                       string   SOURCE_LINK                  string   PRIMARYMP                    string   SECONDARYMP                  string   ROUTE_NAME                   string   SEGMENT_NAME                 string   SEGMENT_ID                   string   SEGMENT_OID                  string   PRIMARYLAT                   string   PRIMARYLONG                  string   SECONDARYLAT                 string   SECONDARYLONG                string   REPORT_UPDATED               string   REPORT_CREATED               string   REPORT_ID                    string   HEADLINE                     string   DESCRIPTION                  string   FMEDATA_READ                 string   STATUS                       string   SEGMENT_DATE                 string   OBJECTID                     int

@@ -1,0 +1,1642 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files\FME\fme.exe" "C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\JSONs_to_AGOL.fmw"
+#          --SourceDataset_JSON """"""C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\Illinois.json"" ""C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\Kansas.json"" ""C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\Minnesota.json"" ""C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\Missouri.json"" ""C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\Nebraska.json"" ""C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\NorthDakota.json"" ""C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\SouthDakota.json"" ""C:\Users\s517020\Documents\FME\Workspaces\Midwest Road Conditions\Data\Wisconsin.json""""""
+#          --UTC_Offset "6"
+#    
+#    
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2017.1.1.1 (20171014 - Build 17652 - WIN64)"
+#!   FME_DOCUMENT_PRIORGUID="5a6e6392-0aac-4812-9afc-292ced74580c,232689f5-3875-4cb9-b942-2c69e737b2b2,f88d86b3-86fd-453b-960b-0ecdcb14355d,272c0f0a-5fd2-4a9c-8fe0-5414515c28a4,698f59c9-94bf-41cc-a649-aaec1093ac6e,9032187c-4ceb-4fed-a5fe-2a60b66b7822,f774739f-86bd-4701-8994-70d46e67aee4,02251ba1-ebc3-4245-b627-b8121e373b0d,9740413d-ca04-4943-9be4-60340bdb05b1,04af5193-63bb-4676-aa0e-1cb2ab674534,283596d9-7238-4c2d-bd58-b62903f58ef0,2a4a39ab-84e1-4d21-812e-942856e1085b,44ac1a04-f33f-4b4d-92be-4a1253f233fd,c1177b06-2d45-4001-ae54-10e68c5ede7b,14602466-2c1b-4fc2-b790-993ccecfb68e,2f7486c3-252c-4c3b-9e4c-69ef2e07a0aa,dc0a9b54-29d6-4818-82fc-b3ef1a0d89a8,bf048d5b-8139-4855-bd47-0d0c9ad9bfe4,430ff8af-63a9-4657-8575-486240530923,38ef9e1f-7f72-431f-a353-3b854758c9bd,9165a6e7-a486-4094-9c82-1ba0062b7639,f90138cc-e991-4dff-b748-65ea901bdc92,ff4fb8bf-80df-4756-83e3-3e75a1a9a709,2aacbe90-9fb1-447b-a10b-b4e0801f3ad8,07abd47b-93d4-4fe0-93be-24ce2cfde0b1,f70e9ee7-b389-4f20-b454-0fba342013c0,00902e48-5277-4dc3-ab32-c5bd4c90873d,deae0ee0-9500-43fb-a066-f0ca8496a5ab,9c795da1-c6f3-485e-b916-8421aa8c5ed4,49af47e3-fac5-41fb-b9f1-4fc74e767ee7,2f8fff9f-6b00-46f7-8911-b9b6768766b4,ba46afb5-2cf1-4b8c-b1e1-b3f92253fc91,735e4094-9943-445b-ba06-de86850a29e4,51b30fca-5987-42c0-9a46-61a12f0334ec,ff3b9b7f-3ff3-4a68-886d-05ca89885b2e,86444cb0-6bc4-4cc1-b7d2-53e72ebb0e3a,5b3a9446-a886-4c32-9e0a-de016f2e6fb9,a33b48d4-c734-4c2d-83e5-5ace179aadd3,ab80f23a-ebc5-4df4-921b-e3b1d70d8188,b83b2de0-0765-4f3e-91aa-11e790fb4329"
+#!   SOURCE="NONE"
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   DESCRIPTION="&lt;p&gt;Writes road conditions to AGOL.&lt;/p&gt;&#10;"
+#!   MAX_LOG_FEATURES="200"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_DOCUMENT_GUID="2eae0ab0-dddd-4b2e-ad15-23df2f9f9698"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   BEGIN_PYTHON="#-------------------------------------------------------------------------------&lt;lf&gt;#&lt;space&gt;Name:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Disables&lt;solidus&gt;ReEnables&lt;space&gt;Editing&lt;space&gt;for&lt;space&gt;Service&lt;lf&gt;#&lt;space&gt;Purpose:&lt;lf&gt;#&lt;lf&gt;#&lt;space&gt;Author:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Kelly&lt;space&gt;Gerrow&lt;solidus&gt;Hunter&lt;space&gt;Praska&lt;solidus&gt;Mark&lt;space&gt;McCart&lt;lf&gt;#Contact:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;kgerrow&lt;at&gt;esri.com&lt;lf&gt;#&lt;lf&gt;#&lt;space&gt;Created:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;9&lt;solidus&gt;8&lt;solidus&gt;2016&lt;lf&gt;#-------------------------------------------------------------------------------&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;getToken&lt;openparen&gt;adminUser&lt;comma&gt;&lt;space&gt;pw&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;data&lt;space&gt;=&lt;space&gt;&lt;opencurly&gt;&lt;apos&gt;username&lt;apos&gt;:&lt;space&gt;adminUser&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;password&lt;apos&gt;:&lt;space&gt;pw&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;referer&lt;apos&gt;&lt;space&gt;:&lt;space&gt;&lt;apos&gt;https:&lt;solidus&gt;&lt;solidus&gt;www.arcgis.com&lt;apos&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;f&lt;apos&gt;:&lt;space&gt;&lt;apos&gt;json&lt;apos&gt;&lt;closecurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;url&lt;space&gt;&lt;space&gt;=&lt;space&gt;&lt;apos&gt;https:&lt;solidus&gt;&lt;solidus&gt;arcgis.com&lt;solidus&gt;sharing&lt;solidus&gt;rest&lt;solidus&gt;generateToken&lt;apos&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;jres&lt;space&gt;=&lt;space&gt;requests.post&lt;openparen&gt;url&lt;comma&gt;&lt;space&gt;data=data&lt;comma&gt;&lt;space&gt;verify=False&lt;closeparen&gt;.json&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;return&lt;space&gt;jres&lt;openbracket&gt;&lt;apos&gt;token&lt;apos&gt;&lt;closebracket&gt;&lt;comma&gt;jres&lt;openbracket&gt;&lt;apos&gt;ssl&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;lf&gt;#generates&lt;space&gt;account&lt;space&gt;information&lt;lf&gt;def&lt;space&gt;GetAccount&lt;openparen&gt;pref&lt;comma&gt;&lt;space&gt;tokenfun&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;URL=&lt;space&gt;pref+&lt;apos&gt;www.arcgis.com&lt;solidus&gt;sharing&lt;solidus&gt;rest&lt;solidus&gt;portals&lt;solidus&gt;self?f=json&lt;amp&gt;token=&lt;apos&gt;&lt;space&gt;+&lt;space&gt;tokenfun&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;response&lt;space&gt;=&lt;space&gt;requests.get&lt;openparen&gt;URL&lt;comma&gt;&lt;space&gt;verify=False&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;jres&lt;space&gt;=&lt;space&gt;json.loads&lt;openparen&gt;response.text&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;return&lt;space&gt;jres&lt;openbracket&gt;&lt;apos&gt;urlKey&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;import&lt;space&gt;requests&lt;comma&gt;&lt;space&gt;json&lt;lf&gt;&lt;lf&gt;#Enter&lt;space&gt;Username&lt;space&gt;and&lt;space&gt;Password&lt;lf&gt;user=&lt;space&gt;&lt;quote&gt;USERNAME&lt;quote&gt;&lt;space&gt;#raw_input&lt;openparen&gt;&lt;apos&gt;What&lt;space&gt;is&lt;space&gt;the&lt;space&gt;ArcGIS&lt;space&gt;Online&lt;space&gt;Username?&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;pw&lt;space&gt;=&lt;space&gt;&lt;quote&gt;PASSWORD&lt;quote&gt;&lt;space&gt;#raw_input&lt;openparen&gt;&lt;apos&gt;What&lt;space&gt;is&lt;space&gt;the&lt;space&gt;ArcGIS&lt;space&gt;Online&lt;space&gt;Password?&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;#get&lt;space&gt;account&lt;space&gt;information&lt;lf&gt;token=&lt;space&gt;getToken&lt;openparen&gt;user&lt;comma&gt;&lt;space&gt;pw&lt;closeparen&gt;&lt;lf&gt;if&lt;space&gt;token&lt;openbracket&gt;1&lt;closebracket&gt;&lt;space&gt;==&lt;space&gt;False:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pref=&lt;apos&gt;http:&lt;solidus&gt;&lt;solidus&gt;&lt;apos&gt;&lt;lf&gt;else:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pref=&lt;apos&gt;https:&lt;solidus&gt;&lt;solidus&gt;&lt;apos&gt;&lt;lf&gt;#Create&lt;space&gt;Portal&lt;space&gt;URL&lt;lf&gt;t=GetAccount&lt;openparen&gt;pref&lt;comma&gt;token&lt;openbracket&gt;0&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;portalUrl=pref+t&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;restURL=&lt;apos&gt;http:&lt;solidus&gt;&lt;solidus&gt;services.arcgis.com&lt;solidus&gt;8lRhdTsQyJpO52F1&lt;solidus&gt;arcgis&lt;solidus&gt;rest&lt;solidus&gt;admin&lt;solidus&gt;services&lt;solidus&gt;MidwestWinterRoadConditions&lt;solidus&gt;FeatureServer&lt;solidus&gt;updateDefinition&lt;apos&gt;&lt;space&gt;#modify&lt;space&gt;URL&lt;lf&gt;defCapabilities=&lt;space&gt;&lt;apos&gt;&lt;opencurly&gt;&lt;quote&gt;hasStaticData&lt;quote&gt;:false&lt;comma&gt;&lt;quote&gt;capabilities&lt;quote&gt;:&lt;quote&gt;Query&lt;comma&gt;Editing&lt;comma&gt;Create&lt;comma&gt;Update&lt;comma&gt;Delete&lt;comma&gt;Extract&lt;quote&gt;&lt;closecurly&gt;&lt;apos&gt;&lt;space&gt;#editing&lt;space&gt;enabled&lt;lf&gt;#defCapabilities=&lt;space&gt;&lt;apos&gt;&lt;opencurly&gt;&lt;quote&gt;capabilities&lt;quote&gt;:&lt;quote&gt;Query&lt;quote&gt;&lt;closecurly&gt;&lt;apos&gt;&lt;space&gt;#editing&lt;space&gt;disabled&lt;lf&gt;data&lt;space&gt;=&lt;space&gt;&lt;opencurly&gt;&lt;apos&gt;updateDefinition&lt;apos&gt;:&lt;space&gt;defCapabilities&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;token&lt;apos&gt;:token&lt;openbracket&gt;0&lt;closebracket&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;f&lt;apos&gt;:&lt;space&gt;&lt;apos&gt;json&lt;apos&gt;&lt;closecurly&gt;&lt;lf&gt;&lt;lf&gt;#Send&lt;space&gt;Request&lt;lf&gt;res&lt;space&gt;=requests.post&lt;openparen&gt;restURL&lt;comma&gt;&lt;space&gt;data&lt;space&gt;=&lt;space&gt;data&lt;comma&gt;&lt;space&gt;verify=False&lt;closeparen&gt;.json&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;print&lt;space&gt;res&lt;lf&gt;if&lt;space&gt;res&lt;openbracket&gt;&lt;apos&gt;success&lt;apos&gt;&lt;closebracket&gt;==True:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;space&gt;&lt;apos&gt;Service&lt;space&gt;successfully&lt;space&gt;Added&lt;apos&gt;&lt;lf&gt;else:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;space&gt;&lt;apos&gt;Service&lt;space&gt;NOT&lt;space&gt;ADDED&lt;apos&gt;"
+#!   SHOW_ANNOTATIONS="true"
+#!   FME_BUILD_NUM="17652"
+#!   LOG_FILE=""
+#!   END_PYTHON="#-------------------------------------------------------------------------------&lt;lf&gt;#&lt;space&gt;Name:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Disables&lt;solidus&gt;ReEnables&lt;space&gt;Editing&lt;space&gt;for&lt;space&gt;Service&lt;space&gt;&lt;amp&gt;&lt;space&gt;Writes&lt;space&gt;Feature&lt;space&gt;Collections&lt;space&gt;to&lt;space&gt;AGOL&lt;lf&gt;#&lt;space&gt;Purpose:&lt;lf&gt;#&lt;lf&gt;#&lt;space&gt;Authors:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Kelly&lt;space&gt;Gerrow&lt;space&gt;&lt;openparen&gt;Esri&lt;closeparen&gt;&lt;semicolon&gt;&lt;space&gt;Mark&lt;space&gt;McCart&lt;space&gt;&lt;openparen&gt;HNTB&lt;closeparen&gt;&lt;semicolon&gt;&lt;space&gt;Hunter&lt;space&gt;Praska&lt;space&gt;&lt;openparen&gt;Iowa&lt;space&gt;DOT&lt;closeparen&gt;&lt;semicolon&gt;&lt;space&gt;Eric&lt;space&gt;Rodenberg&lt;space&gt;&lt;openparen&gt;Esri&lt;closeparen&gt;&lt;lf&gt;#&lt;space&gt;Contact:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;kgerrow&lt;at&gt;esri.com&lt;semicolon&gt;&lt;space&gt;mmccart&lt;at&gt;hntb.com&lt;semicolon&gt;&lt;space&gt;hunter.praska&lt;at&gt;iowa.dot.gov&lt;semicolon&gt;&lt;space&gt;erodenberg&lt;at&gt;esri.com&lt;lf&gt;#&lt;lf&gt;#&lt;space&gt;Created:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;11&lt;solidus&gt;18&lt;solidus&gt;2015&lt;lf&gt;#&lt;space&gt;Modified:&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;8&lt;solidus&gt;10&lt;solidus&gt;2016&lt;space&gt;-&lt;space&gt;To&lt;space&gt;include&lt;space&gt;Feature&lt;space&gt;Collection&lt;space&gt;Creation&lt;space&gt;on&lt;space&gt;AGOL&lt;space&gt;&lt;openparen&gt;Mark&lt;space&gt;and&lt;space&gt;Eric&lt;closeparen&gt;&lt;lf&gt;#-------------------------------------------------------------------------------&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;getToken&lt;openparen&gt;adminUser&lt;comma&gt;&lt;space&gt;pw&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;data&lt;space&gt;=&lt;space&gt;&lt;opencurly&gt;&lt;apos&gt;username&lt;apos&gt;:&lt;space&gt;adminUser&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;password&lt;apos&gt;:&lt;space&gt;pw&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;referer&lt;apos&gt;&lt;space&gt;:&lt;space&gt;&lt;apos&gt;https:&lt;solidus&gt;&lt;solidus&gt;www.arcgis.com&lt;apos&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;f&lt;apos&gt;:&lt;space&gt;&lt;apos&gt;json&lt;apos&gt;&lt;closecurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;url&lt;space&gt;&lt;space&gt;=&lt;space&gt;&lt;apos&gt;https:&lt;solidus&gt;&lt;solidus&gt;arcgis.com&lt;solidus&gt;sharing&lt;solidus&gt;rest&lt;solidus&gt;generateToken&lt;apos&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;jres&lt;space&gt;=&lt;space&gt;requests.post&lt;openparen&gt;url&lt;comma&gt;&lt;space&gt;data=data&lt;comma&gt;&lt;space&gt;verify=False&lt;closeparen&gt;.json&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;return&lt;space&gt;jres&lt;openbracket&gt;&lt;apos&gt;token&lt;apos&gt;&lt;closebracket&gt;&lt;comma&gt;jres&lt;openbracket&gt;&lt;apos&gt;ssl&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;lf&gt;#generates&lt;space&gt;account&lt;space&gt;information&lt;lf&gt;def&lt;space&gt;GetAccount&lt;openparen&gt;pref&lt;comma&gt;&lt;space&gt;tokenfun&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;URL=&lt;space&gt;pref+&lt;apos&gt;www.arcgis.com&lt;solidus&gt;sharing&lt;solidus&gt;rest&lt;solidus&gt;portals&lt;solidus&gt;self?f=json&lt;amp&gt;token=&lt;apos&gt;&lt;space&gt;+&lt;space&gt;tokenfun&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;response&lt;space&gt;=&lt;space&gt;requests.get&lt;openparen&gt;URL&lt;comma&gt;&lt;space&gt;verify=False&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;jres&lt;space&gt;=&lt;space&gt;json.loads&lt;openparen&gt;response.text&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;return&lt;space&gt;jres&lt;openbracket&gt;&lt;apos&gt;urlKey&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;import&lt;space&gt;requests&lt;comma&gt;&lt;space&gt;json&lt;lf&gt;#&lt;space&gt;Next&lt;space&gt;3&lt;space&gt;lines&lt;space&gt;of&lt;space&gt;code&lt;space&gt;are&lt;space&gt;required&lt;space&gt;to&lt;space&gt;copy&lt;solidus&gt;create&lt;space&gt;Feature&lt;space&gt;Collections&lt;space&gt;on&lt;space&gt;AGOL&lt;lf&gt;import&lt;space&gt;sys&lt;lf&gt;sys.path.append&lt;openparen&gt;r&lt;quote&gt;C:&lt;backslash&gt;TEMP&lt;backslash&gt;OverwriteScript&lt;quote&gt;&lt;closeparen&gt;&lt;space&gt;#Originally&lt;space&gt;provied&lt;space&gt;by&lt;space&gt;Eric&lt;space&gt;R.&lt;space&gt;at&lt;space&gt;Esri&lt;comma&gt;&lt;space&gt;but&lt;space&gt;not&lt;space&gt;needed&lt;space&gt;to&lt;space&gt;run&lt;space&gt;in&lt;space&gt;FME&lt;lf&gt;from&lt;space&gt;overwrite_RC_NonIA&lt;space&gt;import&lt;space&gt;run&lt;space&gt;#Rename&lt;space&gt;&lt;apos&gt;overwrite_AVL_Direct&lt;apos&gt;&lt;space&gt;to&lt;space&gt;name&lt;space&gt;of&lt;space&gt;.py&lt;space&gt;file&lt;space&gt;you&lt;space&gt;want&lt;space&gt;to&lt;space&gt;run.&lt;space&gt;Store&lt;space&gt;it&lt;space&gt;here:&lt;space&gt;C:&lt;backslash&gt;apps&lt;backslash&gt;FME&lt;backslash&gt;2016&lt;backslash&gt;python&lt;backslash&gt;python27&lt;backslash&gt;&lt;space&gt;for&lt;space&gt;FME&lt;space&gt;Desktop.&lt;space&gt;For&lt;space&gt;FME&lt;space&gt;Server:&lt;space&gt;Load&lt;space&gt;to&lt;space&gt;RESOURCES&lt;gt&gt;ENGINE&lt;gt&gt;PLUGINS&lt;gt&gt;PYTHON&lt;space&gt;via&lt;space&gt;Web&lt;space&gt;UI&lt;lf&gt;&lt;lf&gt;#Enter&lt;space&gt;Username&lt;space&gt;and&lt;space&gt;Password&lt;lf&gt;user=&lt;space&gt;&lt;quote&gt;USERNAME&lt;quote&gt;&lt;space&gt;#raw_input&lt;openparen&gt;&lt;apos&gt;What&lt;space&gt;is&lt;space&gt;the&lt;space&gt;ArcGIS&lt;space&gt;Online&lt;space&gt;Username?&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;pw&lt;space&gt;=&lt;space&gt;&lt;quote&gt;PASSWORD&lt;quote&gt;&lt;space&gt;#raw_input&lt;openparen&gt;&lt;apos&gt;What&lt;space&gt;is&lt;space&gt;the&lt;space&gt;ArcGIS&lt;space&gt;Online&lt;space&gt;Password?&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;#get&lt;space&gt;account&lt;space&gt;information&lt;lf&gt;token=&lt;space&gt;getToken&lt;openparen&gt;user&lt;comma&gt;&lt;space&gt;pw&lt;closeparen&gt;&lt;lf&gt;if&lt;space&gt;token&lt;openbracket&gt;1&lt;closebracket&gt;&lt;space&gt;==&lt;space&gt;False:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pref=&lt;apos&gt;http:&lt;solidus&gt;&lt;solidus&gt;&lt;apos&gt;&lt;lf&gt;else:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pref=&lt;apos&gt;https:&lt;solidus&gt;&lt;solidus&gt;&lt;apos&gt;&lt;lf&gt;#Create&lt;space&gt;Portal&lt;space&gt;URL&lt;lf&gt;t=GetAccount&lt;openparen&gt;pref&lt;comma&gt;token&lt;openbracket&gt;0&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;portalUrl=pref+t&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;restURL=&lt;apos&gt;http:&lt;solidus&gt;&lt;solidus&gt;services.arcgis.com&lt;solidus&gt;8lRhdTsQyJpO52F1&lt;solidus&gt;arcgis&lt;solidus&gt;rest&lt;solidus&gt;admin&lt;solidus&gt;services&lt;solidus&gt;MidwestWinterRoadConditions&lt;solidus&gt;FeatureServer&lt;solidus&gt;updateDefinition&lt;apos&gt;&lt;space&gt;#modify&lt;space&gt;URL&lt;lf&gt;defCapabilities=&lt;space&gt;&lt;apos&gt;&lt;opencurly&gt;&lt;quote&gt;capabilities&lt;quote&gt;:&lt;quote&gt;Query&lt;comma&gt;Extract&lt;quote&gt;&lt;closecurly&gt;&lt;apos&gt;&lt;space&gt;#editing&lt;space&gt;disabled&lt;lf&gt;data&lt;space&gt;=&lt;space&gt;&lt;opencurly&gt;&lt;apos&gt;updateDefinition&lt;apos&gt;:&lt;space&gt;defCapabilities&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;token&lt;apos&gt;:token&lt;openbracket&gt;0&lt;closebracket&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;f&lt;apos&gt;:&lt;space&gt;&lt;apos&gt;json&lt;apos&gt;&lt;closecurly&gt;&lt;lf&gt;&lt;lf&gt;#Send&lt;space&gt;Request&lt;lf&gt;res&lt;space&gt;=requests.post&lt;openparen&gt;restURL&lt;comma&gt;&lt;space&gt;data&lt;space&gt;=&lt;space&gt;data&lt;comma&gt;&lt;space&gt;verify=False&lt;closeparen&gt;.json&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;print&lt;space&gt;res&lt;lf&gt;if&lt;space&gt;res&lt;openbracket&gt;&lt;apos&gt;success&lt;apos&gt;&lt;closebracket&gt;==True:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;space&gt;&lt;apos&gt;Service&lt;space&gt;successfully&lt;space&gt;Added&lt;apos&gt;&lt;lf&gt;else:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;space&gt;&lt;apos&gt;Service&lt;space&gt;NOT&lt;space&gt;ADDED&lt;apos&gt;&lt;lf&gt;&lt;lf&gt;#&lt;space&gt;Run&lt;space&gt;the&lt;space&gt;Feature&lt;space&gt;Collection&lt;space&gt;creation&lt;space&gt;script&lt;space&gt;provided&lt;space&gt;by&lt;space&gt;Esri&lt;space&gt;and&lt;space&gt;modified&lt;space&gt;for&lt;space&gt;each&lt;space&gt;FC&lt;lf&gt;config_file&lt;space&gt;=&lt;space&gt;r&lt;quote&gt;C:&lt;backslash&gt;Apps&lt;backslash&gt;FME&lt;backslash&gt;2016&lt;backslash&gt;python&lt;backslash&gt;python27&lt;backslash&gt;overwrite_RC_NonIA.cfg&lt;quote&gt;&lt;space&gt;#For&lt;space&gt;FME&lt;space&gt;Desktop&lt;space&gt;Only.&lt;space&gt;Must&lt;space&gt;copy&lt;space&gt;.cfg&lt;space&gt;and&lt;space&gt;.py&lt;space&gt;file&lt;space&gt;here&lt;lf&gt;#config_file&lt;space&gt;=&lt;space&gt;r&lt;quote&gt;C:&lt;backslash&gt;ProgramData&lt;backslash&gt;Safe&lt;space&gt;Software&lt;backslash&gt;FME&lt;space&gt;Server&lt;backslash&gt;resources&lt;backslash&gt;engine&lt;backslash&gt;Plugins&lt;backslash&gt;python&lt;backslash&gt;overwrite_RC_NonIA.cfg&lt;quote&gt;&lt;space&gt;#For&lt;space&gt;FME&lt;space&gt;Server&lt;space&gt;Only.&lt;space&gt;Must&lt;space&gt;load&lt;space&gt;to&lt;space&gt;FME&lt;space&gt;Server&lt;space&gt;Resources&lt;lf&gt;run&lt;openparen&gt;config_file&lt;closeparen&gt;"
+#!   WORKSPACE_VERSION="1"
+#!   HISTORY="01&lt;solidus&gt;2017,D&lt;space&gt;Runneals,Workspace&lt;space&gt;Created,06&lt;solidus&gt;2017,D&lt;space&gt;Runneals,Updated&lt;space&gt;to&lt;space&gt;2017.1&lt;space&gt;+&lt;space&gt;Documentation"
+#!   BEGIN_TCL=""
+#!   DOC_EXTENTS="1643.87 1179"
+#!   PYTHON_COMPATIBILITY="27"
+#!   DESTINATION_ROUTING_FILE=""
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   MARKDOWN_DESCRIPTION="Writes road conditions to AGOL."
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   MARKDOWN_USAGE=""
+#!   ZOOM_SCALE="100"
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   PASSWORD=""
+#!   USE_MARKDOWN="YES"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   DOC_TOP_LEFT="-713.882 -1200.5"
+#!   TERMINATE_REJECTED="NO"
+#!   DESTINATION="NONE"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   USAGE=""
+#!   SHOW_INFO_NODES="true"
+#!   END_TCL=""
+#!   TITLE="JSONs to AGOL"
+#!   VIEW_POSITION="-1021.89 84.3758"
+#!   SOURCE_ROUTING_FILE=""
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   CATEGORY="Road Conditions"
+#!   FME_SERVER_SERVICES=""
+#!   LAST_SAVE_DATE="2017-12-05T09:42:31"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="JSON"
+#!   DATASET="$(SourceDataset_JSON)"
+#!   KEYWORD="JSON_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_type string fme_sweep_angle float fme_rotation float fme_dataset string fme_color string fme_text_size float fme_secondary_axis float fme_feature_type string fme_basename string multi_reader_full_id int fme_primary_axis float multi_reader_keyword string fme_geometry fme_char(50) fme_start_angle float multi_reader_id int fme_text_string string fme_fill_color string multi_reader_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="16492"
+#!   MIN_FEATURES=""
+#!   COORDSYS=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   START_FEATURE=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the JSON file(s) or Specify the JSON URL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="json file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the JSON file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="JSON_IN_SEARCH_ENVELOPE_MINX JSON_IN_SEARCH_ENVELOPE_MINY JSON_IN_SEARCH_ENVELOPE_MAXX JSON_IN_SEARCH_ENVELOPE_MAXY JSON_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#!   DATASET=""
+#!   KEYWORD="ARCGISONLINEFEATURES_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="arcgisonline_type {FME_GEN_GEOMETRY} arcgisonline_mode INSERT arcgisonline_truncate_layer NO"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="arcgisonline_globalid esriFieldTypeString(254) arcgisonline_objectid esriFieldTypeInteger fme_type esriFieldTypeString(50) arcgisonline_attachment{}.globalid esriFieldTypeString(254) fme_sweep_angle esriFieldTypeDouble arcgisonline_attachment{}.name esriFieldTypeString(254) fme_rotation esriFieldTypeDouble fme_dataset esriFieldTypeString(50) fme_color esriFieldTypeString(50) arcgisonline_type esriFieldTypeString(254) arcgisonline_attachment{}.size esriFieldTypeInteger arcgisonline_attachment{}.content_type esriFieldTypeString(254) fme_text_size esriFieldTypeDouble fme_secondary_axis esriFieldTypeDouble fme_feature_type esriFieldTypeString(50) fme_basename esriFieldTypeString(50) fme_primary_axis esriFieldTypeDouble fme_geometry fme_char(50) arcgisonline_attachment{}.data esriFieldTypeString(254) fme_start_angle esriFieldTypeDouble fme_text_string esriFieldTypeString(50) arcgisonline_attachment{}.id esriFieldTypeInteger fme_fill_color esriFieldTypeString(50)"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP arcgisonline_layer_group arcgisonline_mode%arcgisonline_truncate_layer%arcgisonline_rollback_on_failure Layer&quot; &quot;&quot; &quot;GUI FORCE_DEFS WHOLE_LINE CHOICE arcgisonline_mode INSERT%UPDATE%DELETE Writer Mode&quot; INSERT &quot;GUI CHOICE arcgisonline_truncate_layer YES%NO Truncate First&quot; NO "
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="NONE"
+#!   GENERATE_FME_BUILD_NUM="17539"
+#!   COORDSYS="SPHERICAL_MERCATOR"
+#!   FANOUT_GROUP="NO"
+#!   FANOUT_EXPRESSION=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="Layer1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Layer"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_AUTHENTICATION"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="ARCGISONLINEFEATURES_IN_FEATURES_PER_REQUEST ARCGISONLINEFEATURES_OUT_FEATURES_PER_REQUEST ARCGISONLINEFEATURES_OUT_USE_GLOBAL_ID"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="object"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="array"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="object_or_array"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeInteger"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeInteger"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeInteger"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeInteger"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeSmallInteger"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeInteger"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeSmallInteger"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeSingle"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeDouble"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeDate"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeDate"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeDate"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString(254)"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString(254)"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString(254)"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString(254)"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeString"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeOID"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeDouble"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeSmallInteger"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeGUID(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="esriFieldTypeGlobalID(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_multipoint"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_point"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_polyline"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_polygon"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_polygon"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_no_geom"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_no_geom"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_no_geom"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_no_geom"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_polygon"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_polyline"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="arcgisonline_no_geom"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="ARCGISONLINEFEATURES"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Wisconsin"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="13"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-621.882 -267.999"
+#!   BOUNDING_RECT="-621.882 -267.999 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="SouthDakota"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="14"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-621.882 -405.999"
+#!   BOUNDING_RECT="-621.882 -405.999 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_CREATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_UPDATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="NorthDakota"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="15"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-621.882 -543.999"
+#!   BOUNDING_RECT="-621.882 -543.999 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_CREATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_UPDATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Missouri"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="17"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-621.882 -1096"
+#!   BOUNDING_RECT="-621.882 -1096 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Kansas"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="19"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-621.882 -819.999"
+#!   BOUNDING_RECT="-621.882 -819.999 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_CREATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_UPDATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Illinois"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="20"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-621.882 -129.999"
+#!   BOUNDING_RECT="-621.882 -129.999 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_CREATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_UPDATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Nebraska"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="16"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-621.882 -957.999"
+#!   BOUNDING_RECT="-621.882 -957.999 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_OID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYLAT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYLONG" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYLAT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYLONG" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_UPDATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_CREATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_DATE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Minnesota"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="18"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-621.882 -681.999"
+#!   BOUNDING_RECT="-621.882 -681.999 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYMP" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROUTE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SEGMENT_OID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYLAT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYLONG" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYLAT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SECONDARYLONG" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_UPDATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_CREATED" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="RoadConditions"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="29"
+#!   FEAT_GEOMTYPE="arcgisonline_polyline"
+#!   POSITION="897.733 -787.625"
+#!   BOUNDING_RECT="897.733 -787.625 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="ARCGISONLINEFEATURES_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="esriFieldTypeInteger" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HEADLINE" ATTR_TYPE="esriFieldTypeString(2048)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_UPDATED" ATTR_TYPE="esriFieldTypeDate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_CREATED" ATTR_TYPE="esriFieldTypeDate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DESCRIPTION" ATTR_TYPE="esriFieldTypeString(2048)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE" ATTR_TYPE="esriFieldTypeString(2048)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOURCE_LINK" ATTR_TYPE="esriFieldTypeString(2048)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FMEDATA_READ" ATTR_TYPE="esriFieldTypeDate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUS" ATTR_TYPE="esriFieldTypeString(2048)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="REPORT_ID" ATTR_TYPE="esriFieldTypeString(2048)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AGOL_WRITE" ATTR_TYPE="esriFieldTypeDate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ROAD_CONDITION" ATTR_TYPE="esriFieldTypeSmallInteger" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="arcgisonline_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="arcgisonline_truncate_layer" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="arcgisonline_mode" PARM_VALUE="UPDATE"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#!   NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE="JSON_1"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#!   NAME="Road Conditions"
+#! />
+#! <ITEM
+#!   NAME="JSONs_to_AGOL.fmw"
+#! />
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILE_OR_URL SourceDataset_JSON JSON_Documents(*.json)|*.json|All_Files|* Source JSON (JavaScript Object Notation) File or URL:"
+#!   DEFAULT_VALUE="&quot;&quot;$(FME_MF_DIR)Data\Illinois.json&quot; &quot;$(FME_MF_DIR)Data\Kansas.json&quot; &quot;$(FME_MF_DIR)Data\Minnesota.json&quot; &quot;$(FME_MF_DIR)Data\Missouri.json&quot; &quot;$(FME_MF_DIR)Data\Nebraska.json&quot; &quot;$(FME_MF_DIR)Data\NorthDakota.json&quot; &quot;$(FME_MF_DIR)Data\SouthDakota.json&quot; &quot;$(FME_MF_DIR)Data\Wisconsin.json&quot;&quot;"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI CHOICE_OR_ATTR UTC_Offset 5%6 UTC Offset:"
+#!   DEFAULT_VALUE="6"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="25"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Time Stamp for write to AGOL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="59.3753 -952.627"
+#!   TOP_LEFT="59.3753 -952.627"
+#!   BOTTOM_RIGHT="58.3753 -951.627"
+#!   BOUNDING_RECT="59.3753 -952.627 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="40"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="26"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Map Road Condition values&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;to domains&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="81.2505 -315.121"
+#!   TOP_LEFT="81.2505 -315.121"
+#!   BOTTOM_RIGHT="80.2505 -314.121"
+#!   BOUNDING_RECT="81.2505 -315.121 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="48"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="28"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Write to AGOL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="929.983 -654.248"
+#!   TOP_LEFT="929.983 -654.248"
+#!   BOTTOM_RIGHT="928.983 -653.248"
+#!   BOUNDING_RECT="929.983 -654.248 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="29"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="33"
+#!   NAME="Read in JSON files"
+#!   DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="-713.882 -21.499"
+#!   BOTTOM_RIGHT="-117.882 -1200.5"
+#!   BOUNDING_RECT="-713.882 -21.499 596 1179"
+#!   STICKY="true"
+#!   COLOUR="0.0901961,0.309804,0.921569"
+#!   CONTENTS="16 18 17 19 14 20 15 13 "
+#! />
+#! <BOOKMARK
+#!   IDENTIFIER="27"
+#!   NAME="Final formatting"
+#!   DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="9.37528 -225.121"
+#!   BOTTOM_RIGHT="709.381 -1066.38"
+#!   BOUNDING_RECT="9.37528 -225.121 700.006 841.257"
+#!   STICKY="true"
+#!   COLOUR="0.694118,0.0392157,0.192157"
+#!   CONTENTS="40 51 49 26 34 48 25 "
+#! />
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="34"
+#!   TYPE="StringCaseChanger"
+#!   VERSION="5"
+#!   POSITION="145.876 -634.499"
+#!   BOUNDING_RECT="145.876 -634.499 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HEADLINE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROAD_CONDITION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DESCRIPTION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROUTE_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_CREATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="FMEDATA_READ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATUS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE_LINK" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_UPDATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_OID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRLIST" PARM_VALUE="DESCRIPTION HEADLINE"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringCaseChanger"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRCHOICE" PARM_VALUE="Selected Attributes"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CHANGE_TYPE" PARM_VALUE="Full Title Case"/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="48"
+#!   TYPE="AttributeValueMapper"
+#!   VERSION="6"
+#!   POSITION="145.876 -487.622"
+#!   BOUNDING_RECT="145.876 -487.622 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17491"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HEADLINE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROAD_CONDITION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DESCRIPTION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROUTE_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_CREATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="FMEDATA_READ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATUS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE_LINK" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_UPDATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_OID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="ROAD_CONDITION"/>
+#!     <XFORM_PARM PARM_NAME="DIRECTION" PARM_VALUE="Forward (Source To Destination)"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Road_Condition"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="VALUE_MAP_TABLE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SRC" PARM_VALUE="ROAD_CONDITION"/>
+#!     <XFORM_PARM PARM_NAME="LUT" PARM_VALUE="Data&lt;space&gt;Not&lt;space&gt;Available,0,Seasonal,1,Partially&lt;space&gt;Covered,2,Completely&lt;space&gt;Covered,3,Travel&lt;space&gt;Not&lt;space&gt;Advised,4,Impassable,5"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="40"
+#!   TYPE="AttributeManager"
+#!   VERSION="1"
+#!   POSITION="145.876 -787.625"
+#!   BOUNDING_RECT="145.876 -787.625 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17650"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYMP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROUTE_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HEADLINE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ROAD_CONDITION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_UPDATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_CREATED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DESCRIPTION" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOURCE_LINK" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="FMEDATA_READ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATUS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PRIMARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SECONDARYLONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="REPORT_ID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_OID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SEGMENT_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AGOL_WRITE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="PRIMARYMP PRIMARYMP  NO_OP SECONDARYMP SECONDARYMP  NO_OP ROUTE_NAME ROUTE_NAME  NO_OP SEGMENT_ID SEGMENT_ID  NO_OP SEGMENT_NAME SEGMENT_NAME  NO_OP HEADLINE HEADLINE  NO_OP ROAD_CONDITION ROAD_CONDITION  NO_OP REPORT_UPDATED REPORT_UPDATED  NO_OP REPORT_CREATED REPORT_CREATED  NO_OP DESCRIPTION DESCRIPTION  NO_OP SOURCE SOURCE  NO_OP SOURCE_LINK SOURCE_LINK  NO_OP FMEDATA_READ FMEDATA_READ &lt;at&gt;DateTimeAdd&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;FMEDATA_READ&lt;closeparen&gt;&lt;comma&gt;PT&lt;at&gt;Left&lt;openparen&gt;&lt;at&gt;Right&lt;openparen&gt;&lt;at&gt;DateTimeNow&lt;openparen&gt;local&lt;closeparen&gt;&lt;comma&gt;4&lt;closeparen&gt;&lt;comma&gt;1&lt;closeparen&gt;H&lt;closeparen&gt; SET_TO STATUS STATUS  NO_OP PRIMARYLAT PRIMARYLAT  NO_OP PRIMARYLONG PRIMARYLONG  NO_OP SECONDARYLAT SECONDARYLAT  NO_OP SECONDARYLONG SECONDARYLONG  NO_OP REPORT_ID REPORT_ID  NO_OP SEGMENT_OID SEGMENT_OID  NO_OP OBJECTID OBJECTID  NO_OP SEGMENT_DATE SEGMENT_DATE  NO_OP  AGOL_WRITE &lt;at&gt;Left&lt;openparen&gt;&lt;at&gt;DateTimeNow&lt;openparen&gt;utc&lt;closeparen&gt;&lt;comma&gt;14&lt;closeparen&gt; SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TimeStamper"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="43"
+#!   SOURCE_NODE="13"
+#!   TARGET_NODE="48"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="44"
+#!   SOURCE_NODE="14"
+#!   TARGET_NODE="48"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="41"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="48"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="39"
+#!   SOURCE_NODE="16"
+#!   TARGET_NODE="48"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="42"
+#!   SOURCE_NODE="17"
+#!   TARGET_NODE="48"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="38"
+#!   SOURCE_NODE="18"
+#!   TARGET_NODE="48"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="37"
+#!   SOURCE_NODE="19"
+#!   TARGET_NODE="48"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="45"
+#!   SOURCE_NODE="20"
+#!   TARGET_NODE="48"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="51"
+#!   SOURCE_NODE="34"
+#!   TARGET_NODE="40"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="30"
+#!   SOURCE_NODE="40"
+#!   TARGET_NODE="29"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="49"
+#!   SOURCE_NODE="48"
+#!   TARGET_NODE="34"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+FME_PYTHON_VERSION 27
+GUI IGNORE SourceDataset_JSON_1,JSON_IN_SCAN_MODE_JSON_1,JSON_IN_SCHEMA_SCAN_QUERY_JSON_1,JSON_IN_FEATURE_TYPE_KEY_JSON_1,JSON_IN_GEOMETRY_FORMAT_JSON_1,JSON_IN_GEOMETRY_KEY_JSON_1,JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1,JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1,JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1,JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1,JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1,JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1,JSON_IN_CLIP_TO_ENVELOPE_JSON_1,JSON_IN_NETWORK_AUTHENTICATION_JSON_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1,ARCGISONLINEFEATURES_OUT_NC_ARCGISONLINEFEATURES_1,ARCGISONLINEFEATURES_OUT_AGOL_ADV_PARM_GROUP_ARCGISONLINEFEATURES_1,ARCGISONLINEFEATURES_OUT_FEATURES_PER_REQUEST_ARCGISONLINEFEATURES_1,ARCGISONLINEFEATURES_OUT_USE_GLOBAL_ID_ARCGISONLINEFEATURES_1,FEATURESERVICE_ARCGISONLINEFEATURES_1
+DEFAULT_MACRO SourceDataset_JSON ""$(FME_MF_DIR)Data\Illinois.json" "$(FME_MF_DIR)Data\Kansas.json" "$(FME_MF_DIR)Data\Minnesota.json" "$(FME_MF_DIR)Data\Missouri.json" "$(FME_MF_DIR)Data\Nebraska.json" "$(FME_MF_DIR)Data\NorthDakota.json" "$(FME_MF_DIR)Data\SouthDakota.json" "$(FME_MF_DIR)Data\Wisconsin.json""
+GUI FILE_OR_URL SourceDataset_JSON JSON_Documents(*.json)|*.json|All_Files|* Source JSON (JavaScript Object Notation) File or URL:
+DEFAULT_MACRO UTC_Offset 6
+GUI CHOICE UTC_Offset 5%6 UTC Offset:
+INCLUDE [ if {{$(SourceDataset_JSON)} == {}} { puts_real {Parameter 'SourceDataset_JSON' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(UTC_Offset)} == {}} { puts_real {Parameter 'UTC_Offset' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+FME_PROFILE_RESULT_CSV "C:\Users\drunnea\Documents\My FME Workspaces\Surrounding State Conditions\RunData\jsonstoagol.csv"
+#! START_WB_HEADER
+READER_TYPE JSON
+READER_KEYWORD JSON_1
+READER_GEN_DIRECTIVES GEOMETRY_KEY,<lt>Unused<gt>,EXPOSE_ATTRS_GROUP,,SEARCH_ENVELOPE_MINX,0,USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,No,SEARCH_ENVELOPE_MINY,0,SCHEMA_SCAN_QUERY,<lt>Unused<gt>,_MERGE_SCHEMAS,YES,GEOMETRY_FORMAT,None,CLIP_TO_ENVELOPE,NO,SCAN_MODE,AUTO,SEARCH_ENVELOPE_MAXX,0,_EXTRA_DATASETS,<quote>C:<backslash>Users<backslash>drunnea<backslash>Documents<backslash>My<space>FME<space>Workspaces<backslash>Surrounding<space>State<space>Conditions<backslash>Condition<space>Data<backslash>Data<backslash>SouthDakota.json<quote><comma><quote>C:<backslash>Users<backslash>drunnea<backslash>Documents<backslash>My<space>FME<space>Workspaces<backslash>Surrounding<space>State<space>Conditions<backslash>Condition<space>Data<backslash>Data<backslash>NorthDakota.json<quote><comma><quote>C:<backslash>Users<backslash>drunnea<backslash>Documents<backslash>My<space>FME<space>Workspaces<backslash>Surrounding<space>State<space>Conditions<backslash>Condition<space>Data<backslash>Data<backslash>Nebraska.json<quote><comma><quote>C:<backslash>Users<backslash>drunnea<backslash>Documents<backslash>My<space>FME<space>Workspaces<backslash>Surrounding<space>State<space>Conditions<backslash>Condition<space>Data<backslash>Data<backslash>Missouri.json<quote><comma><quote>C:<backslash>Users<backslash>drunnea<backslash>Documents<backslash>My<space>FME<space>Workspaces<backslash>Surrounding<space>State<space>Conditions<backslash>Condition<space>Data<backslash>Data<backslash>Minnesota.json<quote><comma><quote>C:<backslash>Users<backslash>drunnea<backslash>Documents<backslash>My<space>FME<space>Workspaces<backslash>Surrounding<space>State<space>Conditions<backslash>Condition<space>Data<backslash>Data<backslash>Kansas.json<quote><comma><quote>C:<backslash>Users<backslash>drunnea<backslash>Documents<backslash>My<space>FME<space>Workspaces<backslash>Surrounding<space>State<space>Conditions<backslash>Condition<space>Data<backslash>Data<backslash>Illinois.json<quote>,COORDINATE_SYSTEM_KEY,<lt>Unused<gt>,JSON_EXPOSE_FORMAT_ATTRS,,USE_SEARCH_ENVELOPE,NO,DECODE_TEXT_STRINGS,Yes,FEATURE_TYPE_KEY,json_featuretype,SEARCH_ENVELOPE_MAXY,0
+
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} ARCGISONLINEFEATURES
+MULTI_WRITER_KEYWORD{0} ARCGISONLINEFEATURES_1
+#! END_WB_HEADER
+
+#! START_WB_HEADER
+MACRO WB_KEYWORD "JSON_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER JSON JSON_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_JSON_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER JSON JSON_1
+DEFAULT_MACRO SourceDataset_JSON_1 $(SourceDataset_JSON)
+GUI FILE_OR_URL SourceDataset_JSON_1 JSON_Documents(*.json)|*.json|All_Files|* Source JSON (JavaScript Object Notation) File or URL:
+DEFAULT_MACRO JSON_IN_SCAN_MODE_JSON_1 AUTO
+JSON_1_SCAN_MODE "$(JSON_IN_SCAN_MODE_JSON_1)"
+GUI ACTIVECHOICE_LOOKUP JSON_IN_SCAN_MODE_JSON_1 Auto,AUTO,JSON_IN_SCHEMA_SCAN_QUERY%JSON<space>Query,QUERY Schema Scan Mode
+DEFAULT_MACRO JSON_IN_SCHEMA_SCAN_QUERY_JSON_1 <Unused>
+JSON_1_SCHEMA_SCAN_QUERY "$(JSON_IN_SCHEMA_SCAN_QUERY_JSON_1)"
+GUI TEXT_ENCODED JSON_IN_SCHEMA_SCAN_QUERY_JSON_1 JSON Query for Feature Objects:
+DEFAULT_MACRO JSON_IN_FEATURE_TYPE_KEY_JSON_1 json_featuretype
+JSON_1_FEATURE_TYPE_KEY "$(JSON_IN_FEATURE_TYPE_KEY_JSON_1)"
+GUI OPTIONAL TEXT JSON_IN_FEATURE_TYPE_KEY_JSON_1 Feature Type Key Name:
+DEFAULT_MACRO JSON_IN_GEOMETRY_FORMAT_JSON_1 None
+JSON_1_GEOMETRY_FORMAT "$(JSON_IN_GEOMETRY_FORMAT_JSON_1)"
+GUI ACTIVECHOICE JSON_IN_GEOMETRY_FORMAT_JSON_1 GeoJSON%OGC-WKT%None,JSON_IN_GEOMETRY_KEY,JSON_IN_COORDINATE_SYSTEM_KEY Geometry Format:
+DEFAULT_MACRO JSON_IN_GEOMETRY_KEY_JSON_1 <Unused>
+JSON_1_GEOMETRY_KEY "$(JSON_IN_GEOMETRY_KEY_JSON_1)"
+GUI OPTIONAL TEXT JSON_IN_GEOMETRY_KEY_JSON_1 Geometry Key Name:
+DEFAULT_MACRO JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1 <Unused>
+JSON_1_COORDINATE_SYSTEM_KEY "$(JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1)"
+GUI TEXT JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1 Coordinate System Key Name:
+DEFAULT_MACRO JSON_IN_DECODE_TEXT_STRINGS_JSON_1 Yes
+JSON_1_DECODE_TEXT_STRINGS "$(JSON_IN_DECODE_TEXT_STRINGS_JSON_1)"
+DEFAULT_MACRO JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1 
+JSON_1_EXPOSE_ATTRS_GROUP "$(JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1)"
+GUI OPTIONAL DISCLOSUREGROUP JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1 JSON_EXPOSE_FORMAT_ATTRS Schema Attributes
+DEFAULT_MACRO JSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_JSON_1 No
+JSON_1_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE "$(JSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_JSON_1)"
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1 Maximum Y:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+DEFAULT_MACRO JSON_IN_CLIP_TO_ENVELOPE_JSON_1 NO
+JSON_1_CLIP_TO_ENVELOPE "$(JSON_IN_CLIP_TO_ENVELOPE_JSON_1)"
+GUI OPTIONAL CHECKBOX JSON_IN_CLIP_TO_ENVELOPE_JSON_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_NETWORK_AUTHENTICATION_JSON_1 
+JSON_1_NETWORK_AUTHENTICATION "$(JSON_IN_NETWORK_AUTHENTICATION_JSON_1)"
+GUI OPTIONAL AUTHENTICATOR JSON_IN_NETWORK_AUTHENTICATION_JSON_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_ATTRIBUTE_READING_JSON_1 ALL
+JSON_1_ATTRIBUTE_READING "$(JSON_IN_ATTRIBUTE_READING_JSON_1)"
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1 Search Envelope Coordinate System:
+JSON_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1)"
+# ===========================================================================
+JSON_1_DATASET "$(SourceDataset_JSON_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "ARCGISONLINEFEATURES_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER ARCGISONLINEFEATURES ARCGISONLINEFEATURES_1
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_ARCGISONLINEFEATURES_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER ARCGISONLINEFEATURES ARCGISONLINEFEATURES_1
+DEFAULT_MACRO DestDataset_ARCGISONLINEFEATURES_1 www.arcgis.com
+DEFAULT_MACRO ARCGISONLINEFEATURES_OUT_NC_ARCGISONLINEFEATURES_1 AGOL
+ARCGISONLINEFEATURES_1_NC "$(ARCGISONLINEFEATURES_OUT_NC_ARCGISONLINEFEATURES_1)"
+GUI NAMED_CONNECTION_ENCODED ARCGISONLINEFEATURES_OUT_NC_ARCGISONLINEFEATURES_1 "Esri ArcGIS Online" ArcGIS Online Connection:
+DEFAULT_MACRO ARCGISONLINEFEATURES_OUT_AGOL_ADV_PARM_GROUP_ARCGISONLINEFEATURES_1 
+GUI OPTIONAL DISCLOSUREGROUP ARCGISONLINEFEATURES_OUT_AGOL_ADV_PARM_GROUP_ARCGISONLINEFEATURES_1 ARCGISONLINEFEATURES_OUT_FEATURES_PER_REQUEST_ARCGISONLINEFEATURES_1%ARCGISONLINEFEATURES_OUT_USE_GLOBAL_ID_ARCGISONLINEFEATURES_1 Advanced
+DEFAULT_MACRO ARCGISONLINEFEATURES_OUT_FEATURES_PER_REQUEST_ARCGISONLINEFEATURES_1 1000
+ARCGISONLINEFEATURES_1_FEATURES_PER_REQUEST "$(ARCGISONLINEFEATURES_OUT_FEATURES_PER_REQUEST_ARCGISONLINEFEATURES_1)"
+GUI INTEGER ARCGISONLINEFEATURES_OUT_FEATURES_PER_REQUEST_ARCGISONLINEFEATURES_1 Features Per Request:
+DEFAULT_MACRO ARCGISONLINEFEATURES_OUT_USE_GLOBAL_ID_ARCGISONLINEFEATURES_1 No
+ARCGISONLINEFEATURES_1_USE_GLOBAL_ID "$(ARCGISONLINEFEATURES_OUT_USE_GLOBAL_ID_ARCGISONLINEFEATURES_1)"
+GUI CHOICE ARCGISONLINEFEATURES_OUT_USE_GLOBAL_ID_ARCGISONLINEFEATURES_1 Yes%No Use Global IDs:
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO ARCGISONLINEFEATURES_OUT_DESTINATION_DATASETTYPE_VALIDATION_ARCGISONLINEFEATURES_1 Yes
+ARCGISONLINEFEATURES_1_DESTINATION_DATASETTYPE_VALIDATION "$(ARCGISONLINEFEATURES_OUT_DESTINATION_DATASETTYPE_VALIDATION_ARCGISONLINEFEATURES_1)"
+# Expose Feature Service in navigator.
+DEFAULT_MACRO FEATURESERVICE_ARCGISONLINEFEATURES_1 AGOL/Winter_Operations/Winter Road Conditions - Midwest Region
+GUI STRING FEATURESERVICE_ARCGISONLINEFEATURES_1 Feature Service:
+ARCGISONLINEFEATURES_1_FEATURESERVICE "$(FEATURESERVICE_ARCGISONLINEFEATURES_1)"
+ARCGISONLINEFEATURES_1_DATASET "$(DestDataset_ARCGISONLINEFEATURES_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)JSONs_to_AGOL.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+MAPPING_FILE_ID JSONs<space>to<space>AGOL
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_JSON_1 JSON_1
+DEFAULT_MACRO DATASET_KEYWORD_ARCGISONLINEFEATURES_1 ARCGISONLINEFEATURES_1
+# -------------------------------------------------------------------------
+
+JSON_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+ARCGISONLINEFEATURES_1_COORDINATE_SYSTEM SPHERICAL_MERCATOR
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+FME_BEGIN_PYTHON_ENC #-------------------------------------------------------------------------------<lf>#<space>Name:<space><space><space><space><space><space><space><space>Disables<solidus>ReEnables<space>Editing<space>for<space>Service<lf>#<space>Purpose:<lf>#<lf>#<space>Author:<space><space><space><space><space><space>Kelly<space>Gerrow<solidus>Hunter<space>Praska<solidus>Mark<space>McCart<lf>#Contact:<space><space><space><space><space><space>kgerrow<at>esri.com<lf>#<lf>#<space>Created:<space><space><space><space><space>9<solidus>8<solidus>2016<lf>#-------------------------------------------------------------------------------<lf><lf>def<space>getToken<openparen>adminUser<comma><space>pw<closeparen>:<lf><space><space><space><space><space><space><space><space>data<space>=<space><opencurly><apos>username<apos>:<space>adminUser<comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>password<apos>:<space>pw<comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>referer<apos><space>:<space><apos>https:<solidus><solidus>www.arcgis.com<apos><comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>f<apos>:<space><apos>json<apos><closecurly><lf><space><space><space><space><space><space><space><space>url<space><space>=<space><apos>https:<solidus><solidus>arcgis.com<solidus>sharing<solidus>rest<solidus>generateToken<apos><lf><space><space><space><space><space><space><space><space>jres<space>=<space>requests.post<openparen>url<comma><space>data=data<comma><space>verify=False<closeparen>.json<openparen><closeparen><lf><space><space><space><space><space><space><space><space>return<space>jres<openbracket><apos>token<apos><closebracket><comma>jres<openbracket><apos>ssl<apos><closebracket><lf><lf>#generates<space>account<space>information<lf>def<space>GetAccount<openparen>pref<comma><space>tokenfun<closeparen>:<lf><space><space><space><space>URL=<space>pref+<apos>www.arcgis.com<solidus>sharing<solidus>rest<solidus>portals<solidus>self?f=json<amp>token=<apos><space>+<space>tokenfun<lf><space><space><space><space>response<space>=<space>requests.get<openparen>URL<comma><space>verify=False<closeparen><lf><space><space><space><space>jres<space>=<space>json.loads<openparen>response.text<closeparen><lf><space><space><space><space>return<space>jres<openbracket><apos>urlKey<apos><closebracket><lf><lf><lf>import<space>requests<comma><space>json<lf><lf>#Enter<space>Username<space>and<space>Password<lf>user=<space><quote>USERNAME<quote><space>#raw_input<openparen><apos>What<space>is<space>the<space>ArcGIS<space>Online<space>Username?<apos><closeparen><lf>pw<space>=<space><quote>PASSWORD<quote><space>#raw_input<openparen><apos>What<space>is<space>the<space>ArcGIS<space>Online<space>Password?<apos><closeparen><lf><lf>#get<space>account<space>information<lf>token=<space>getToken<openparen>user<comma><space>pw<closeparen><lf>if<space>token<openbracket>1<closebracket><space>==<space>False:<lf><space><space><space><space><space><space><space><space><space><space><space>pref=<apos>http:<solidus><solidus><apos><lf>else:<lf><space><space><space><space><space><space><space><space><space><space><space>pref=<apos>https:<solidus><solidus><apos><lf>#Create<space>Portal<space>URL<lf>t=GetAccount<openparen>pref<comma>token<openbracket>0<closebracket><closeparen><lf>portalUrl=pref+t<lf><lf><lf>restURL=<apos>http:<solidus><solidus>services.arcgis.com<solidus>8lRhdTsQyJpO52F1<solidus>arcgis<solidus>rest<solidus>admin<solidus>services<solidus>MidwestWinterRoadConditions<solidus>FeatureServer<solidus>updateDefinition<apos><space>#modify<space>URL<lf>defCapabilities=<space><apos><opencurly><quote>hasStaticData<quote>:false<comma><quote>capabilities<quote>:<quote>Query<comma>Editing<comma>Create<comma>Update<comma>Delete<comma>Extract<quote><closecurly><apos><space>#editing<space>enabled<lf>#defCapabilities=<space><apos><opencurly><quote>capabilities<quote>:<quote>Query<quote><closecurly><apos><space>#editing<space>disabled<lf>data<space>=<space><opencurly><apos>updateDefinition<apos>:<space>defCapabilities<comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>token<apos>:token<openbracket>0<closebracket><comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>f<apos>:<space><apos>json<apos><closecurly><lf><lf>#Send<space>Request<lf>res<space>=requests.post<openparen>restURL<comma><space>data<space>=<space>data<comma><space>verify=False<closeparen>.json<openparen><closeparen><lf>print<space>res<lf>if<space>res<openbracket><apos>success<apos><closebracket>==True:<lf><space><space><space><space>print<space><apos>Service<space>successfully<space>Added<apos><lf>else:<lf><space><space><space><space>print<space><apos>Service<space>NOT<space>ADDED<apos>
+FME_END_PYTHON_ENC #-------------------------------------------------------------------------------<lf>#<space>Name:<space><space><space><space><space><space><space><space>Disables<solidus>ReEnables<space>Editing<space>for<space>Service<space><amp><space>Writes<space>Feature<space>Collections<space>to<space>AGOL<lf>#<space>Purpose:<lf>#<lf>#<space>Authors:<space><space><space><space><space>Kelly<space>Gerrow<space><openparen>Esri<closeparen><semicolon><space>Mark<space>McCart<space><openparen>HNTB<closeparen><semicolon><space>Hunter<space>Praska<space><openparen>Iowa<space>DOT<closeparen><semicolon><space>Eric<space>Rodenberg<space><openparen>Esri<closeparen><lf>#<space>Contact:<space><space><space><space><space>kgerrow<at>esri.com<semicolon><space>mmccart<at>hntb.com<semicolon><space>hunter.praska<at>iowa.dot.gov<semicolon><space>erodenberg<at>esri.com<lf>#<lf>#<space>Created:<space><space><space><space><space>11<solidus>18<solidus>2015<lf>#<space>Modified:<space><space><space><space>8<solidus>10<solidus>2016<space>-<space>To<space>include<space>Feature<space>Collection<space>Creation<space>on<space>AGOL<space><openparen>Mark<space>and<space>Eric<closeparen><lf>#-------------------------------------------------------------------------------<lf><lf>def<space>getToken<openparen>adminUser<comma><space>pw<closeparen>:<lf><space><space><space><space><space><space><space><space>data<space>=<space><opencurly><apos>username<apos>:<space>adminUser<comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>password<apos>:<space>pw<comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>referer<apos><space>:<space><apos>https:<solidus><solidus>www.arcgis.com<apos><comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>f<apos>:<space><apos>json<apos><closecurly><lf><space><space><space><space><space><space><space><space>url<space><space>=<space><apos>https:<solidus><solidus>arcgis.com<solidus>sharing<solidus>rest<solidus>generateToken<apos><lf><space><space><space><space><space><space><space><space>jres<space>=<space>requests.post<openparen>url<comma><space>data=data<comma><space>verify=False<closeparen>.json<openparen><closeparen><lf><space><space><space><space><space><space><space><space>return<space>jres<openbracket><apos>token<apos><closebracket><comma>jres<openbracket><apos>ssl<apos><closebracket><lf><lf>#generates<space>account<space>information<lf>def<space>GetAccount<openparen>pref<comma><space>tokenfun<closeparen>:<lf><space><space><space><space>URL=<space>pref+<apos>www.arcgis.com<solidus>sharing<solidus>rest<solidus>portals<solidus>self?f=json<amp>token=<apos><space>+<space>tokenfun<lf><space><space><space><space>response<space>=<space>requests.get<openparen>URL<comma><space>verify=False<closeparen><lf><space><space><space><space>jres<space>=<space>json.loads<openparen>response.text<closeparen><lf><space><space><space><space>return<space>jres<openbracket><apos>urlKey<apos><closebracket><lf><lf><lf>import<space>requests<comma><space>json<lf>#<space>Next<space>3<space>lines<space>of<space>code<space>are<space>required<space>to<space>copy<solidus>create<space>Feature<space>Collections<space>on<space>AGOL<lf>import<space>sys<lf>sys.path.append<openparen>r<quote>C:<backslash>TEMP<backslash>OverwriteScript<quote><closeparen><space>#Originally<space>provied<space>by<space>Eric<space>R.<space>at<space>Esri<comma><space>but<space>not<space>needed<space>to<space>run<space>in<space>FME<lf>from<space>overwrite_RC_NonIA<space>import<space>run<space>#Rename<space><apos>overwrite_AVL_Direct<apos><space>to<space>name<space>of<space>.py<space>file<space>you<space>want<space>to<space>run.<space>Store<space>it<space>here:<space>C:<backslash>apps<backslash>FME<backslash>2016<backslash>python<backslash>python27<backslash><space>for<space>FME<space>Desktop.<space>For<space>FME<space>Server:<space>Load<space>to<space>RESOURCES<gt>ENGINE<gt>PLUGINS<gt>PYTHON<space>via<space>Web<space>UI<lf><lf>#Enter<space>Username<space>and<space>Password<lf>user=<space><quote>USERNAME<quote><space>#raw_input<openparen><apos>What<space>is<space>the<space>ArcGIS<space>Online<space>Username?<apos><closeparen><lf>pw<space>=<space><quote>PASSWORD<quote><space>#raw_input<openparen><apos>What<space>is<space>the<space>ArcGIS<space>Online<space>Password?<apos><closeparen><lf><lf>#get<space>account<space>information<lf>token=<space>getToken<openparen>user<comma><space>pw<closeparen><lf>if<space>token<openbracket>1<closebracket><space>==<space>False:<lf><space><space><space><space><space><space><space><space><space><space><space>pref=<apos>http:<solidus><solidus><apos><lf>else:<lf><space><space><space><space><space><space><space><space><space><space><space>pref=<apos>https:<solidus><solidus><apos><lf>#Create<space>Portal<space>URL<lf>t=GetAccount<openparen>pref<comma>token<openbracket>0<closebracket><closeparen><lf>portalUrl=pref+t<lf><lf><lf>restURL=<apos>http:<solidus><solidus>services.arcgis.com<solidus>8lRhdTsQyJpO52F1<solidus>arcgis<solidus>rest<solidus>admin<solidus>services<solidus>MidwestWinterRoadConditions<solidus>FeatureServer<solidus>updateDefinition<apos><space>#modify<space>URL<lf>defCapabilities=<space><apos><opencurly><quote>capabilities<quote>:<quote>Query<comma>Extract<quote><closecurly><apos><space>#editing<space>disabled<lf>data<space>=<space><opencurly><apos>updateDefinition<apos>:<space>defCapabilities<comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>token<apos>:token<openbracket>0<closebracket><comma><lf><space><space><space><space><space><space><space><space><space><space><space><space><apos>f<apos>:<space><apos>json<apos><closecurly><lf><lf>#Send<space>Request<lf>res<space>=requests.post<openparen>restURL<comma><space>data<space>=<space>data<comma><space>verify=False<closeparen>.json<openparen><closeparen><lf>print<space>res<lf>if<space>res<openbracket><apos>success<apos><closebracket>==True:<lf><space><space><space><space>print<space><apos>Service<space>successfully<space>Added<apos><lf>else:<lf><space><space><space><space>print<space><apos>Service<space>NOT<space>ADDED<apos><lf><lf>#<space>Run<space>the<space>Feature<space>Collection<space>creation<space>script<space>provided<space>by<space>Esri<space>and<space>modified<space>for<space>each<space>FC<lf>config_file<space>=<space>r<quote>C:<backslash>Apps<backslash>FME<backslash>2016<backslash>python<backslash>python27<backslash>overwrite_RC_NonIA.cfg<quote><space>#For<space>FME<space>Desktop<space>Only.<space>Must<space>copy<space>.cfg<space>and<space>.py<space>file<space>here<lf>#config_file<space>=<space>r<quote>C:<backslash>ProgramData<backslash>Safe<space>Software<backslash>FME<space>Server<backslash>resources<backslash>engine<backslash>Plugins<backslash>python<backslash>overwrite_RC_NonIA.cfg<quote><space>#For<space>FME<space>Server<space>Only.<space>Must<space>load<space>to<space>FME<space>Server<space>Resources<lf>run<openparen>config_file<closeparen>
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME JSONs_to_AGOL
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+JSON_1_DEF Illinois   SEGMENT_ID                   string   HEADLINE                     string   ROAD_CONDITION               string   SEGMENT_NAME                 string   DESCRIPTION                  string   ROUTE_NAME                   string   REPORT_CREATED               string   FMEDATA_READ                 string   STATUS                       string   SOURCE                       string   SOURCE_LINK                  string   REPORT_UPDATED               string   OBJECTID                     int   PRIMARYMP                    string   SECONDARYMP                  string
+# -------------------------------------------------------------------------
+JSON_1_DEF Wisconsin   HEADLINE                     string   ROAD_CONDITION               string   SEGMENT_NAME                 string   SEGMENT_ID                   string   PRIMARYMP                    string   SECONDARYMP                  string   ROUTE_NAME                   string   DESCRIPTION                  string   FMEDATA_READ                 string   STATUS                       string   OBJECTID                     int   SOURCE                       string   SOURCE_LINK                  string
+# -------------------------------------------------------------------------
+JSON_1_DEF NorthDakota   SEGMENT_ID                   string   ROAD_CONDITION               string   HEADLINE                     string   ROUTE_NAME                   string   DESCRIPTION                  string   PRIMARYMP                    string   SECONDARYMP                  string   SEGMENT_NAME                 string   REPORT_CREATED               string   FMEDATA_READ                 string   REPORT_UPDATED               string   SOURCE                       string   SOURCE_LINK                  string   STATUS                       string   OBJECTID                     int
+# -------------------------------------------------------------------------
+JSON_1_DEF Minnesota   ROAD_CONDITION               string   SOURCE_LINK                  string   PRIMARYMP                    string   SECONDARYMP                  string   ROUTE_NAME                   string   SEGMENT_NAME                 string   SEGMENT_ID                   string   SEGMENT_OID                  string   PRIMARYLAT                   string   PRIMARYLONG                  string   SECONDARYLAT                 string   SECONDARYLONG                string   REPORT_UPDATED               string   REPORT_CREATED               string   REPORT_ID                    string   HEADLINE                     string   DESCRIPTION                  string   FMEDATA_READ                 string   STATUS                       string   SOURCE                       string   OBJECTID                     int
+# -------------------------------------------------------------------------
+JSON_1_DEF Kansas   DESCRIPTION                  string   HEADLINE                     string   ROUTE_NAME                   string   SEGMENT_NAME                 string   PRIMARYMP                    string   SECONDARYMP                  string   ROAD_CONDITION               string   REPORT_CREATED               string   STATUS                       string   FMEDATA_READ                 string   SOURCE                       string   SOURCE_LINK                  string   REPORT_UPDATED               string   OBJECTID                     string
+# -------------------------------------------------------------------------
+JSON_1_DEF SouthDakota   REPORT_CREATED               string   PRIMARYMP                    string   SECONDARYMP                  string   DESCRIPTION                  string   HEADLINE                     string   ROAD_CONDITION               string   FMEDATA_READ                 string   REPORT_UPDATED               string   SEGMENT_ID                   string   SEGMENT_NAME                 string   ROUTE_NAME                   string   SOURCE_LINK                  string   SOURCE                       string   OBJECTID                     int
+# -------------------------------------------------------------------------
+JSON_1_DEF Nebraska   ROAD_CONDITION               string   SOURCE                       string   SOURCE_LINK                  string   PRIMARYMP                    string   SECONDARYMP                  string   ROUTE_NAME                   string   SEGMENT_NAME                 string   SEGMENT_ID                   string   SEGMENT_OID                  string   PRIMARYLAT                   string   PRIMARYLONG                  string   SECONDARYLAT                 string   SECONDARYLONG                string   REPORT_UPDATED               string   REPORT_CREATED               string   REPORT_ID                    string   HEADLINE                     string   DESCRIPTION                  string   FMEDATA_READ                 string   STATUS                       string   SEGMENT_DATE                 string   OBJECTID                     int
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD JSON_1   INPUT FEATURE_TYPE *    ROUTE JSON JSON_1::Illinois TO FME_GENERIC ::Illinois ALIAS_GEOMETRY    ROUTE JSON JSON_1::Wisconsin TO FME_GENERIC ::Wisconsin ALIAS_GEOMETRY    ROUTE JSON JSON_1::NorthDakota TO FME_GENERIC ::NorthDakota ALIAS_GEOMETRY    ROUTE JSON JSON_1::Minnesota TO FME_GENERIC ::Minnesota ALIAS_GEOMETRY    ROUTE JSON JSON_1::Kansas TO FME_GENERIC ::Kansas ALIAS_GEOMETRY    ROUTE JSON JSON_1::SouthDakota TO FME_GENERIC ::SouthDakota ALIAS_GEOMETRY    ROUTE JSON JSON_1::Nebraska TO FME_GENERIC ::Nebraska ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+JSON_1_MERGE_DEF JSON_1::Illinois EXACT Illinois
+JSON_1_MERGE_DEF JSON_1::Wisconsin EXACT Wisconsin
+JSON_1_MERGE_DEF JSON_1::Missouri EXACT Missouri
+JSON_1_MERGE_DEF JSON_1::NorthDakota EXACT NorthDakota
+JSON_1_MERGE_DEF JSON_1::Minnesota EXACT Minnesota
+JSON_1_MERGE_DEF JSON_1::Kansas EXACT Kansas
+JSON_1_MERGE_DEF JSON_1::SouthDakota EXACT SouthDakota
+JSON_1_MERGE_DEF JSON_1::Nebraska EXACT Nebraska
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Illinois (JSON_1) Splitter"    INPUT FEATURE_TYPE Illinois    OUTPUT FEATURE_TYPE Illinois_JSON_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Wisconsin (JSON_1) Splitter"    INPUT FEATURE_TYPE Wisconsin    OUTPUT FEATURE_TYPE Wisconsin_JSON_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Missouri (JSON_1) Splitter"    INPUT FEATURE_TYPE Missouri    OUTPUT FEATURE_TYPE Missouri_JSON_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "NorthDakota (JSON_1) Splitter"    INPUT FEATURE_TYPE NorthDakota    OUTPUT FEATURE_TYPE NorthDakota_JSON_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Minnesota (JSON_1) Splitter"    INPUT FEATURE_TYPE Minnesota    OUTPUT FEATURE_TYPE Minnesota_JSON_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Kansas (JSON_1) Splitter"    INPUT FEATURE_TYPE Kansas    OUTPUT FEATURE_TYPE Kansas_JSON_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SouthDakota (JSON_1) Splitter"    INPUT FEATURE_TYPE SouthDakota    OUTPUT FEATURE_TYPE SouthDakota_JSON_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Nebraska (JSON_1) Splitter"    INPUT FEATURE_TYPE Nebraska    OUTPUT FEATURE_TYPE Nebraska_JSON_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+Lookup Road_Condition_LOOKUP_TABLE   Data<space>Not<space>Available 0   Seasonal        1   Partially<space>Covered 2   Completely<space>Covered 3   Travel<space>Not<space>Advised 4   Impassable      5   ""              0   ENCODED_SUPPORTUNICODE
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME Road_Condition    INPUT  FEATURE_TYPE Wisconsin_JSON_1    INPUT  FEATURE_TYPE SouthDakota_JSON_1    INPUT  FEATURE_TYPE NorthDakota_JSON_1    INPUT  FEATURE_TYPE Nebraska_JSON_1    INPUT  FEATURE_TYPE Missouri_JSON_1    INPUT  FEATURE_TYPE Minnesota_JSON_1    INPUT  FEATURE_TYPE Kansas_JSON_1    INPUT  FEATURE_TYPE Illinois_JSON_1    OUTPUT FEATURE_TYPE Road_Condition_OUTPUT         @Lookup(Road_Condition_LOOKUP_TABLE,"ROAD_CONDITION",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, ROAD_CONDITION)
+
+
+# -------------------------------------------------------------------------
+INCLUDE [          if { ({Selected Attributes} == {All Attributes}) } {             puts {MACRO StringCaseChanger_func @RenameAttributes(PERFORM_OPERATION,value,.*,fulltitle,"-_")};          } else {             puts {MACRO StringCaseChanger_func @RenameAttributes(LIST_ATTR, "value", "DESCRIPTION HEADLINE",fulltitle,"-_")};          }         ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringCaseChanger    INPUT  FEATURE_TYPE Road_Condition_OUTPUT    OUTPUT FEATURE_TYPE StringCaseChanger_OUTPUT         $(StringCaseChanger_func)
+
+# -------------------------------------------------------------------------
+
+
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME TimeStamper    INPUT  FEATURE_TYPE StringCaseChanger_OUTPUT    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "FMEDATA_READ" "FMEDATA_READ" "<at>DateTimeAdd<openparen><at>Value<openparen>FMEDATA_READ<closeparen><comma>PT<at>Left<openparen><at>Right<openparen><at>DateTimeNow<openparen>local<closeparen><comma>4<closeparen><comma>1<closeparen>H<closeparen>" "SET_TO" }      ATTR_ACTION { "" "AGOL_WRITE" "<at>Left<openparen><at>DateTimeNow<openparen>utc<closeparen><comma>14<closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE TimeStamper_OUTPUT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC TimeStamper_OUTPUT TO ARCGISONLINEFEATURES __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>RoadConditions<closeparen> COORDINATE_SYSTEM SPHERICAL_MERCATOR GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+ARCGISONLINEFEATURES_1_DEF RoadConditions   arcgisonline_type            arcgisonline_polyline   arcgisonline_mode            UPDATE   arcgisonline_truncate_layer  NO   OBJECTID                     esriFieldTypeInteger   HEADLINE                     esriFieldTypeString(2048)   REPORT_UPDATED               esriFieldTypeDate   REPORT_CREATED               esriFieldTypeDate   DESCRIPTION                  esriFieldTypeString(2048)   SOURCE                       esriFieldTypeString(2048)   SOURCE_LINK                  esriFieldTypeString(2048)   FMEDATA_READ                 esriFieldTypeDate   STATUS                       esriFieldTypeString(2048)   REPORT_ID                    esriFieldTypeString(2048)   AGOL_WRITE                   esriFieldTypeDate   ROAD_CONDITION               esriFieldTypeSmallInteger

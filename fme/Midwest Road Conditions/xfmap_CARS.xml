@@ -1,0 +1,618 @@
+<?xml version="1.0"?>
+<xfMap>
+ <feature-map multi-feature-construction="true">
+    <mapping match="full-event-update">
+       <feature-type> <literal expr="Feature"/> </feature-type>
+    </mapping>
+ </feature-map>
+ <feature-content-map>
+<mapping match="message-header">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="OrganizationID"/> </name>
+           	<value> <extract expr="./sender/organization-id" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="MessageNumber"/> </name>
+           	<value> <extract expr="./message-number" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="MessageIssueDate"/> </name>
+           	<value> <extract expr="./message-time-stamp/date" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="MessageIssueTime"/> </name>
+           	<value> <extract expr="./message-time-stamp/time" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="MessageIssueUTCoffset"/> </name>
+           	<value> <extract expr="./message-time-stamp/utc-offset" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="MessageExpiryDate"/> </name>
+           	<value> <extract expr="./message-expiry-time/date" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="MessageExpiryTime"/> </name>
+           	<value> <extract expr="./message-expiry-time/time" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="MessageExpiryUTCoffset"/> </name>
+           	<value> <extract expr="./message-expiry-stamp/utc-offset" /> </value>
+           </attribute>
+        </attributes>
+</mapping>
+<mapping match="event-reference">
+        <attributes>
+           <attribute>
+           	<name>  <literal expr="ID"/> </name>
+           	<value> <extract expr="./event-id" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="Update"/> </name>
+           	<value> <extract expr="./update" /> </value>
+           </attribute>
+		</attributes>
+</mapping>
+<mapping match="event-indicators">
+		<attributes>
+			<attribute>
+           	<name>  <literal expr="Status"/> </name>
+           	<value> <extract expr="./event-indicator/status" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="Priority"/> </name>
+           	<value> <extract expr="./event-indicator/priority" /> </value>
+           </attribute>
+		</attributes>
+</mapping>
+<mapping match="headline/headline">
+		<attributes>
+			<attribute>
+           	<name>  <literal expr="hd_traffic"/> </name>
+           	<value> <extract expr="./traffic-condition" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="hd_incident"/> </name>
+           	<value> <extract expr="./incident" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_closure"/> </name>
+           	<value> <extract expr="./closure" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_roadwork"/> </name>
+           	<value> <extract expr="./roadwork" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="hd_obstruction"/> </name>
+           	<value> <extract expr="./obstruction" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="hd_delay"/> </name>
+           	<value> <extract expr="./delay" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="hd_unusualdriving"/> </name>
+           	<value> <extract expr="./unusual-driving" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_mobsit"/> </name>
+           	<value> <extract expr="./mobile-situation" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="hd_devicestat"/> </name>
+           	<value> <extract expr="./device-status" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="hd_restriction"/> </name>
+           	<value> <extract expr="./restriction" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_disaster"/> </name>
+           	<value> <extract expr="./disaster" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_disturbance"/> </name>
+           	<value> <extract expr="./disturbance" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="hd_sportsevent"/> </name>
+           	<value> <extract expr="./sporting-event" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_specialevent"/> </name>
+           	<value> <extract expr="./special-event" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="hd_parkinginfo"/> </name>
+           	<value> <extract expr="./parking-information" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_systeminfo"/> </name>
+           	<value> <extract expr="./system-information" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_weather_cond"/> </name>
+           	<value> <extract expr="./weather-condition" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="hd_wx_precip"/> </name>
+           	<value> <extract expr="./precipitation" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="hd_wx_wind"/> </name>
+           	<value> <extract expr="./wind" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="hd_wx_airquality"/> </name>
+           	<value> <extract expr="./visibility-air-quality" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_wx_temp"/> </name>
+           	<value> <extract expr="./temperature" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="hd_pavementcond"/> </name>
+           	<value> <extract expr="./pavement-condition" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="hd_winter_restriction"/> </name>
+           	<value> <extract expr="./winter-driving-restriction" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="hd_winter_index"/> </name>
+           	<value> <extract expr="./winter-driving-index" /> </value>
+           </attribute>
+		   </attributes>
+</mapping>
+<mapping match="details/detail/descriptions/description/phrase">
+			<attributes>
+			<attribute>
+           	<name>  <literal expr="ph_traffic"/> </name>
+           	<value> <extract expr="./traffic-condition" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="ph_incident"/> </name>
+           	<value> <extract expr="./incident" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_closure"/> </name>
+           	<value> <extract expr="./closure" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_roadwork"/> </name>
+           	<value> <extract expr="./roadwork" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ph_obstruction"/> </name>
+           	<value> <extract expr="./obstruction" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="ph_delay"/> </name>
+           	<value> <extract expr="./delay" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="ph_unusualdriving"/> </name>
+           	<value> <extract expr="./unusual-driving" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_mobsit"/> </name>
+           	<value> <extract expr="./mobile-situation" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ph_devicestat"/> </name>
+           	<value> <extract expr="./device-status" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="ph_restriction"/> </name>
+           	<value> <extract expr="./restriction" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_disaster"/> </name>
+           	<value> <extract expr="./disaster" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_disturbance"/> </name>
+           	<value> <extract expr="./disturbance" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ph_sportsevent"/> </name>
+           	<value> <extract expr="./sporting-event" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_specialevent"/> </name>
+           	<value> <extract expr="./special-event" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="ph_parkinginfo"/> </name>
+           	<value> <extract expr="./parking-information" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_systeminfo"/> </name>
+           	<value> <extract expr="./system-information" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_weather_cond"/> </name>
+           	<value> <extract expr="./weather-condition" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ph_wx_precip"/> </name>
+           	<value> <extract expr="./precipitation" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="ph_wx_wind"/> </name>
+           	<value> <extract expr="./wind" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="ph_wx_airquality"/> </name>
+           	<value> <extract expr="./visibility-air-quality" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_wx_temp"/> </name>
+           	<value> <extract expr="./temperature" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ph_pavementcond"/> </name>
+           	<value> <extract expr="./pavement-condition" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="ph_winter_restriction"/> </name>
+           	<value> <extract expr="./winter-driving-restriction" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ph_winter_index"/> </name>
+           	<value> <extract expr="./winter-driving-index" /> </value>
+           </attribute>
+		   </attributes>
+		</mapping>
+<mapping match="details/detail/descriptions/description/cause">
+			<attributes>
+			<attribute>
+           	<name>  <literal expr="ca_traffic"/> </name>
+           	<value> <extract expr="./traffic-condition" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="ca_incident"/> </name>
+           	<value> <extract expr="./incident" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_closure"/> </name>
+           	<value> <extract expr="./closure" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_roadwork"/> </name>
+           	<value> <extract expr="./roadwork" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ca_obstruction"/> </name>
+           	<value> <extract expr="./obstruction" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="ca_delay"/> </name>
+           	<value> <extract expr="./delay" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="ca_unusualdriving"/> </name>
+           	<value> <extract expr="./unusual-driving" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_mobsit"/> </name>
+           	<value> <extract expr="./mobile-situation" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ca_devicestat"/> </name>
+           	<value> <extract expr="./device-status" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="ca_restriction"/> </name>
+           	<value> <extract expr="./restriction" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_disaster"/> </name>
+           	<value> <extract expr="./disaster" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_disturbance"/> </name>
+           	<value> <extract expr="./disturbance" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ca_sportsevent"/> </name>
+           	<value> <extract expr="./sporting-event" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_specialevent"/> </name>
+           	<value> <extract expr="./special-event" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="ca_parkinginfo"/> </name>
+           	<value> <extract expr="./parking-information" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_systeminfo"/> </name>
+           	<value> <extract expr="./system-information" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_weather_cond"/> </name>
+           	<value> <extract expr="./weather-condition" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ca_wx_precip"/> </name>
+           	<value> <extract expr="./precipitation" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="ca_wx_wind"/> </name>
+           	<value> <extract expr="./wind" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="ca_wx_airquality"/> </name>
+           	<value> <extract expr="./visibility-air-quality" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_wx_temp"/> </name>
+           	<value> <extract expr="./temperature" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ca_pavementcond"/> </name>
+           	<value> <extract expr="./pavement-condition" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="ca_winter_restriction"/> </name>
+           	<value> <extract expr="./winter-driving-restriction" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="ca_winter_index"/> </name>
+           	<value> <extract expr="./winter-driving-index" /> </value>
+           </attribute>
+			</attributes>
+		</mapping>
+<mapping match="details/detail/descriptions/description/advice">
+		<attributes>
+			<attribute>
+           	<name>  <literal expr="Suggestions"/> </name>
+           	<value> <extract expr="./suggestion" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="Recommendations"/> </name>
+           	<value> <extract expr="./closure" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="Instructions"/> </name>
+           	<value> <extract expr="./instruction" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="AltRoute"/> </name>
+           	<value> <extract expr="./alternative-route" /> </value>
+           </attribute>
+			<attribute  type="multi-value" delim=", ">
+           	<name>  <literal expr="Warnings"/> </name>
+           	<value> <extract expr="./warning" /> </value>
+           </attribute>           
+		   </attributes>
+		</mapping>
+<mapping match="details/detail/descriptions/description/quantity">
+		<attributes>
+			<attribute>
+           	<name>  <literal expr="LengthAffected"/> </name>
+           	<value> <extract expr="./extent/length-affected" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="Delay"/> </name>
+           	<value> <extract expr="./link-state/delay" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="Headway"/> </name>
+           	<value> <extract expr="./link-date/headway" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="TravelTime"/> </name>
+           	<value> <extract expr="./link-state/travel-time" /> </value>
+           </attribute> 
+           <attribute>
+           	<name>  <literal expr="IncidentTotalVehicles"/> </name>
+           	<value> <extract expr="./incident-details/vehicles-involved" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="IncidentCars"/> </name>
+           	<value> <extract expr="./incident-details/cars-involved" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="IncidentTrucks"/> </name>
+           	<value> <extract expr="./incident-details/trucks-involved" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="IncidentBusses"/> </name>
+           	<value> <extract expr="./incident-details/buses-involved" /> </value>
+           </attribute>
+		   <attribute>
+           	<name>  <literal expr="EssAvgWindDirection"/> </name>
+           	<value> <extract expr="./road-weather/wind-direction" /> </value>
+           </attribute>
+		   <attribute>
+           	<name>  <literal expr="EssAvgWindSpeed"/> </name>
+           	<value> <extract expr="./road-weather/wind-speed" /> </value>
+           </attribute>
+		   <attribute>
+           	<name>  <literal expr="EssAirTemperature"/> </name>
+           	<value> <extract expr="./road-weather/air-temp" /> </value>
+           </attribute>
+		   <attribute>
+           	<name>  <literal expr="EssRelativeHumidity"/> </name>
+           	<value> <extract expr="./road-weather/relative-humidity" /> </value>
+           </attribute>
+		   <attribute>
+           	<name>  <literal expr="EssVisibility"/> </name>
+           	<value> <extract expr="./road-weather/visibility" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="EssWaterDepth"/> </name>
+           	<value> <extract expr="./surface-conditions/water-depth" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="EssAdjacentSnowDepth"/> </name>
+           	<value> <extract expr="./surface-conditions/adjacent-snow-depth" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="EssRoadwaySnowDepth"/> </name>
+           	<value> <extract expr="./surface-conditions/roadway-snow-depth" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="EssRoadwaySnowPackDepth"/> </name>
+           	<value> <extract expr="./surface-conditions/roadway-snow-pack-depth" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="EssIceThickness"/> </name>
+           	<value> <extract expr="./surface-conditions/ice-thickness" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="EssPavementTemperature"/> </name>
+           	<value> <extract expr="./surface-conditions/pavement-temperature" /> </value>
+           </attribute>
+           <attribute>
+           	<name>  <literal expr="SpeedLimitAdvisory"/> </name>
+           	<value> <extract expr="./link-restrictions/speed-limit-advisory" /> </value>
+           </attribute>           
+           <attribute>
+           	<name>  <literal expr="SpeedLimit"/> </name>
+           	<value> <extract expr="./link-restrictions/speed-limit" /> </value>
+           </attribute>  
+           <attribute>
+           	<name>  <literal expr="SpeedLimitTruck"/> </name>
+           	<value> <extract expr="./link-restrictions/speed-limit-truck" /> </value>
+           </attribute>  
+           <attribute>
+           	<name>  <literal expr="RestrictionLength"/> </name>
+           	<value> <extract expr="./link-restrictions/restriction-length" /> </value>
+           </attribute>  
+           <attribute>
+           	<name>  <literal expr="RestrictionHeight"/> </name>
+           	<value> <extract expr="./link-restrictions/restriction-height" /> </value>
+           </attribute>  
+           <attribute>
+           	<name>  <literal expr="RestrictionWidth"/> </name>
+           	<value> <extract expr="./link-restrictions/restriction-width" /> </value>
+           </attribute>  
+           <attribute>
+           	<name>  <literal expr="RestrictionWeightVehicle"/> </name>
+           	<value> <extract expr="./link-restrictions/restriction-weight-vehicle" /> </value>
+           </attribute>  
+           <attribute>
+           	<name>  <literal expr="RestrictionWeightAxle"/> </name>
+           	<value> <extract expr="./link-restrictions/restriction-weight-axle" /> </value>
+           </attribute>  
+		   </attributes>
+		</mapping>
+<mapping match="details/detail/descriptions/description/additional-text">
+		<attributes>
+			<attribute  type="multi-value" delim=" ">
+           	<name>  <literal expr="Descriptions"/> </name>
+           	<value> <extract expr="./description" /> </value>
+           </attribute>           
+		   </attributes>
+		</mapping>
+<mapping match="details/detail/locations/location">
+		<attributes>
+			<attribute>
+           	<name>  <literal expr="FIPS"/> </name>
+           	<value> <extract expr="./area-location/area-id" /> </value>
+           </attribute>           
+			<attribute>
+           	<name>  <literal expr="Ownership"/> </name>
+           	<value> <extract expr="./location-on-link/link-ownership" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="RouteDesignator"/> </name>
+           	<value> <extract expr="./location-on-link/route-designator" /> </value>
+           </attribute> 
+		   <attribute>
+           	<name>  <literal expr="LinkDirection"/> </name>
+           	<value> <extract expr="./location-on-link/link-direction" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="Latitude1"/> </name>
+           	<value> <extract expr="./location-on-link/primary-location/geo-location/latitude" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="Longitude1"/> </name>
+           	<value> <extract expr="./location-on-link/primary-location/geo-location/longitude" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="LinearReference1"/> </name>
+           	<value> <extract expr="./location-on-link/primary-location/linear-reference" /> </value>
+           </attribute>
+		   <attribute>
+           	<name>  <literal expr="CrossRoad1"/> </name>
+           	<value> <extract expr="./location-on-link/primary-location/cross-street-name" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="Latitude2"/> </name>
+           	<value> <extract expr="./location-on-link/secondary-location/geo-location/latitude" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="Longitude2"/> </name>
+           	<value> <extract expr="./location-on-link/secondary-location/geo-location/longitude" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="LinearReference2"/> </name>
+           	<value> <extract expr="./location-on-link/secondary-location/linear-reference" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="CrossRoad2"/> </name>
+           	<value> <extract expr="./location-on-link/secondary-location/cross-street-name" /> </value>
+           </attribute>
+		   </attributes>
+		</mapping>
+	<mapping match="details/detail/times">
+		<attributes>
+			<attribute>
+           	<name>  <literal expr="UpdateTimeDate"/> </name>
+           	<value> <extract expr="./update-time/date" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="UpdateTimeTime"/> </name>
+           	<value> <extract expr="./update-time/time" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="UpdateTimeUTCoffset"/> </name>
+           	<value> <extract expr="./update-time/utc-offset" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="EndTimeDate"/> </name>
+           	<value> <extract expr="./valid-period/end-time/date" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="EndTimeTime"/> </name>
+           	<value> <extract expr="./valid-period/end-time/time" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="EndTimeUTCoffset"/> </name>
+           	<value> <extract expr="./valid-period/end-time/utc-offset" /> </value>
+           </attribute>
+		   <attribute>
+           	<name>  <literal expr="StartTimeDate"/> </name>
+           	<value> <extract expr="./start-time/date" /> </value>
+           </attribute> 
+		   <attribute>
+           	<name>  <literal expr="StartTimeTime"/> </name>
+           	<value> <extract expr="./start-time/time" /> </value>
+           </attribute>
+		   <attribute>
+           	<name>  <literal expr="StartTimeUTCoffset"/> </name>
+           	<value> <extract expr="./start-time/utc-offset" /> </value>
+           </attribute>
+			<attribute>
+           	<name>  <literal expr="RecurringDays"/> </name>
+           	<value> <extract expr="./recurrent-times/recurrent-period/days-of-the-week" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ScheduleTimes"/> </name>
+           	<value> <extract expr="./recurrent-times/schedule-times" /> </value>
+           </attribute> 
+			<attribute>
+           	<name>  <literal expr="ScheduleTimesUTCoffset"/> </name>
+           	<value> <extract expr="./recurrent-times/utc-offset" /> </value>
+           </attribute>
+		   </attributes>
+		</mapping>
+</feature-content-map>	  	
+</xfMap>
