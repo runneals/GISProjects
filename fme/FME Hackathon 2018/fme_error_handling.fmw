@@ -1,0 +1,1857 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        C:\Apps\FME\18547\fme.exe "C:\Users\drunnea\Desktop\FME Hackathon\fme_error_handling.fmw"
+#              --FAILED_JSON ""
+#              --FME_SERVER_CONNECTION "fmeserver"
+#              --SAD_LOGS_DB "E:\Sad Logs\errors.sqlite"
+#              --TO_EMAIL_WORK ""
+#              --TO_EMAIL_PERSONAL ""
+#              --SMTP_SERVER "SMTP"
+#              --FROM_EMAIL "fmeserver<at>yourdomain.gov"
+#              --FME_SERVER_URL "https://fme.yourcompany.com"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Help to prioritize errors and explain what they mean before emailing them off. &lt;/p&gt;&#10;"
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="5735.81 2337.52"
+#!   DOC_TOP_LEFT="-820.134 -2125.02"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="18547"
+#!   FME_DOCUMENT_GUID="477b41c7-00b8-4c41-98c1-27eb876a1aa7"
+#!   FME_DOCUMENT_PRIORGUID="37b75b5f-4272-4415-bee8-a9794f5f171f,7e0f47d0-8481-4af4-a952-5f30ccb475d0,bf188348-5797-485a-8574-1043ddde4145,c19c4298-c315-4c16-9bd1-d62105482f63,6a94cb8a-3a15-4348-9a05-37bd27370ec4,3eb035fd-66b8-4c94-b73e-a1bfaee74245,1f74b443-f2cb-45c8-b705-5d94405fa25f,c21d4eb2-4d60-4b3d-88d8-25e77772f90a,e1eb029b-a5f7-4aed-b12c-95e3de8771c3,f8343365-3a61-4889-a023-872802aba928,4b9c3eaa-76a4-43e3-a004-8ef5de3999a0,77a6647e-c0da-4537-9158-cee7f21f6c08,8a13cc41-998e-40fe-9693-bb369e5f78e4,79e4f599-8b07-4333-b49a-ed6e27276beb"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY="11&lt;solidus&gt;30&lt;solidus&gt;2018,DR,First&lt;space&gt;Beta&lt;space&gt;Version"
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2018.1.0.2 (20180903 - Build 18547 - WIN64)"
+#!   LAST_SAVE_DATE="2018-11-30T16:23:18"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="36"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="NO"
+#!   TITLE="Clean Error Notifications"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="628.131 -543.755"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="JSON"
+#!   DATASET="$(FAILED_JSON)"
+#!   KEYWORD="JSON_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="multi_reader_full_id int fme_sweep_angle float fme_dataset string fme_rotation float fme_basename string fme_type string fme_secondary_axis float fme_text_size float fme_color string fme_fill_color string fme_start_angle float multi_reader_keyword string fme_primary_axis float multi_reader_id int fme_text_string string multi_reader_type string fme_geometry string fme_feature_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="18547"
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="json file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the JSON file(s) or Specify the JSON URL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the JSON file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="SQLITE3"
+#!   DATASET="$(SAD_LOGS_DB)"
+#!   KEYWORD="SQLITE3_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="255"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="sqlite3_update_key_columns &quot;&quot; sqlite3_drop_table NO sqlite3_truncate_table NO sqlite3_table_writer_mode INHERIT_FROM_WRITER"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_sweep_angle float fme_dataset varchar(50) fme_rotation float fme_db_transaction varchar(16) db_type varchar(254) fme_basename varchar(50) fme_type varchar(50) fme_secondary_axis float fme_text_size float fme_color varchar(50) fme_where varchar(254) fme_fill_color varchar(50) fme_start_angle float fme_primary_axis float fme_text_string varchar(50) fme_db_operation varchar(8) fme_geometry varchar(50) fme_feature_type varchar(50)"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP sqlite3_layer_group sqlite3_general_group Table&quot; &quot;&quot; &quot;GUI OPTIONAL NAMEDGROUP sqlite3_general_group sqlite3_table_writer_mode%sqlite3_drop_table%sqlite3_truncate_table%sqlite3_row_selection_group General&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP sqlite3_row_selection_group FME_DISCLOSURE_OPEN%sqlite3_update_key_columns Row Selection&quot; &quot;&quot; &quot;GUI CHOICE sqlite3_drop_table NO%YES Drop Table&quot; NO &quot;GUI CHOICE sqlite3_truncate_table NO%YES Truncate Table&quot; NO &quot;GUI LOOKUP_CHOICE sqlite3_table_writer_mode Inherit&lt;space&gt;from&lt;space&gt;Writer,INHERIT_FROM_WRITER%Insert,INSERT%Update,UPDATE%Delete,DELETE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL ATTRLIST_COMMAS sqlite3_update_key_columns \&quot; \&quot; Update/Delete Key Columns&quot; &quot;&quot; "
+#!   ATTR_INDEX_TYPES="Indexed Unique"
+#!   ATTR_NAME_INVALID_CHARS="&quot;"
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="18547"
+#!   COORDSYS=""
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="SQLITE3_OUT_WRITER_MODE SQLITE3_OUT_TRANSACTION_INTERVAL SQLITE3_OUT_BEGIN_SQL{0} SQLITE3_OUT_END_SQL{0}"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ALLOW_DATASET_CONFLICT"
+#!   VALUE="YES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="sqlite file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="Table1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the SQLite3 Database file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the SQLite3 Database file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="blob"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="blob"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="blob"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varchar(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varchar(20)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="SQLITE3"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="real(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="SQLITE3"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="SQLITE3"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="SQLITE3"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="JSONFeature"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="24"
+#!   FEAT_GEOMTYPE="json_no_geom"
+#!   POSITION="-687.50787507875066 -588.12853128531287"
+#!   BOUNDING_RECT="-687.50787507875066 -588.12853128531287 -1 -1"
+#!   ORDER="500000000000045"
+#!   COLLAPSED="false"
+#!   KEYWORD="JSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="workspace" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="timeRequested" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="requestKeyword" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="timeStarted" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="repository" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LogFileName" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusMessage" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="jobfailure_topic" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusNumber" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="id" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="timeFinished" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="logHome" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="logUrl" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="Logs"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="35"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="4211.6406564065637 -845.00725007250173"
+#!   BOUNDING_RECT="4211.6406564065637 -845.00725007250173 638.40784407844149 71"
+#!   ORDER="500000000000371"
+#!   COLLAPSED="true"
+#!   KEYWORD="SQLITE3_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="workspace" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="timeRequested" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="requestKeyword" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="timeStarted" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="repository" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LogFileName" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusMessage" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="jobfailure_topic" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusNumber" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="id" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="timeFinished" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="logHome" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="logUrl" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="_log_attr" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="match" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="sqlite3_drop_table" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="sqlite3_general_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="sqlite3_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="sqlite3_row_selection_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="sqlite3_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#!     <DEFLINE_PARM PARM_NAME="sqlite3_truncate_table" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="sqlite3_update_key_columns" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#!   NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE="JSON_1"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#!   NAME="Utilities"
+#! />
+#! <ITEM
+#!   NAME="fme_error_handling.fmw"
+#! />
+#! <READER_DATASETS>
+#! <DATASET 
+#!   NAME="JSON_1"
+#!   OVERRIDE="-JSON_1_DATASET"
+#!   DATASET="JSON_1/"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET 
+#!   NAME="SQLITE3_1"
+#!   OVERRIDE="-SQLITE3_1_DATASET"
+#!   DATASET="SQLITE3_1/errors.sqlite"
+#! />
+#! </WRITER_DATASETS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILE_OR_URL FAILED_JSON JSON_Documents(*.json)|*.json|All_Files|* The $(FME_TOPIC_MESSAGE):"
+#!   DEFAULT_VALUE="$(FME_TOPIC_MESSAGE)"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI NAMED_CONNECTION_ENCODED FME_SERVER_CONNECTION &quot;FME Server&quot; Connection to read log files:"
+#!   DEFAULT_VALUE="fmeserver"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME SAD_LOGS_DB SQLite_Database_Files(*.sqlite;*.db;*.sl3;*.gpkg)|*.sqlite;*.db;*.sl3;*.gpkg|SQLite_Database_Files(*.sqlite)|*.sqlite|SQLite_Database_Files(*.db)|*.db|SQLite_Database_Files(*.sl3)|*.sl3|SQLite_Database_Files(*.gpkg)|*.gpkg|All_files(*)|* SQLite Database:"
+#!   DEFAULT_VALUE="E:\Sad Logs\errors.sqlite"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR TO_EMAIL_WORK Work Email:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR TO_EMAIL_PERSONAL Why not add your personal email so you can be on-call all the time and notified 24/7 when jobs start failing (especially useful if your company doesn&apos;t provide you with a phone or allow email on your personal device) ;):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_ENCODED SMTP_SERVER SMTP Server:"
+#!   DEFAULT_VALUE="SMTP"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR_ENCODED FROM_EMAIL From Email:"
+#!   DEFAULT_VALUE="fmeserver&lt;at&gt;yourdomain.gov"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR FME_SERVER_URL Base FME Server URL (ie https://fme.yourcompany.com):"
+#!   DEFAULT_VALUE="https://fme.yourcompany.com"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="26"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Added filter to not send emails to personal emails when database goes down for backup. This should reduce the number of emails to personal emails.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="3546.9104691046932 -1056.1332813328136"
+#!   TOP_LEFT="3546.9104691046932 -1056.1332813328136"
+#!   BOTTOM_RIGHT="4682.9104691046932 -1055.1332813328136"
+#!   BOUNDING_RECT="3546.9104691046932 -1056.1332813328136 1136 -1"
+#!   ORDER="500000000000055"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="33"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="27"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Retrieve Log File from server. NOTE this needs access to your server logs!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-112.87546875468752 -348.37696876968772"
+#!   TOP_LEFT="-112.87546875468752 -348.37696876968772"
+#!   BOTTOM_RIGHT="437.12453124531248 -347.37696876968772"
+#!   BOUNDING_RECT="-112.87546875468752 -348.37696876968772 550 -1"
+#!   ORDER="500000000000367"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="9"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="30"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Remove that New Python error message... Because you should already know about that :)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="413.50437504375009 -788.75618756187555"
+#!   TOP_LEFT="413.50437504375009 -788.75618756187555"
+#!   BOTTOM_RIGHT="1056.5043750437501 -787.75618756187555"
+#!   BOUNDING_RECT="413.50437504375009 -788.75618756187555 643 -1"
+#!   ORDER="500000000000368"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="37"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="39"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Change Carriage Returns to New Lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1069.7609376093762 -410.62740627406276"
+#!   TOP_LEFT="1069.7609376093762 -410.62740627406276"
+#!   BOTTOM_RIGHT="1534.3903439034391 -553.12853128531287"
+#!   BOUNDING_RECT="1069.7609376093762 -410.62740627406276 464.62940629406285 142.50112501125011"
+#!   ORDER="500000000000369"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="32"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="44"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Create List of log lines that are marked as ERROR (Note, that the regex doesn&apos;t seem to work as documented, but I have done my best to work around that)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1525.0152501525008 -851.25681256812584"
+#!   TOP_LEFT="1525.0152501525008 -851.25681256812584"
+#!   BOTTOM_RIGHT="2240.6474064740642 -1125.0092500925011"
+#!   BOUNDING_RECT="1525.0152501525008 -851.25681256812584 715.63215632156357 273.75243752437524"
+#!   ORDER="500000000000370"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="12"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="46"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Keep all error logs in a db for later analysis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="4187.6406564065637 -649.00612506125162"
+#!   TOP_LEFT="4187.6406564065637 -649.00612506125162"
+#!   BOTTOM_RIGHT="4868.0485004850052 -648.00612506125162"
+#!   BOUNDING_RECT="4187.6406564065637 -649.00612506125162 680.40784407844149 -1"
+#!   ORDER="500000000000373"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="35"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="48"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This should be set up in your subscriptions as $(FME_TOPIC_MESSAGE) -- or just check the &amp;quot;Get Value from Topic Message&amp;quot; box&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-820.1337813378135 -260.87609376093769"
+#!   TOP_LEFT="-820.1337813378135 -260.87609376093769"
+#!   BOTTOM_RIGHT="-149.1337813378135 -259.87609376093769"
+#!   BOUNDING_RECT="-820.1337813378135 -260.87609376093769 671 -1"
+#!   ORDER="500000000000376"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,0,0.015686274509803921,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="24"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="49"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This needs to be set up as a subscription and subscribed to topics that are associated with failed jobs.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Action is required on your part for the annotations in RED.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Further notes... You can add further filtering rules for who it sends to and the message it sends (ie. sending an IT a message when the database has issues with the database error you&apos;re getting.... or including actions that need to be taken to get a job working again based on an error), but I just started this and I don&apos;t know all the errors, so I&apos;ll just send them all off :)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-796.66397663976659 212.50212502125015"
+#!   TOP_LEFT="-796.66397663976659 212.50212502125015"
+#!   BOTTOM_RIGHT="1056.4795547955478 -192.50162501625022"
+#!   BOUNDING_RECT="-796.66397663976659 212.50212502125015 1853.1435314353143 405.00375003750037"
+#!   ORDER="500000000000377"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,0,0.015686274509803921,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="45"
+#!   NAME="If a list is created, parse the first error"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="2407.2743127431272 -540.62915629156282"
+#!   ORDER="500000000000372"
+#!   BOTTOM_RIGHT="3511.2803128031287 -816.62915629156282"
+#!   BOUNDING_RECT="2407.2743127431272 -540.62915629156282 1104.0060000600015 276"
+#!   STICKY="true"
+#!   COLOUR="0.15686274509803921,0.14509803921568629,0.77647058823529413"
+#!   CONTENTS="42 18 22 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="47"
+#!   NAME="Notifications"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="3501.0357503575051 -933.63315633156344"
+#!   ORDER="500000000000374"
+#!   BOTTOM_RIGHT="4915.6736567365697 -2125.0212502125023"
+#!   BOUNDING_RECT="3501.0357503575051 -933.63315633156344 1414.6379063790646 1191.3880938809389"
+#!   STICKY="true"
+#!   COLOUR="0.066666666666666666,0.1803921568627451,0.78823529411764703"
+#!   CONTENTS="23 33 29 31 26 20 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="9"
+#!   TYPE="FMEServerLogFileRetriever"
+#!   VERSION="1"
+#!   POSITION="-46.875468754687518 -588.12853128531287"
+#!   BOUNDING_RECT="-46.875468754687518 -588.12853128531287 -1 -1"
+#!   ORDER="500000000000005"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_failure_reason" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="CONNECTION_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="EMBED_CONNECTION_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="JOB_ID_VAL" PARM_VALUE="@Value(id)"/>
+#!     <XFORM_PARM PARM_NAME="LOG_ATTR" PARM_VALUE="_log_attr"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SERVER_CONNECTION" PARM_VALUE="$(FME_SERVER_CONNECTION)"/>
+#!     <XFORM_PARM PARM_NAME="SERVER_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="USERNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FMEServerLogFileRetriever"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="12"
+#!   TYPE="StringSearcher"
+#!   VERSION="3"
+#!   POSITION="1668.7666876668761 -588.12853128531287"
+#!   BOUNDING_RECT="1668.7666876668761 -588.12853128531287 -1 -1"
+#!   ORDER="500000000000006"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="MATCHED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="NOT_MATCHED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="yes"/>
+#!     <XFORM_PARM PARM_NAME="MATCHED_PARTS_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MATCHED_RESULT_ATTR" PARM_VALUE="match"/>
+#!     <XFORM_PARM PARM_NAME="MATCHES_ATTR" PARM_VALUE="allmatch"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="^&lt;openparen&gt;.*&lt;closeparen&gt;&lt;quote&gt;|ERROR&lt;space&gt;&lt;openparen&gt;.*&lt;closeparen&gt;&lt;dollar&gt;^"/>
+#!     <XFORM_PARM PARM_NAME="STRING_TO_SEARCH" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;_log_attr&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringSearcher"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="32"
+#!   TYPE="StringReplacer"
+#!   VERSION="4"
+#!   POSITION="1093.7609376093762 -588.12853128531287"
+#!   BOUNDING_RECT="1093.7609376093762 -588.12853128531287 -1 -1"
+#!   ORDER="500000000000017"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="FIND_TEXT" PARM_VALUE="&lt;cr&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH" PARM_VALUE="_FME_NO_OP_"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="REPLACE_TEXT" PARM_VALUE="&lt;lf&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SRC_ATTRS" PARM_VALUE="_log_attr"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringReplacer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="18"
+#!   TYPE="AttributeSplitter"
+#!   VERSION="3"
+#!   POSITION="2481.2743127431272 -650.62915629156282"
+#!   BOUNDING_RECT="2481.2743127431272 -650.62915629156282 -1 -1"
+#!   ORDER="500000000000029"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="allmatch&lt;opencurly&gt;1&lt;closecurly&gt;.match"/>
+#!     <XFORM_PARM PARM_NAME="DELIMITER" PARM_VALUE="&lt;lf&gt;"/>
+#!     <XFORM_PARM PARM_NAME="DROP_EMPTY_PARTS" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_list"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRIM_OPTION" PARM_VALUE="Both"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeSplitter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="37"
+#!   TYPE="StringReplacer"
+#!   VERSION="4"
+#!   POSITION="528.13028130281282 -588.12853128531287"
+#!   BOUNDING_RECT="528.13028130281282 -588.12853128531287 -1 -1"
+#!   ORDER="500000000000048"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="FIND_TEXT" PARM_VALUE="|ERROR&lt;space&gt;|C:&lt;backslash&gt;Program&lt;space&gt;Files&lt;backslash&gt;FMEServer&lt;backslash&gt;Server&lt;backslash&gt;fme&lt;backslash&gt;&lt;solidus&gt;python&lt;backslash&gt;urllib3&lt;backslash&gt;connectionpool.py:858:&lt;space&gt;InsecureRequestWarning:&lt;space&gt;Unverified&lt;space&gt;HTTPS&lt;space&gt;request&lt;space&gt;is&lt;space&gt;being&lt;space&gt;made.&lt;space&gt;Adding&lt;space&gt;certificate&lt;space&gt;verification&lt;space&gt;is&lt;space&gt;strongly&lt;space&gt;advised.&lt;space&gt;See:&lt;space&gt;https:&lt;solidus&gt;&lt;solidus&gt;urllib3.readthedocs.io&lt;solidus&gt;en&lt;solidus&gt;latest&lt;solidus&gt;advanced-usage.html#ssl-warnings"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH" PARM_VALUE="_FME_NO_OP_"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="REPLACE_TEXT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SRC_ATTRS" PARM_VALUE="_log_attr"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="NewPythonVersionErrorRemoval"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="23"
+#!   TYPE="Emailer"
+#!   VERSION="1"
+#!   POSITION="4246.9174691746939 -1662.5143751437504"
+#!   BOUNDING_RECT="4246.9174691746939 -1662.5143751437504 618.75618756187532 71"
+#!   ORDER="500000000000039"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="Sent"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADDRESSING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTACHGROUP" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="ATTACHMENTTABLE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BCC" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BODY" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;StatusMessage&lt;closeparen&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;More&lt;space&gt;details:&lt;space&gt;$(FME_SERVER_URL)&lt;solidus&gt;fmeserver&lt;solidus&gt;#&lt;solidus&gt;job&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;id&lt;closeparen&gt;&lt;solidus&gt;summary&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;Time&lt;space&gt;Requested:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;timeRequested&lt;closeparen&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;Time&lt;space&gt;Started:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;timeStarted&lt;closeparen&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;Time&lt;space&gt;Finished:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;timeFinished&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CC" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CONTENT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FROM" PARM_VALUE="$(FROM_EMAIL)"/>
+#!     <XFORM_PARM PARM_NAME="SERVICE" PARM_VALUE="Generic SMTP"/>
+#!     <XFORM_PARM PARM_NAME="SERVICEGROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SMTP_CONNECTION" PARM_VALUE="HOST;$(SMTP_SERVER);PORT;25;ENCRYPTION;None;TIMEOUT;60;AUTHENTICATION;NO;USERNAME;&lt;Unused&gt;;PASSWORD;&lt;Unused&gt;;FME_CONTROLLER_QUERY_FILE;transformers&lt;backslash&gt;dependencies&lt;backslash&gt;emailer&lt;backslash&gt;Generic&lt;space&gt;SMTP.fme"/>
+#!     <XFORM_PARM PARM_NAME="SUBJECT" PARM_VALUE="&lt;openbracket&gt;FME&lt;space&gt;Failed&lt;closebracket&gt;:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;repository&lt;closeparen&gt;&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;workspace&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TO" PARM_VALUE="$(TO_EMAIL_WORK)"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WorkEmailer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="20"
+#!   TYPE="TestFilter"
+#!   VERSION="1"
+#!   POSITION="3575.0357503575051 -1334.3860938609382"
+#!   BOUNDING_RECT="3575.0357503575051 -1334.3860938609382 -1 -1"
+#!   ORDER="500000000000051"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="Winter&lt;space&gt;Operations"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TESTLISTGRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="&quot;BOOL_OP,COMPOSITE,COMPOSITE_TEST,&quot;&quot;&quot;&quot;&quot;&quot;1 AND (2 AND (3 OR 4 OR 5))&quot;&quot;&quot;&quot;&quot;&quot;,TEST_CLAUSE,TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;repository&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;Winter&lt;lt&gt;space&lt;gt&gt;Operations&lt;lf&gt;NUM_TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;DateTimeFormat&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;DateTimeNow&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;comma&lt;gt&gt;%H&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;RANGE&lt;space&gt;&lt;lt&gt;openbracket&lt;gt&gt;01&lt;lt&gt;comma&lt;gt&gt;02&lt;lt&gt;closebracket&lt;gt&gt;&lt;lf&gt;CASE_INSENSITIVE_TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;StatusMessage&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;ORA-01033:&lt;lt&gt;space&lt;gt&gt;ORACLE&lt;lt&gt;space&lt;gt&gt;initialization&lt;lt&gt;space&lt;gt&gt;or&lt;lt&gt;space&lt;gt&gt;shutdown&lt;lt&gt;space&lt;gt&gt;in&lt;lt&gt;space&lt;gt&gt;progress&lt;lf&gt;CASE_INSENSITIVE_TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;StatusMessage&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;ORA-12518:&lt;lt&gt;space&lt;gt&gt;TNS:listener&lt;lt&gt;space&lt;gt&gt;could&lt;lt&gt;space&lt;gt&gt;not&lt;lt&gt;space&lt;gt&gt;hand&lt;lt&gt;space&lt;gt&gt;off&lt;lt&gt;space&lt;gt&gt;client&lt;lt&gt;space&lt;gt&gt;connection&lt;lf&gt;CASE_INSENSITIVE_TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;StatusMessage&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;ORA-01034:&lt;lt&gt;space&lt;gt&gt;ORACLE&lt;lt&gt;space&lt;gt&gt;not&lt;lt&gt;space&lt;gt&gt;available&quot;,Winter&lt;space&gt;Operations"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="31"
+#!   TYPE="Emailer"
+#!   VERSION="1"
+#!   POSITION="4246.9174691746939 -1400.0112501125006"
+#!   BOUNDING_RECT="4246.9174691746939 -1400.0112501125006 618.75618756187532 71"
+#!   ORDER="500000000000039"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="Sent"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADDRESSING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTACHGROUP" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="ATTACHMENTTABLE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BCC" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BODY" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;StatusMessage&lt;closeparen&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;More&lt;space&gt;details:&lt;space&gt;$(FME_SERVER_URL)&lt;solidus&gt;fmeserver&lt;solidus&gt;#&lt;solidus&gt;job&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;id&lt;closeparen&gt;&lt;solidus&gt;summary&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;Time&lt;space&gt;Requested:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;timeRequested&lt;closeparen&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;Time&lt;space&gt;Started:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;timeStarted&lt;closeparen&gt;&lt;lt&gt;br&lt;space&gt;&lt;solidus&gt;&lt;gt&gt;&lt;lf&gt;Time&lt;space&gt;Finished:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;timeFinished&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CC" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CONTENT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FROM" PARM_VALUE="$(FROM_EMAIL)"/>
+#!     <XFORM_PARM PARM_NAME="SERVICE" PARM_VALUE="Generic SMTP"/>
+#!     <XFORM_PARM PARM_NAME="SERVICEGROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SMTP_CONNECTION" PARM_VALUE="HOST;$(SMTP_SERVER);PORT;25;ENCRYPTION;None;TIMEOUT;60;AUTHENTICATION;NO;USERNAME;&lt;Unused&gt;;PASSWORD;&lt;Unused&gt;;FME_CONTROLLER_QUERY_FILE;transformers&lt;backslash&gt;dependencies&lt;backslash&gt;emailer&lt;backslash&gt;Generic&lt;space&gt;SMTP.fme"/>
+#!     <XFORM_PARM PARM_NAME="SUBJECT" PARM_VALUE="&lt;openbracket&gt;FME&lt;space&gt;Failed&lt;closebracket&gt;:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;repository&lt;closeparen&gt;&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;workspace&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TO" PARM_VALUE="$(TO_EMAIL_WORK)&lt;comma&gt;&lt;space&gt;$(TO_EMAIL_PERSONAL)"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WinterOpsEmailer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="42"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="3031.2803128031287 -650.62915629156282"
+#!   BOUNDING_RECT="3031.2803128031287 -650.62915629156282 -1 -1"
+#!   ORDER="500000000000053"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18547"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="workspace" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeRequested" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="requestKeyword" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="repository" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LogFileName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="jobfailure_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="StatusNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logHome" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="logUrl" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_log_attr" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.match" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="allmatch{}.startIndex" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="workspace workspace  NO_OP timeRequested timeRequested  NO_OP requestKeyword requestKeyword  NO_OP timeStarted timeStarted  NO_OP repository repository  NO_OP LogFileName LogFileName  NO_OP StatusMessage StatusMessage &lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;0&lt;closecurly&gt;&lt;closeparen&gt;&lt;space&gt;&lt;space&gt;|&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;at&gt;Value&lt;openparen&gt;StatusMessage&lt;closeparen&gt; SET_TO jobfailure_topic jobfailure_topic  NO_OP StatusNumber StatusNumber  NO_OP id id  NO_OP timeFinished timeFinished  NO_OP logHome logHome  NO_OP logUrl logUrl  NO_OP _log_attr _log_attr  NO_OP match match  NO_OP allmatch&lt;opencurly&gt;&lt;closecurly&gt;.match allmatch&lt;opencurly&gt;&lt;closecurly&gt;.match  NO_OP allmatch&lt;opencurly&gt;&lt;closecurly&gt;.startIndex allmatch&lt;opencurly&gt;&lt;closecurly&gt;.startIndex  NO_OP _list&lt;opencurly&gt;&lt;closecurly&gt; _list&lt;opencurly&gt;&lt;closecurly&gt;  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StatusMessage"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="25"
+#!   SOURCE_NODE="24"
+#!   TARGET_NODE="9"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="38"
+#!   SOURCE_NODE="9"
+#!   TARGET_NODE="37"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="19"
+#!   SOURCE_NODE="12"
+#!   TARGET_NODE="18"
+#!   SOURCE_PORT_DESC="fo 0 MATCHED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="22"
+#!   SOURCE_NODE="18"
+#!   TARGET_NODE="42"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="33"
+#!   SOURCE_NODE="20"
+#!   TARGET_NODE="31"
+#!   SOURCE_PORT_DESC="fo 0 Winter&lt;lt&gt;space&lt;gt&gt;Operations"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="34"
+#!   SOURCE_NODE="32"
+#!   TARGET_NODE="12"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="36"
+#!   SOURCE_NODE="37"
+#!   TARGET_NODE="32"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="43"
+#!   SOURCE_NODE="42"
+#!   TARGET_NODE="20"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="41"
+#!   SOURCE_NODE="42"
+#!   TARGET_NODE="35"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="28"
+#!   SOURCE_NODE="12"
+#!   TARGET_NODE="20"
+#!   SOURCE_PORT_DESC="fo 1 NOT_MATCHED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="40"
+#!   SOURCE_NODE="12"
+#!   TARGET_NODE="35"
+#!   SOURCE_PORT_DESC="fo 1 NOT_MATCHED"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="29"
+#!   SOURCE_NODE="20"
+#!   TARGET_NODE="23"
+#!   SOURCE_PORT_DESC="fo 1 &lt;lt&gt;lt&lt;gt&gt;UNFILTERED&lt;lt&gt;gt&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 36
+GUI IGNORE SourceDataset_JSON_1,JSON_IN_FME_GROUP_NAMED1_JSON_1,JSON_IN_SCAN_MODE_JSON_1,JSON_IN_QUERY_TABLE_JSON_1,JSON_IN_FME_GROUP_NAMED2_JSON_1,JSON_IN_FEATURE_TYPE_KEY_JSON_1,JSON_IN_GEOMETRY_FORMAT_JSON_1,JSON_IN_GEOMETRY_KEY_JSON_1,JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1,JSON_IN_SAVE_FRAGMENTS_JSON_1,JSON_IN_USE_SEARCH_ENVELOPE_JSON_1,JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1,JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1,JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1,JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1,JSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1,JSON_IN_CLIP_TO_ENVELOPE_JSON_1,JSON_IN_NETWORK_AUTHENTICATION_JSON_1,DestDataset_SQLITE3_1,SQLITE3_OUT_FME_CONNECTION_GROUP_SQLITE3_1,SQLITE3_OUT_OVERWRITE_FILE_SQLITE3_1,SQLITE3_OUT_DATASET_TEMPLATE_SQLITE3_1,SQLITE3_OUT_ADVANCED_SQLITE3_1,SQLITE3_OUT_WRITER_MODE_SQLITE3_1,SQLITE3_OUT_START_TRANSACTION_SQLITE3_1,SQLITE3_OUT_TRANSACTION_INTERVAL_SQLITE3_1,SQLITE3_OUT_BEGIN_SQL{0}_SQLITE3_1,SQLITE3_OUT_END_SQL{0}_SQLITE3_1
+DEFAULT_MACRO FAILED_JSON $(FME_TOPIC_MESSAGE)
+GUI FILE_OR_URL FAILED_JSON JSON_Documents(*.json)|*.json|All_Files|* The $(FME_TOPIC_MESSAGE):
+DEFAULT_MACRO FME_SERVER_CONNECTION fmeserver
+GUI NAMED_CONNECTION_ENCODED FME_SERVER_CONNECTION "FME Server" Connection to read log files:
+DEFAULT_MACRO SAD_LOGS_DB E:\Sad Logs\errors.sqlite
+GUI FILENAME SAD_LOGS_DB SQLite_Database_Files(*.sqlite;*.db;*.sl3;*.gpkg)|*.sqlite;*.db;*.sl3;*.gpkg|SQLite_Database_Files(*.sqlite)|*.sqlite|SQLite_Database_Files(*.db)|*.db|SQLite_Database_Files(*.sl3)|*.sl3|SQLite_Database_Files(*.gpkg)|*.gpkg|All_files(*)|* SQLite Database:
+DEFAULT_MACRO TO_EMAIL_WORK 
+GUI TEXT TO_EMAIL_WORK Work Email:
+DEFAULT_MACRO TO_EMAIL_PERSONAL 
+GUI OPTIONAL TEXT TO_EMAIL_PERSONAL Why not add your personal email so you can be on-call all the time and notified 24/7 when jobs start failing _especially useful if your company doesn't provide you with a phone or allow email on your personal device_ ;_:
+DEFAULT_MACRO SMTP_SERVER SMTP
+GUI STRING_ENCODED SMTP_SERVER SMTP Server:
+DEFAULT_MACRO FROM_EMAIL fmeserver<at>yourdomain.gov
+GUI STRING_ENCODED FROM_EMAIL From Email:
+DEFAULT_MACRO FME_SERVER_URL https://fme.yourcompany.com
+GUI TEXT FME_SERVER_URL Base FME Server URL (ie https://fme.yourcompany.com):
+INCLUDE [ if {{$(FAILED_JSON)} == {}} { puts_real {Parameter 'FAILED_JSON' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(FME_SERVER_CONNECTION)} == {}} { puts_real {Parameter 'FME_SERVER_CONNECTION' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SAD_LOGS_DB)} == {}} { puts_real {Parameter 'SAD_LOGS_DB' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(TO_EMAIL_WORK)} == {}} { puts_real {Parameter 'TO_EMAIL_WORK' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SMTP_SERVER)} == {}} { puts_real {Parameter 'SMTP_SERVER' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(FROM_EMAIL)} == {}} { puts_real {Parameter 'FROM_EMAIL' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(FME_SERVER_URL)} == {}} { puts_real {Parameter 'FME_SERVER_URL' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} JSON
+MULTI_READER_KEYWORD{0} JSON_1
+MULTI_READER_GEN_DIRECTIVES{0} FLATTEN_MODE,ALL_LEVELS,USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,No,SEARCH_ENVELOPE_MINX,0,SCAN_MODE,AUTO,_MERGE_SCHEMAS,YES,SEARCH_ENVELOPE_MAXY,0,FEATURE_TYPE_KEY,json_featuretype,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,CLIP_TO_ENVELOPE,NO,USE_SEARCH_ENVELOPE,NO,DECODE_TEXT_STRINGS,Yes,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXX,0,EXPOSE_ATTRS_GROUP,,GEOMETRY_KEY,<lt>Unused<gt>,SAVE_FRAGMENTS,NO,GEOMETRY_FORMAT,None,QUERY_TABLE,<lt>Unused<gt>,COORDINATE_SYSTEM_KEY,<lt>Unused<gt>,JSON_EXPOSE_FORMAT_ATTRS,
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} SQLITE3
+MULTI_WRITER_KEYWORD{0} SQLITE3_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "JSON_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER JSON JSON_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_JSON_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER JSON JSON_1
+DEFAULT_MACRO SourceDataset_JSON_1 $(FAILED_JSON)
+GUI FILE_OR_URL SourceDataset_JSON_1 JSON_Documents(*.json)|*.json|All_Files|* Source JSON (JavaScript Object Notation) File or URL:
+DEFAULT_MACRO JSON_IN_FME_GROUP_NAMED1_JSON_1 
+GUI OPTIONAL DISCLOSUREGROUP JSON_IN_FME_GROUP_NAMED1_JSON_1 JSON_IN_SCAN_MODE_JSON_1%JSON_IN_QUERY_TABLE_JSON_1%JSON_IN_FLATTEN_MODE Schema Scan
+DEFAULT_MACRO JSON_IN_SCAN_MODE_JSON_1 AUTO
+JSON_1_SCAN_MODE "$(JSON_IN_SCAN_MODE_JSON_1)"
+GUI ACTIVECHOICE_LOOKUP JSON_IN_SCAN_MODE_JSON_1 Auto,AUTO,JSON_IN_QUERY_TABLE_JSON_1%JSON<space>Query,QUERY Schema Scan Mode
+DEFAULT_MACRO JSON_IN_QUERY_TABLE_JSON_1 <Unused>
+JSON_1_QUERY_TABLE "$(JSON_IN_QUERY_TABLE_JSON_1)"
+GUI GUI_LINE_TABLE JSON_IN_QUERY_TABLE_JSON_1 NO_LABEL%NOT_OK_IF_INVALID%START_NUM_ROWS:1%"Feature Type"%"STRING_ENCODED FTYPE"%Query%"DYNAMIC_SINGLE_SELECT_ENCODED QUERY $[SourceDataset_JSON_1],_FORMAT_OVERRIDE_,JSON,_GET_ATTRIBUTE_VALUES_,,JSON_SCAN_FOR_QUERIES,YES,FME_DELIM,<u001F>,FME_PARENT_SELECTION,root_node,FME_READ_SCHEMA,NO,FME_DN_ATTR,display_value,FME_PATH_ATTR,query_string,FME_EXPAND,json" JSON Queries for Feature Objects:
+DEFAULT_MACRO JSON_IN_FLATTEN_MODE_JSON_1 ALL_LEVELS
+JSON_1_FLATTEN_MODE "$(JSON_IN_FLATTEN_MODE_JSON_1)"
+DEFAULT_MACRO JSON_IN_FME_GROUP_NAMED2_JSON_1 
+GUI OPTIONAL DISCLOSUREGROUP JSON_IN_FME_GROUP_NAMED2_JSON_1 JSON_IN_FEATURE_TYPE_KEY_JSON_1%JSON_IN_GEOMETRY_FORMAT_JSON_1%JSON_IN_GEOMETRY_KEY_JSON_1%JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1%JSON_IN_SAVE_FRAGMENTS_JSON_1 Feature Parameters
+DEFAULT_MACRO JSON_IN_FEATURE_TYPE_KEY_JSON_1 json_featuretype
+JSON_1_FEATURE_TYPE_KEY "$(JSON_IN_FEATURE_TYPE_KEY_JSON_1)"
+GUI OPTIONAL TEXT JSON_IN_FEATURE_TYPE_KEY_JSON_1 Feature Type Key Name:
+DEFAULT_MACRO JSON_IN_GEOMETRY_FORMAT_JSON_1 None
+JSON_1_GEOMETRY_FORMAT "$(JSON_IN_GEOMETRY_FORMAT_JSON_1)"
+GUI ACTIVECHOICE JSON_IN_GEOMETRY_FORMAT_JSON_1 GeoJSON%OGC-WKT%None,JSON_IN_GEOMETRY_KEY_JSON_1,JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1 Geometry Format:
+DEFAULT_MACRO JSON_IN_GEOMETRY_KEY_JSON_1 
+JSON_1_GEOMETRY_KEY "$(JSON_IN_GEOMETRY_KEY_JSON_1)"
+GUI OPTIONAL TEXT JSON_IN_GEOMETRY_KEY_JSON_1 Geometry Key Name:
+DEFAULT_MACRO JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1 <Unused>
+JSON_1_COORDINATE_SYSTEM_KEY "$(JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1)"
+GUI TEXT JSON_IN_COORDINATE_SYSTEM_KEY_JSON_1 Coordinate System Key Name:
+DEFAULT_MACRO JSON_IN_SAVE_FRAGMENTS_JSON_1 NO
+JSON_1_SAVE_FRAGMENTS "$(JSON_IN_SAVE_FRAGMENTS_JSON_1)"
+GUI LOOKUP_CHOICE JSON_IN_SAVE_FRAGMENTS_JSON_1 Yes,YES%No,NO Read Entire Feature as JSON Fragment:
+DEFAULT_MACRO JSON_IN_DECODE_TEXT_STRINGS_JSON_1 Yes
+JSON_1_DECODE_TEXT_STRINGS "$(JSON_IN_DECODE_TEXT_STRINGS_JSON_1)"
+DEFAULT_MACRO JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1 
+JSON_1_EXPOSE_ATTRS_GROUP "$(JSON_IN_EXPOSE_ATTRS_GROUP_JSON_1)"
+DEFAULT_MACRO JSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_JSON_1 No
+JSON_1_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE "$(JSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_JSON_1)"
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+DEFAULT_MACRO JSON_IN_USE_SEARCH_ENVELOPE_JSON_1 NO
+JSON_1_USE_SEARCH_ENVELOPE "$(JSON_IN_USE_SEARCH_ENVELOPE_JSON_1)"
+GUI ACTIVEDISCLOSUREGROUP JSON_IN_USE_SEARCH_ENVELOPE_JSON_1 JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1%JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1%JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1%JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1%JSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1%JSON_IN_CLIP_TO_ENVELOPE_JSON_1%JSON_IN_SEARCH_METHOD%JSON_IN_SEARCH_METHOD_FILTER%JSON_IN_SEARCH_ORDER%JSON_IN_SEARCH_FEATURE%JSON_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+# ===========================================================================
+GUI LOOKUP JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1 <Unused>,0 
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MINX_JSON_1 Minimum X:
+# ===========================================================================
+GUI LOOKUP JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1 <Unused>,0 
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MINY_JSON_1 Minimum Y:
+# ===========================================================================
+GUI LOOKUP JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1 <Unused>,0 
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MAXX_JSON_1 Maximum X:
+# ===========================================================================
+GUI LOOKUP JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1 <Unused>,0 
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1 0
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1)"
+GUI OPTIONAL FLOAT JSON_IN_SEARCH_ENVELOPE_MAXY_JSON_1 Maximum Y:
+# ===========================================================================
+GUI LOOKUP JSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1 <Unused>, 
+DEFAULT_MACRO JSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1 
+JSON_1_SEARCH_ENVELOPE "$(JSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1)"
+GUI OPTIONAL COORDSYS JSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_JSON_1 Search Envelope Coordinate System:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+GUI LOOKUP JSON_IN_CLIP_TO_ENVELOPE_JSON_1 <Unused>,NO 
+DEFAULT_MACRO JSON_IN_CLIP_TO_ENVELOPE_JSON_1 NO
+JSON_1_CLIP_TO_ENVELOPE "$(JSON_IN_CLIP_TO_ENVELOPE_JSON_1)"
+GUI OPTIONAL CHECKBOX JSON_IN_CLIP_TO_ENVELOPE_JSON_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO JSON_IN_NETWORK_AUTHENTICATION_JSON_1 
+JSON_1_NETWORK_AUTHENTICATION "$(JSON_IN_NETWORK_AUTHENTICATION_JSON_1)"
+GUI OPTIONAL AUTHENTICATOR JSON_IN_NETWORK_AUTHENTICATION_JSON_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO JSON_IN_ATTRIBUTE_READING_JSON_1 ALL
+JSON_1_ATTRIBUTE_READING "$(JSON_IN_ATTRIBUTE_READING_JSON_1)"
+# ============================================================================ 
+JSON_1_GENERATE_FME_BUILD_NUM 18547
+JSON_1_DATASET "$(SourceDataset_JSON_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "SQLITE3_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER SQLITE3 SQLITE3_1
+# ============================================================================
+# First get the dataset for the database.
+GUI MULTIFILE DestDataset_SQLITE3_1 SQLite_Database_Files(*.sqlite;*.db;*.sl3;*.gpkg)|*.sqlite;*.db;*.sl3;*.gpkg|SQLite_Database_Files(*.sqlite)|*.sqlite|SQLite_Database_Files(*.db)|*.db|SQLite_Database_Files(*.sl3)|*.sl3|SQLite_Database_Files(*.gpkg)|*.gpkg|All_files(*)|* SQLite Database
+DEFAULT_MACRO SQLITE3_OUT_FME_CONNECTION_GROUP_SQLITE3_1 
+GUI OPTIONAL DISCLOSUREGROUP SQLITE3_OUT_FME_CONNECTION_GROUP_SQLITE3_1 SQLITE3_OUT_NAMED_CONNECTION%SQLITE3_OUT_OVERWRITE_FILE_SQLITE3_1%SQLITE3_OUT_DATASET_TEMPLATE_SQLITE3_1 Database Connection
+DEFAULT_MACRO SQLITE3_OUT_OVERWRITE_FILE_SQLITE3_1 No
+SQLITE3_1_OVERWRITE_FILE "$(SQLITE3_OUT_OVERWRITE_FILE_SQLITE3_1)"
+GUI OPTIONAL ACTIVECHECK SQLITE3_OUT_OVERWRITE_FILE_SQLITE3_1 Yes%No,SQLITE3_OUT_DATASET_TEMPLATE_SQLITE3_1 Overwrite Existing Database:
+DEFAULT_MACRO SQLITE3_OUT_DATASET_TEMPLATE_SQLITE3_1 
+SQLITE3_1_DATASET_TEMPLATE "$(SQLITE3_OUT_DATASET_TEMPLATE_SQLITE3_1)"
+GUI OPTIONAL FILENAME_MUSTEXIST SQLITE3_OUT_DATASET_TEMPLATE_SQLITE3_1 SQLite_Database_Files(*.sqlite;*.db;*.sl3)|*.sqlite*;.db;*.sl3|SQLite_Database_Files(*.sqlite)|*.sqlite|SQLite_Database_Files(*.db)|*.db|SQLite_Database_Files(*.sl3)|*.sl3|All_files(*)|* Template File:
+GUI LOOKUP SQLITE3_OUT_DATASET_TEMPLATE_SQLITE3_1 <Unused>, 
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO SQLITE3_OUT_DESTINATION_DATASETTYPE_VALIDATION_SQLITE3_1 Yes
+SQLITE3_1_DESTINATION_DATASETTYPE_VALIDATION "$(SQLITE3_OUT_DESTINATION_DATASETTYPE_VALIDATION_SQLITE3_1)"
+DEFAULT_MACRO SQLITE3_OUT_ADVANCED_SQLITE3_1 
+GUI OPTIONAL DISCLOSUREGROUP SQLITE3_OUT_ADVANCED_SQLITE3_1 SQLITE3_OUT_WRITER_MODE_SQLITE3_1%SQLITE3_OUT_START_TRANSACTION_SQLITE3_1%SQLITE3_OUT_TRANSACTION_INTERVAL_SQLITE3_1%SQLITE3_OUT_BEGIN_SQL{0}_SQLITE3_1%SQLITE3_OUT_END_SQL{0}_SQLITE3_1 Advanced
+# ============================================================================
+# This keyword sets the mode of the writer
+DEFAULT_MACRO SQLITE3_OUT_WRITER_MODE_SQLITE3_1 INSERT
+SQLITE3_1_WRITER_MODE "$(SQLITE3_OUT_WRITER_MODE_SQLITE3_1)"
+GUI LOOKUP_CHOICE SQLITE3_OUT_WRITER_MODE_SQLITE3_1 Insert,INSERT%Update,UPDATE%Delete,DELETE Writer Mode
+# ============================================================================
+# This keyword sets the starting transaction
+DEFAULT_MACRO SQLITE3_OUT_START_TRANSACTION_SQLITE3_1 0
+SQLITE3_1_START_TRANSACTION "$(SQLITE3_OUT_START_TRANSACTION_SQLITE3_1)"
+GUI OPTIONAL TEXT SQLITE3_OUT_START_TRANSACTION_SQLITE3_1 Start Transaction At:
+# ============================================================================
+# This keyword sets the number of features between transaction commits
+DEFAULT_MACRO SQLITE3_OUT_TRANSACTION_INTERVAL_SQLITE3_1 500
+SQLITE3_1_TRANSACTION_INTERVAL "$(SQLITE3_OUT_TRANSACTION_INTERVAL_SQLITE3_1)"
+GUI OPTIONAL TEXT SQLITE3_OUT_TRANSACTION_INTERVAL_SQLITE3_1 Features Per Transaction
+# ============================================================================
+# The following specifies an SQL command to execute before opening the first
+# table.
+DEFAULT_MACRO SQLITE3_OUT_BEGIN_SQL{0}_SQLITE3_1 
+SQLITE3_1_BEGIN_SQL{0} "$(SQLITE3_OUT_BEGIN_SQL{0}_SQLITE3_1)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG SQLITE3_OUT_BEGIN_SQL{0}_SQLITE3_1 MODE,SQL;FORMAT,SQLITE3 SQL To Run Before Write
+# ============================================================================
+# The following specifies an SQL command to execute after closing all the
+# tables.
+DEFAULT_MACRO SQLITE3_OUT_END_SQL{0}_SQLITE3_1 
+SQLITE3_1_END_SQL{0} "$(SQLITE3_OUT_END_SQL{0}_SQLITE3_1)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG SQLITE3_OUT_END_SQL{0}_SQLITE3_1 MODE,SQL;FORMAT,SQLITE3 SQL To Run After Write
+# ============================================================================
+# Prevent the infrastructure from reprojecting incoming features
+DEFAULT_MACRO SQLITE3_OUT_COORDINATE_SYSTEM_GRANULARITY_SQLITE3_1 FEATURE
+SQLITE3_1_COORDINATE_SYSTEM_GRANULARITY "$(SQLITE3_OUT_COORDINATE_SYSTEM_GRANULARITY_SQLITE3_1)"
+# Compatibility case to support reading old workspaces with raw byte if unicode
+DEFAULT_MACRO SQLITE3_OUT_SUPPORT_INTERNATIONALIZATION_SQLITE3_1 YES
+SQLITE3_1_SUPPORT_INTERNATIONALIZATION "$(SQLITE3_OUT_SUPPORT_INTERNATIONALIZATION_SQLITE3_1)"
+DEFAULT_MACRO SQLITE3_OUT_ENCODING_SQLITE3_1 utf-8
+SQLITE3_1_ENCODING "$(SQLITE3_OUT_ENCODING_SQLITE3_1)"
+# ============================================================================ 
+SQLITE3_1_GENERATE_FME_BUILD_NUM 18547
+# ============================================================================
+# The following specifies when we should perform table initialization.
+# Table initialization is when we DROP, TRUNCATE, and CREATE TABLE.
+DEFAULT_MACRO SQLITE3_OUT_INIT_TABLES_SQLITE3_1 FIRSTFEATURE
+SQLITE3_1_INIT_TABLES "$(SQLITE3_OUT_INIT_TABLES_SQLITE3_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_SQLITE3_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER SQLITE3 SQLITE3_1
+DEFAULT_MACRO DestDataset_SQLITE3_1 $(SAD_LOGS_DB)
+SQLITE3_1_DATASET "$(DestDataset_SQLITE3_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)fme_error_handling.log"
+LOG_APPEND NO
+LOG_TIMINGS YES
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+MAPPING_FILE_ID Clean<space>Error<space>Notifications
+DEFAULT_MACRO DATASET_KEYWORD_JSON_1 JSON_1
+DEFAULT_MACRO DATASET_KEYWORD_SQLITE3_1 SQLITE3_1
+# -------------------------------------------------------------------------
+
+JSON_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME fme_error_handling
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+JSON_1_DEF JSONFeature   workspace                    string   timeRequested                string   requestKeyword               string   timeStarted                  string   repository                   string   LogFileName                  string   StatusMessage                string   jobfailure_topic             string   StatusNumber                 int   id                           int   timeFinished                 string   logHome                      string   logUrl                       string
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_JSON_1)   INPUT FEATURE_TYPE *    ROUTE JSON JSON_1::JSONFeature multi_reader_keyword,$(DATASET_KEYWORD_JSON_1) TO FME_GENERIC ::JSONFeature ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+JSON_1_MERGE_DEF JSON_1::JSONFeature EXACT JSONFeature
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "JSONFeature (JSON_1) Splitter"    INPUT FEATURE_TYPE JSONFeature    OUTPUT FEATURE_TYPE JSONFeature_JSON_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+FACTORY_DEF * ServerFactory    FACTORY_NAME FMEServerLogFileRetriever       INPUT  FEATURE_TYPE JSONFeature_JSON_1    ACTION RETRIEVE_JOB_LOG    CONNECTION "$(FME_SERVER_CONNECTION)"    JOB_ID "@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>id<closeparen>,FMEServerLogFileRetriever)"    LOG_ATTR _log_attr    OUTPUT OUTPUT FEATURE_TYPE FMEServerLogFileRetriever_OUTPUT
+# -------------------------------------------------------------------------
+MACRO casemac
+INCLUDE [ if { {NO} == {NO} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc NewPythonVersionErrorRemoval_ba879888_71eb_412d_8b02_548cd2f975c77_replacer { findText replaceText invalidValue} {     set attrs [split \"_log_attr\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set noMatch true;       if {{NO} == {YES}} {         set newAttrVal [FME_ReplaceRegex $(casemac) $findValue $attrVal $replaceValue];       } else {         set newAttrVal [string map $(casemac) [list $findValue $replaceValue] $attrVal];       };       if { $newAttrVal ne $attrVal } {         set noMatch false;         FME_SetAttribute $attr $newAttrVal;       };       if {$noMatch} {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME NewPythonVersionErrorRemoval    INPUT  FEATURE_TYPE FMEServerLogFileRetriever_OUTPUT    OUTPUT FEATURE_TYPE NewPythonVersionErrorRemoval_OUTPUT         @Tcl2("NewPythonVersionErrorRemoval_ba879888_71eb_412d_8b02_548cd2f975c77_replacer {|ERROR<space>|C:<backslash>Program<space>Files<backslash>FMEServer<backslash>Server<backslash>fme<backslash><solidus>python<backslash>urllib3<backslash>connectionpool.py:858:<space>InsecureRequestWarning:<space>Unverified<space>HTTPS<space>request<space>is<space>being<space>made.<space>Adding<space>certificate<space>verification<space>is<space>strongly<space>advised.<space>See:<space>https:<solidus><solidus>urllib3.readthedocs.io<solidus>en<solidus>latest<solidus>advanced-usage.html#ssl-warnings} {} {_FME_NO_OP_}")
+# -------------------------------------------------------------------------
+MACRO casemac
+INCLUDE [ if { {YES} == {NO} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc StringReplacer_2b52a246_750f_4012_95b2_5177c304b8f17_replacer { findText replaceText invalidValue} {     set attrs [split \"_log_attr\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set noMatch true;       if {{NO} == {YES}} {         set newAttrVal [FME_ReplaceRegex $(casemac) $findValue $attrVal $replaceValue];       } else {         set newAttrVal [string map $(casemac) [list $findValue $replaceValue] $attrVal];       };       if { $newAttrVal ne $attrVal } {         set noMatch false;         FME_SetAttribute $attr $newAttrVal;       };       if {$noMatch} {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringReplacer    INPUT  FEATURE_TYPE NewPythonVersionErrorRemoval_OUTPUT    OUTPUT FEATURE_TYPE StringReplacer_OUTPUT         @Tcl2("StringReplacer_2b52a246_750f_4012_95b2_5177c304b8f17_replacer {<cr>} {<lf>} {_FME_NO_OP_}")
+# -------------------------------------------------------------------------
+MACRO casemac
+INCLUDE [ if { {yes} == {no} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc StringSearcher_99880d76_94da_49d2_8058_4b478341b79f7_doGrep { stringToSearch regExp matchedChars matches matchedParts } {   set subMatches 1;   set matches [FME_DecodeText $matches];   set matchedParts [FME_DecodeText $matchedParts];   set results [FME_GetRegex $(casemac) [FME_DecodeText $regExp] [FME_DecodeText $stringToSearch]];   if {[llength [lindex $results 0]] > 0} {      set attrName [FME_DecodeText $matchedChars];      FME_SetAttribute $attrName [lindex [lindex [lindex $results 0] 0] 0];      set index 0;      set parts [lindex $results 1];      foreach part $parts {         if {[llength $matchedParts] > 0} {             set attrName "$matchedParts{$index}.part";             FME_SetAttribute $attrName [lindex $part 0];             set attrName "$matchedParts{$index}.startIndex";             FME_SetAttribute $attrName [lindex $part 1];         };         incr index;      };      set index 0;      set regexMatches [lindex $results 0];      foreach part $regexMatches {         if {[llength $matches] > 0} {             set attrName "$matches{$index}.match";             FME_SetAttribute $attrName [lindex $part 0];             set attrName "$matches{$index}.startIndex";             FME_SetAttribute $attrName [lindex $part 1];         };         set isFirstMatch 0;         incr index;      };      return $index;   };   return -1; }
+FACTORY_DEF * TestFactory    FACTORY_NAME StringSearcher    INPUT  FEATURE_TYPE StringReplacer_OUTPUT    TEST @Tcl2("StringSearcher_99880d76_94da_49d2_8058_4b478341b79f7_doGrep {@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_log_attr<closeparen>,StringSearcher)} {^<openparen>.*<closeparen><quote>|ERROR<space><openparen>.*<closeparen><dollar>^} {match} {allmatch} {}") > 0    OUTPUT PASSED FEATURE_TYPE StringSearcher_MATCHED    OUTPUT FAILED FEATURE_TYPE StringSearcher_NOT_MATCHED
+FACTORY_DEF * TeeFactory   FACTORY_NAME "StringSearcher NOT_MATCHED Splitter"   INPUT FEATURE_TYPE StringSearcher_NOT_MATCHED   OUTPUT FEATURE_TYPE StringSearcher_NOT_MATCHED_0_T+AG+f55cdo=   OUTPUT FEATURE_TYPE StringSearcher_NOT_MATCHED_1_uMY6Kor7kJs=
+# -------------------------------------------------------------------------
+Tcl2 set AttributeSplitter_46d0f802_0fdf_4ab0_92ed_9c5898d144317_splitDelim [FME_DecodeText {<lf>}];      if { [regexp {^([1-9][0-9]*s)+$} [set AttributeSplitter_46d0f802_0fdf_4ab0_92ed_9c5898d144317_splitDelim]] }      {         set AttributeSplitter_46d0f802_0fdf_4ab0_92ed_9c5898d144317_splitWidths [split [regsub -all {s$} {<lf>} {}] s];         proc AttributeSplitter_doSplit {}         {            global AttributeSplitter_46d0f802_0fdf_4ab0_92ed_9c5898d144317_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {allmatch<opencurly>1<closecurly>.match}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {Yes} {No}];            foreach width [set AttributeSplitter_46d0f802_0fdf_4ab0_92ed_9c5898d144317_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc AttributeSplitter_doSplit {}         {            global AttributeSplitter_46d0f802_0fdf_4ab0_92ed_9c5898d144317_splitDelim;            set delim [set AttributeSplitter_46d0f802_0fdf_4ab0_92ed_9c5898d144317_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {allmatch<opencurly>1<closecurly>.match}]];            set keepEmptyParts [string equal {Yes} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeSplitter    INPUT  FEATURE_TYPE StringSearcher_MATCHED    OUTPUT FEATURE_TYPE AttributeSplitter_OUTPUT         @Tcl2(AttributeSplitter_doSplit)
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME StatusMessage    INPUT  FEATURE_TYPE AttributeSplitter_OUTPUT    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "StatusMessage" "StatusMessage" "<at>Value<openparen>_list<opencurly>0<closecurly><closeparen><space><space>|<space><space><lf><at>Value<openparen>StatusMessage<closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE StatusMessage_OUTPUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "StatusMessage OUTPUT Splitter"   INPUT FEATURE_TYPE StatusMessage_OUTPUT   OUTPUT FEATURE_TYPE StatusMessage_OUTPUT_0_AR84Wz3LQpU=   OUTPUT FEATURE_TYPE StatusMessage_OUTPUT_1_GkzfvuY9e4k=
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME TestFilter_2    INPUT  FEATURE_TYPE StatusMessage_OUTPUT_0_AR84Wz3LQpU=    INPUT  FEATURE_TYPE StringSearcher_NOT_MATCHED_0_T+AG+f55cdo=    OUTPUT FEATURE_TYPE TestFilter_2_TESTFILTERINPUTLINE_0
+FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_2_Condition_1 INPUT FEATURE_TYPE TestFilter_2_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>repository<closeparen>,TestFilter_2) = Winter<space>Operations ENCODED NUM_TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>DateTimeFormat<openparen><at>DateTimeNow<openparen><closeparen><comma>%H<closeparen>,TestFilter_2) RANGE <openbracket>01<comma>02<closebracket> ENCODED CASE_INSENSITIVE_TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>StatusMessage<closeparen>,TestFilter_2) CONTAINS ORA-01033:<space>ORACLE<space>initialization<space>or<space>shutdown<space>in<space>progress ENCODED CASE_INSENSITIVE_TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>StatusMessage<closeparen>,TestFilter_2) CONTAINS ORA-12518:<space>TNS:listener<space>could<space>not<space>hand<space>off<space>client<space>connection ENCODED CASE_INSENSITIVE_TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>StatusMessage<closeparen>,TestFilter_2) CONTAINS ORA-01034:<space>ORACLE<space>not<space>available ENCODED BOOLEAN_OPERATOR COMPOSITE COMPOSITE_TEST_EXPR "1 AND (2 AND (3 OR 4 OR 5))" OUTPUT PASSED FEATURE_TYPE TestFilter_2_Winter<space>Operations OUTPUT FAILED FEATURE_TYPE TestFilter_2_TESTFILTERINPUTLINE_1
+FACTORY_DEF * TeeFactory FACTORY_NAME TestFilter_2_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE TestFilter_2_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE TestFilter_2_<lt>UNFILTERED<gt>
+# -------------------------------------------------------------------------
+# Note -- the AttachmentTable has to have a SPACE as the first character so that we don't get the *bad*
+# FME Parser to start parsing a @ function call -- if @ is the first character, it will, and then we lose
+# our table elements :-(
+# The python later expects the first character to be a space so all is well.
+FACTORY_DEF * TeeFactory    FACTORY_NAME WorkEmailer_CATCHER    INPUT  FEATURE_TYPE TestFilter_2_<lt>UNFILTERED<gt>    OUTPUT FEATURE_TYPE WorkEmailer_READY       ___fme_emailer_service           "Generic SMTP"       ___fme_emailer_connection        "HOST;@EvaluateExpression(FDIV,STRING_ENCODED,$(SMTP_SERVER),WorkEmailer);PORT;25;ENCRYPTION;None;TIMEOUT;60;AUTHENTICATION;NO;USERNAME;<Unused>;PASSWORD;<Unused>"       ___fme_emailer_from              "@EvaluateExpression(FDIV,STRING_ENCODED,$(FROM_EMAIL),WorkEmailer)"       ___fme_emailer_to                "@EvaluateExpression(FDIV,STRING_ENCODED,$(TO_EMAIL_WORK$encode),WorkEmailer)"       ___fme_emailer_cc                ""       ___fme_emailer_bcc               ""       ___fme_emailer_subject           "@EvaluateExpression(FDIV,STRING_ENCODED,<openbracket>FME<space>Failed<closebracket>:<space><at>Value<openparen>repository<closeparen><solidus><at>Value<openparen>workspace<closeparen>,WorkEmailer)"       ___fme_emailer_body              "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>StatusMessage<closeparen><lt>br<space><solidus><gt><lf><lt>br<space><solidus><gt><lf>More<space>details:<space>$(FME_SERVER_URL$encode)<solidus>fmeserver<solidus>#<solidus>job<solidus><at>Value<openparen>id<closeparen><solidus>summary<lt>br<space><solidus><gt><lf><lt>br<space><solidus><gt><lf>Time<space>Requested:<space><at>Value<openparen>timeRequested<closeparen><lt>br<space><solidus><gt><lf>Time<space>Started:<space><at>Value<openparen>timeStarted<closeparen><lt>br<space><solidus><gt><lf>Time<space>Finished:<space><at>Value<openparen>timeFinished<closeparen>,WorkEmailer)"       ___fme_emailer_attachments       " "       ___fme_emailer_xformerName       "WorkEmailer"
+FACTORY_DEF * PythonFactory    FACTORY_NAME WorkEmailer_CALLER    INPUT FEATURE_TYPE WorkEmailer_READY    PYTHON_NAMESPACE FMEOBJECTS    SYMBOL_NAME Emailer.Emailer    OUTPUT PYOUTPUT FEATURE_TYPE WorkEmailer_PROCESSED
+FACTORY_DEF * TestFactory    FACTORY_NAME WorkEmailer_ROUTER    INPUT FEATURE_TYPE WorkEmailer_PROCESSED    TEST &fme_rejection_code == ""
+# -------------------------------------------------------------------------
+# Note -- the AttachmentTable has to have a SPACE as the first character so that we don't get the *bad*
+# FME Parser to start parsing a @ function call -- if @ is the first character, it will, and then we lose
+# our table elements :-(
+# The python later expects the first character to be a space so all is well.
+FACTORY_DEF * TeeFactory    FACTORY_NAME WinterOpsEmailer_CATCHER    INPUT  FEATURE_TYPE TestFilter_2_Winter<space>Operations    OUTPUT FEATURE_TYPE WinterOpsEmailer_READY       ___fme_emailer_service           "Generic SMTP"       ___fme_emailer_connection        "HOST;@EvaluateExpression(FDIV,STRING_ENCODED,$(SMTP_SERVER),WinterOpsEmailer);PORT;25;ENCRYPTION;None;TIMEOUT;60;AUTHENTICATION;NO;USERNAME;<Unused>;PASSWORD;<Unused>"       ___fme_emailer_from              "@EvaluateExpression(FDIV,STRING_ENCODED,$(FROM_EMAIL),WinterOpsEmailer)"       ___fme_emailer_to                "@EvaluateExpression(FDIV,STRING_ENCODED,$(TO_EMAIL_WORK$encode)<comma><space>$(TO_EMAIL_PERSONAL$encode),WinterOpsEmailer)"       ___fme_emailer_cc                ""       ___fme_emailer_bcc               ""       ___fme_emailer_subject           "@EvaluateExpression(FDIV,STRING_ENCODED,<openbracket>FME<space>Failed<closebracket>:<space><at>Value<openparen>repository<closeparen><solidus><at>Value<openparen>workspace<closeparen>,WinterOpsEmailer)"       ___fme_emailer_body              "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>StatusMessage<closeparen><lt>br<space><solidus><gt><lf><lt>br<space><solidus><gt><lf>More<space>details:<space>$(FME_SERVER_URL$encode)<solidus>fmeserver<solidus>#<solidus>job<solidus><at>Value<openparen>id<closeparen><solidus>summary<lt>br<space><solidus><gt><lf><lt>br<space><solidus><gt><lf>Time<space>Requested:<space><at>Value<openparen>timeRequested<closeparen><lt>br<space><solidus><gt><lf>Time<space>Started:<space><at>Value<openparen>timeStarted<closeparen><lt>br<space><solidus><gt><lf>Time<space>Finished:<space><at>Value<openparen>timeFinished<closeparen>,WinterOpsEmailer)"       ___fme_emailer_attachments       " "       ___fme_emailer_xformerName       "WinterOpsEmailer"
+FACTORY_DEF * PythonFactory    FACTORY_NAME WinterOpsEmailer_CALLER    INPUT FEATURE_TYPE WinterOpsEmailer_READY    PYTHON_NAMESPACE FMEOBJECTS    SYMBOL_NAME Emailer.Emailer    OUTPUT PYOUTPUT FEATURE_TYPE WinterOpsEmailer_PROCESSED
+FACTORY_DEF * TestFactory    FACTORY_NAME WinterOpsEmailer_ROUTER    INPUT FEATURE_TYPE WinterOpsEmailer_PROCESSED    TEST &fme_rejection_code == ""
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC StringSearcher_NOT_MATCHED_1_uMY6Kor7kJs= TO SQLITE3 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Logs<closeparen> GEOMETRY    ROUTE FME_GENERIC StatusMessage_OUTPUT_1_GkzfvuY9e4k= TO SQLITE3 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Logs<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+SQLITE3_1_DEF Logs   sqlite3_update_key_columns   ""   sqlite3_drop_table           NO   sqlite3_truncate_table       NO   sqlite3_table_writer_mode    INHERIT_FROM_WRITER   workspace                    text   timeRequested                text   requestKeyword               text   timeStarted                  text   repository                   text   LogFileName                  text   StatusMessage                text   jobfailure_topic             text   StatusNumber                 integer   id                           integer   timeFinished                 text   logHome                      text   logUrl                       text   _log_attr                    varchar(200)   match                        varchar(200)
