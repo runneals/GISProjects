@@ -1,0 +1,107 @@
+#Set the output for the fgdb to something similar to \\Location\of\temp\fgdb\Test_AVL_Images_Past_1HR.gdb.zip\Test_AVL_Images_Past_1HR.gdb which creates the zip file needed below
+# IMPORTANT NOTE: Only confirmed to work on services with a single layer.
+import json,os
+from arcgis.gis import GIS
+
+# Set Variables
+accountConnection = '\\\\Location\Of\JSON\\\IowaDOT_SODA@AGOL.json' #location of account json file
+append_layer_itemid = '6d4d21abb46e4c6fbabd8421f9300ace' #item id of ArcGIS Service you are appending to
+sourcefile = '/\\Location\of\temp\fgdb\Test_AVL_Images_Past_1HR.gdb.zip' #Location of source file you wrote the zipped file geodatabase out to.
+item_prop = {'title':'Temp append file for Test_AVL_Images_Past_1HR', 'type':'File Geodatabase'} #description for item you are uploading to ArcGIS Online
+source_table_nm = 'Plowcam_Images_For_Past_Hour' #name of table/layer
+restURL='https://services.arcgis.com/8lRhdTsQyJpO52F1/arcgis/rest/admin/services/Test_AVL_Images_Past_1HR/FeatureServer/0/truncate' #admin url to the layer that you are going to truncate.
+
+# ------------------------------- DO NOT MODIFY ANYTHING BELOW THIS LINE -----------------------------------------------
+# Open the credential object and get the gis
+with open(accountConnection) as json_data:
+    d = json.load(json_data)
+
+if os.path.isfile(sourcefile):
+	import requests
+	#-------------------------------------------------------------------------------
+	# Name:        Truncates Data from REST Service prior to write
+	# Purpose:     Ensures that REST service gets truncated, even when there is no data coming through the feed.
+	#
+	# Author:      Kelly Gerrow/David Runneals
+	#Contact:      kgerrow@esri.com
+	#
+	# Created:     11/18/2015
+	#-------------------------------------------------------------------------------
+
+	def getToken(adminUser, pw):
+			data = {'username': adminUser,
+				'password': pw,
+				'referer' : 'https://www.arcgis.com',
+				'f': 'json'}
+			url  = 'https://arcgis.com/sharing/rest/generateToken'
+			jres = requests.post(url, data=data, verify=False).json()
+			return jres['token'],jres['ssl']
+
+	#generates account information
+	def GetAccount(pref, tokenfun):
+		URL= pref+'www.arcgis.com/sharing/rest/portals/self?f=json&token=' + tokenfun
+		response = requests.get(URL, verify=False)
+		jres = json.loads(response.text)
+		return jres['urlKey']
+
+	#get account information
+	token= getToken(d['user'], d['pass'])
+	if token[1] == False:
+			   pref='http://'
+	else:
+			   pref='https://'
+	#Create Portal URL
+	t=GetAccount(pref,token[0])
+	portalUrl=pref+t
+
+	#---------------- Truncate Data ------------------
+	payload = {'token':token[0],
+				'f': 'json'}    
+
+	#Send Request
+	res =requests.post(restURL, data = payload, verify=False).json()
+	if res['success']==True:
+		print("Service Successfully Truncated")
+		#-------------------------------------------------------------------------------
+		# Name:        Appends File Geodatabase to the REST service
+		# Purpose:     This script appends the file geodatabase to the REST service
+		#
+		# Author:      Khaled Hassen/David Runneals
+		# Contact:     khassen@esri.com
+		#
+		# Created:     04/18/2019
+		#-------------------------------------------------------------------------------
+		print("Start GIS Append Script")
+		# Login to the GIS
+		gis = GIS(d['portal'], d['user'], d['pass'])
+
+		# Grab the layer you want to append data into
+		fs_item = gis.content.get(append_layer_itemid)
+		fs_layer = fs_item.layers[0]
+
+		# Add the source file as an item to use with append
+		append_item = gis.content.add(item_properties=item_prop, data=sourcefile)
+		# Call append to add the records into the layer
+		try:
+			fs_layer.append(item_id=append_item.id,
+							upload_format='filegdb',
+							source_table_name=source_table_nm,
+							edits=None,
+							source_info=None,
+							#append_fields=["layer-field-to-update", …]
+							rollback=True)
+			print("Append completed successfully")
+
+		except:
+			print("Something went wrong - Review your parameters or data")
+
+		# Clean up the temporary append item now that its no longer needed
+		print("Delete Append Item & Remove File Geodatabase")
+		append_item.delete()
+		os.remove(sourcefile)
+		print("Service Successfully Updated with New Item + File Removed!")
+	else:
+		print("Service NOT Truncated")
+
+else:
+print("Error: FME Job failed to produce a fgdb zip file")
