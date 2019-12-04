@@ -1,9 +1,9 @@
 #! <?xml version="1.0" encoding="UTF-8" ?>
 #! <WORKSPACE
 #    Command-line to run this workspace:
-#        C:\Apps\FME\19238\fme.exe "C:\Users\drunne2\Desktop\FME Server Bulk Commit for Version Control.fmw"
+#        C:\Apps\FME\19801\fme.exe "C:\Apps\Documents\FME\Workspaces\FME Server Bulk Commit for Version Control.fmw"
 #              --FMEToken ""
-#              --FMEServerURL "https://fme.example.gov"
+#              --FMEServerURL ""
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
@@ -12,14 +12,14 @@
 #!   DESCRIPTION="&lt;p&gt;This workspace is used to bulk commit items to version control. Also can enable auto push to remote repository!&lt;/p&gt;"
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
-#!   DOC_EXTENTS="4495.53 597.254"
-#!   DOC_TOP_LEFT="915.844 -1095.84"
+#!   DOC_EXTENTS="4483.7 582.213"
+#!   DOC_TOP_LEFT="915.844 -1080.8"
 #!   END_PYTHON=""
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
-#!   FME_BUILD_NUM="19238"
-#!   FME_DOCUMENT_GUID="27cdd541-b600-48e8-8f37-9ff82078df1f"
-#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_BUILD_NUM="19801"
+#!   FME_DOCUMENT_GUID="f1f8d550-9bcc-4924-93da-ac207e9e1b4e"
+#!   FME_DOCUMENT_PRIORGUID="27cdd541-b600-48e8-8f37-9ff82078df1f,9a70466b-b061-42ee-8f75-c9190c0b35a5,4b329edf-977e-4cdf-83c1-e601934bf15d"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -27,8 +27,8 @@
 #!   FME_STROKE_MAX_DEVIATION="0"
 #!   HISTORY="2019&lt;solidus&gt;05&lt;solidus&gt;23,DR,First&lt;space&gt;Version"
 #!   IGNORE_READER_FAILURE="No"
-#!   LAST_SAVE_BUILD="FME(R) 2019.0.0.0 (20190328 - Build 19238 - WIN64)"
-#!   LAST_SAVE_DATE="2019-05-23T16:33:09"
+#!   LAST_SAVE_BUILD="FME(R) 2019.2.0.0 (20191105 - Build 19801 - WIN64)"
+#!   LAST_SAVE_DATE="2019-12-04T14:43:18"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION="This workspace is used to bulk commit items to version control. Also can enable auto push to remote repository!"
@@ -47,7 +47,7 @@
 #!   TITLE="Bulk Commit Items for Version Control"
 #!   USAGE="&lt;p&gt;Uses the undocumented versioncontrol REST services, so different versions may break this. Tested in 18547.&lt;/p&gt;"
 #!   USE_MARKDOWN="YES"
-#!   VIEW_POSITION="2320.86 147.918"
+#!   VIEW_POSITION="-565.631 0"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -61,6 +61,45 @@
 #! <FEATURE_TYPES>
 #! </FEATURE_TYPES>
 #! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#!   NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#!   NAME="Utilities"
+#! />
+#! <ITEM
+#!   NAME="FME Server Bulk Commit for Version Control.fmw"
+#! />
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
@@ -70,7 +109,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI OPTIONAL URL_OR_ATTR FMEServerURL http%https Server URL for FME Server:"
-#!   DEFAULT_VALUE="https://fme.example.gov"
+#!   DEFAULT_VALUE=""
 #!   IS_STAND_ALONE="true"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -78,10 +117,10 @@
 #! <COMMENT
 #!   IDENTIFIER="35"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;409 error means that the item hasn&apos;t been changed since it was last committed&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="3093.0040691210716 -1045.8437917712508"
-#!   TOP_LEFT="3093.0040691210716 -1045.8437917712508"
-#!   BOTTOM_RIGHT="3843.0040691210716 -1095.8437917712508"
-#!   BOUNDING_RECT="3093.0040691210716 -1045.8437917712508 750 50"
+#!   POSITION="2825.8347472552823 -1030.8027396940631"
+#!   TOP_LEFT="2825.8347472552823 -1030.8027396940631"
+#!   BOTTOM_RIGHT="3575.8347472552823 -1080.8027396940631"
+#!   BOUNDING_RECT="2825.8347472552823 -1030.8027396940631 750 50"
 #!   ORDER="500000000000026"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -114,7 +153,7 @@
 #!   NAME="Get list of repositories"
 #!   DESCRIPTION=""
 #!   TOP_LEFT="915.84379177125084 -498.5896042293756"
-#!   ORDER="500000000000032"
+#!   ORDER="500000000000161"
 #!   PALETTE_COLOR="Color1"
 #!   COLLAPSED="true"
 #!   UNCOLLAPSED_SIZE="2956.1078544118764 354.5"
@@ -122,7 +161,7 @@
 #!   BOUNDING_RECT="915.84379177125084 -498.5896042293756 610.00106825772946 205"
 #!   STICKY="true"
 #!   COLOUR="0.59999999999999998,0.80000000000000004,0.80000000000000004,1"
-#!   CONTENTS="12 2 3 11 6 9 7 4 8 "
+#!   CONTENTS="9 8 11 4 3 7 12 6 2 "
 #! >
 #!     <BOOKMARK_FEAT NAME="encodeRepositoryName : Output" SOURCE_NODE="11" SOURCE_PORT_DESC="fo 0 OUTPUT"/>
 #! </BOOKMARK>
@@ -131,15 +170,15 @@
 #!   NAME="Get list of items in repositories"
 #!   DESCRIPTION=""
 #!   TOP_LEFT="1609.7659376593779 -498.5896042293756"
-#!   ORDER="500000000000030"
+#!   ORDER="500000000000160"
 #!   PALETTE_COLOR="Color2"
 #!   COLLAPSED="true"
-#!   UNCOLLAPSED_SIZE="2369.4340210068758 568.0877292106253"
+#!   UNCOLLAPSED_SIZE="2369.4340210068758 617.04655213218791"
 #!   BOTTOM_RIGHT="2549.7659376593779 -703.5896042293756"
 #!   BOUNDING_RECT="1609.7659376593779 -498.5896042293756 940 205"
 #!   STICKY="true"
 #!   COLOUR="0.63529411764705879,0.80000000000000004,0.59999999999999998,1"
-#!   CONTENTS="17 19 14 23 18 38 20 21 "
+#!   CONTENTS="21 20 17 23 18 19 14 38 "
 #! >
 #!     <BOOKMARK_FEAT NAME="getItems" SOURCE_NODE="14" SOURCE_PORT_DESC="fi 0 "/>
 #!     <BOOKMARK_FEAT NAME="encodeWorkspaceName : Output" SOURCE_NODE="20" SOURCE_PORT_DESC="fo 0 OUTPUT"/>
@@ -148,16 +187,16 @@
 #!   IDENTIFIER="27"
 #!   NAME="Commit all items to local repo"
 #!   DESCRIPTION=""
-#!   TOP_LEFT="2609.6107294406274 -498.5896042293756"
-#!   ORDER="500000000000028"
+#!   TOP_LEFT="2626.5306253062517 -498.5896042293756"
+#!   ORDER="500000000000158"
 #!   PALETTE_COLOR="Color3"
 #!   COLLAPSED="true"
 #!   UNCOLLAPSED_SIZE="1275.8447917812509 763.92302089687553"
-#!   BOTTOM_RIGHT="3549.6107294406274 -703.5896042293756"
-#!   BOUNDING_RECT="2609.6107294406274 -498.5896042293756 940 205"
+#!   BOTTOM_RIGHT="3566.5306253062517 -703.5896042293756"
+#!   BOUNDING_RECT="2626.5306253062517 -498.5896042293756 940 205"
 #!   STICKY="true"
 #!   COLOUR="1,0.85490196078431369,0.59999999999999998,1"
-#!   CONTENTS="30 26 35 37 36 40 "
+#!   CONTENTS="36 37 40 30 35 26 "
 #! >
 #!     <BOOKMARK_FEAT NAME="encodeCommitMessage" SOURCE_NODE="40" SOURCE_PORT_DESC="fi 0 "/>
 #!     <BOOKMARK_FEAT NAME="postCommit : Output" SOURCE_NODE="26" SOURCE_PORT_DESC="fo 0 Output"/>
@@ -166,16 +205,16 @@
 #!   IDENTIFIER="34"
 #!   NAME="Push local repo to remote... Don&apos;t enable unless you&apos;re sure you want to auto push!"
 #!   DESCRIPTION=""
-#!   TOP_LEFT="3628.3709170425032 -498.5896042293756"
-#!   ORDER="500000000000031"
+#!   TOP_LEFT="3616.5486254862535 -498.5896042293756"
+#!   ORDER="500000000000159"
 #!   PALETTE_COLOR="Color4"
 #!   COLLAPSED="true"
 #!   UNCOLLAPSED_SIZE="1783.8502918362519 414.5"
-#!   BOTTOM_RIGHT="5411.3709170425027 -703.5896042293756"
-#!   BOUNDING_RECT="3628.3709170425032 -498.5896042293756 1783 205"
+#!   BOTTOM_RIGHT="5399.5486254862535 -703.5896042293756"
+#!   BOUNDING_RECT="3616.5486254862535 -498.5896042293756 1783 205"
 #!   STICKY="true"
 #!   COLOUR="0.85098039215686272,0.92941176470588238,0.60392156862745094,1"
-#!   CONTENTS="33 31 28 "
+#!   CONTENTS="33 28 31 "
 #! >
 #!     <BOOKMARK_FEAT NAME="StatisticsCalculator" SOURCE_NODE="31" SOURCE_PORT_DESC="fi 0 "/>
 #! </BOOKMARK>
@@ -638,8 +677,8 @@
 #!   IDENTIFIER="26"
 #!   TYPE="HTTPCaller"
 #!   VERSION="1"
-#!   POSITION="3337.1999586662528 -627.0896042293756"
-#!   BOUNDING_RECT="3337.1999586662528 -627.0896042293756 454 71"
+#!   POSITION="3354.1198545318766 -627.0896042293756"
+#!   BOUNDING_RECT="3354.1198545318766 -627.0896042293756 454 71"
 #!   ORDER="500000000000002"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -733,8 +772,8 @@
 #!   IDENTIFIER="40"
 #!   TYPE="TextEncoder"
 #!   VERSION="2"
-#!   POSITION="2697.6107294406274 -627.0896042293756"
-#!   BOUNDING_RECT="2697.6107294406274 -627.0896042293756 454 71"
+#!   POSITION="2714.5306253062517 -627.0896042293756"
+#!   BOUNDING_RECT="2714.5306253062517 -627.0896042293756 454 71"
 #!   ORDER="500000000000018"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -771,8 +810,8 @@
 #!   IDENTIFIER="28"
 #!   TYPE="HTTPCaller"
 #!   VERSION="1"
-#!   POSITION="4322.2930629306302 -627.08960422937537"
-#!   BOUNDING_RECT="4322.2930629306302 -627.08960422937537 454 71"
+#!   POSITION="4310.470771374381 -627.08960422937537"
+#!   BOUNDING_RECT="4310.470771374381 -627.08960422937537 454 71"
 #!   ORDER="500000000000002"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -836,8 +875,8 @@
 #!   IDENTIFIER="31"
 #!   TYPE="StatisticsCalculator"
 #!   VERSION="8"
-#!   POSITION="3716.3709170425032 -627.08960422937537"
-#!   BOUNDING_RECT="3716.3709170425032 -627.08960422937537 454 71"
+#!   POSITION="3704.5486254862535 -627.08960422937537"
+#!   BOUNDING_RECT="3704.5486254862535 -627.08960422937537 454 71"
 #!   ORDER="500000000000020"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -914,11 +953,11 @@
 #!   IDENTIFIER="36"
 #!   TYPE="Inspector"
 #!   VERSION="5"
-#!   POSITION="3299.6995836625028 -909.17445841125061"
-#!   BOUNDING_RECT="3299.6995836625028 -909.17445841125061 430 71"
+#!   POSITION="3316.6194795281272 -909.17445841125061"
+#!   BOUNDING_RECT="3316.6194795281272 -909.17445841125061 430 71"
 #!   ORDER="500000000000027"
 #!   PARMS_EDITED="true"
-#!   ENABLED="true"
+#!   ENABLED="false"
 #!   LAST_PARM_EDIT="19238"
 #! >
 #!     <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
@@ -1045,7 +1084,7 @@
 #!   TARGET_NODE="31"
 #!   SOURCE_PORT_DESC="fo 0 Output"
 #!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="false"
+#!   ENABLED="true"
 #!   EXECUTION_IDX="0"
 #!   HIDDEN="false"
 #!   EXTRA_POINTS=""
@@ -1097,7 +1136,7 @@
 FME_PYTHON_VERSION 37
 DEFAULT_MACRO FMEToken 
 GUI TEXT_ENCODED FMEToken FME Token:
-DEFAULT_MACRO FMEServerURL https://fme.example.gov
+DEFAULT_MACRO FMEServerURL 
 GUI OPTIONAL URL FMEServerURL http%https Server URL for FME Server:
 INCLUDE [ if {{$(FMEToken)} == {}} { puts_real {Parameter 'FMEToken' must be given a value.}; exit 1; }; ]
 #! START_HEADER
@@ -1130,12 +1169,6 @@ MULTI_READER_CONTINUE_ON_READER_FAILURE No
 
 MACRO WORKSPACE_NAME FME Server Bulk Commit for Version Control
 MACRO FME_VIEWER_APP fmedatainspector
-# -------------------------------------------------------------------------
-
-INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
-MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
-MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
-MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
 Tcl2 proc Creator_CoordSysRemover {} {   global FME_CoordSys;   set FME_CoordSys {}; }
@@ -1157,7 +1190,7 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TA
 FACTORY_DEF * HTTPFactory    FACTORY_NAME getRepositoriesList       INPUT  FEATURE_TYPE Creator_CREATED    TARGET_URL "@EvaluateExpression(FDIV,STRING_ENCODED,$(FMEServerURL$encode)<solidus>fmerest<solidus>v3<solidus>repositories?limit=-1<amp>offset=-1<amp>fmetoken=$(FMEToken),getRepositoriesList)"    HTTP_METHOD GET    SAVE_FILE NO    OUTPUT_FILENAME "<Unused>"    OUTPUT_DIRECTORY "<Unused>"    FILE_EXTENSION "<Unused>"    TARGET_ATTR "_response_body"    FILE_PATH_ATTR "<Unused>"    UPLOAD_FILE "<Unused>"    UPLOAD_BODY "<Unused>"    MULTIPART_UPLOAD <Unused>    UPLOAD_CONTENT_TYPE "<Unused>"    COMBINED_MULTIPART_TABLE    REQUEST_HEADER_TABLE    ADDITIONAL_URL_PARAMETERS    AUTH_USERNAME "<Unused>"    AUTH_PASSWORD "<Unused>"    AUTH_METHOD "<Unused>"    TARGET_ATTRIBUTE_ENCODING auto-detect    RESPONSE_HEADER_LIST_ATTR ""    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    CONNECTION_TIMEOUT_LENGTH 60    TRANSFER_TIMEOUT_LENGTH 90    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    NAMED_CONNECTION "<Unused>"    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE getRepositoriesList_Output    OUTPUT REJECTED FEATURE_TYPE getRepositoriesList_<REJECTED>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "getRepositoriesList <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE getRepositoriesList_<REJECTED>
 # -------------------------------------------------------------------------
-FACTORY_DEF * JSONQueryFactory    FACTORY_NAME JSONFlattener    INPUT  FEATURE_TYPE getRepositoriesList_Output    MODE FLATTEN    JSON_DOCUMENT "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_response_body<closeparen>,JSONFlattener)"    READ_FROM_FILE NO    FILEPATH_OR_URL <Unused>    EXPLODE_QUERY "json"    RECURSIVE_FLATTEN YES    ERROR_LIST_ATTR "_json_error"    OUTPUT EXPLODED FEATURE_TYPE JSONFlattener_OUTPUT    OUTPUT REJECTED FEATURE_TYPE JSONFlattener_<REJECTED>
+FACTORY_DEF * JSONQueryFactory    FACTORY_NAME JSONFlattener    INPUT  FEATURE_TYPE getRepositoriesList_Output    MODE FLATTEN    JSON_DOCUMENT "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_response_body<closeparen>,JSONFlattener)"    READ_FROM_FILE NO    FILEPATH_OR_URL "<Unused>"    EXPLODE_QUERY "json"    RECURSIVE_FLATTEN YES    ERROR_LIST_ATTR "_json_error"    OUTPUT EXPLODED FEATURE_TYPE JSONFlattener_OUTPUT    OUTPUT REJECTED FEATURE_TYPE JSONFlattener_<REJECTED>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "JSONFlattener <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE JSONFlattener_<REJECTED>
 # -------------------------------------------------------------------------
 FACTORY_DEF * ElementFactory    FACTORY_NAME ListExploder    INPUT  FEATURE_TYPE JSONFlattener_OUTPUT    LIST_NAME "items{}"    ELEMENT_NUMBER_FIELD "_element_index"    CLONE_GEOMETRY    ATTR_ACCUM_MODE "HANDLE_CONFLICT"    ATTR_CONFLICT_RES "INCOMING_IF_CONFLICT"    INCOMING_PREFIX "<Unused>"    OUTPUT ELEMENT FEATURE_TYPE ListExploder_ELEMENTS         @RemoveAttributes(ElementFactory.baseCloned)
@@ -1167,7 +1200,7 @@ FACTORY_DEF * TextEncoderFactory    FACTORY_NAME encodeRepositoryName    INPUT  
 FACTORY_DEF * HTTPFactory    FACTORY_NAME getItems       INPUT  FEATURE_TYPE encodeRepositoryName_OUTPUT    TARGET_URL "@EvaluateExpression(FDIV,STRING_ENCODED,$(FMEServerURL$encode)<solidus>fmerest<solidus>v3<solidus>repositories<solidus><at>Value<openparen>encoded.repositoryName<closeparen><solidus>items?fmetoken=$(FMEToken),getItems)"    HTTP_METHOD GET    SAVE_FILE NO    OUTPUT_FILENAME "<Unused>"    OUTPUT_DIRECTORY "<Unused>"    FILE_EXTENSION "<Unused>"    TARGET_ATTR "_response_body"    FILE_PATH_ATTR "<Unused>"    UPLOAD_FILE "<Unused>"    UPLOAD_BODY "<Unused>"    MULTIPART_UPLOAD <Unused>    UPLOAD_CONTENT_TYPE "<Unused>"    COMBINED_MULTIPART_TABLE    REQUEST_HEADER_TABLE    ADDITIONAL_URL_PARAMETERS    AUTH_USERNAME "<Unused>"    AUTH_PASSWORD "<Unused>"    AUTH_METHOD "<Unused>"    TARGET_ATTRIBUTE_ENCODING auto-detect    RESPONSE_HEADER_LIST_ATTR ""    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    CONNECTION_TIMEOUT_LENGTH 60    TRANSFER_TIMEOUT_LENGTH 90    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    NAMED_CONNECTION "<Unused>"    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE getItems_Output    OUTPUT REJECTED FEATURE_TYPE getItems_<REJECTED>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "getItems <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE getItems_<REJECTED>
 # -------------------------------------------------------------------------
-FACTORY_DEF * JSONQueryFactory    FACTORY_NAME JSONFlattener_2    INPUT  FEATURE_TYPE getItems_Output    MODE FLATTEN    JSON_DOCUMENT "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_response_body<closeparen>,JSONFlattener_2)"    READ_FROM_FILE NO    FILEPATH_OR_URL <Unused>    EXPLODE_QUERY "json"    RECURSIVE_FLATTEN YES    ERROR_LIST_ATTR "_json_error"    OUTPUT EXPLODED FEATURE_TYPE JSONFlattener_2_OUTPUT    OUTPUT REJECTED FEATURE_TYPE JSONFlattener_2_<REJECTED>
+FACTORY_DEF * JSONQueryFactory    FACTORY_NAME JSONFlattener_2    INPUT  FEATURE_TYPE getItems_Output    MODE FLATTEN    JSON_DOCUMENT "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_response_body<closeparen>,JSONFlattener_2)"    READ_FROM_FILE NO    FILEPATH_OR_URL "<Unused>"    EXPLODE_QUERY "json"    RECURSIVE_FLATTEN YES    ERROR_LIST_ATTR "_json_error"    OUTPUT EXPLODED FEATURE_TYPE JSONFlattener_2_OUTPUT    OUTPUT REJECTED FEATURE_TYPE JSONFlattener_2_<REJECTED>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "JSONFlattener_2 <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE JSONFlattener_2_<REJECTED>
 # -------------------------------------------------------------------------
 FACTORY_DEF * ElementFactory    FACTORY_NAME ListExploder_2    INPUT  FEATURE_TYPE JSONFlattener_2_OUTPUT    LIST_NAME "items{}"    ELEMENT_NUMBER_FIELD "_element_index"    CLONE_GEOMETRY    ATTR_ACCUM_MODE "HANDLE_CONFLICT"    ATTR_CONFLICT_RES "INCOMING_IF_CONFLICT"    INCOMING_PREFIX "<Unused>"    OUTPUT ELEMENT FEATURE_TYPE ListExploder_2_ELEMENTS         @RemoveAttributes(ElementFactory.baseCloned)
@@ -1177,27 +1210,14 @@ FACTORY_DEF * TextEncoderFactory    FACTORY_NAME encodeWorkspaceName    INPUT  F
 FACTORY_DEF * TextEncoderFactory    FACTORY_NAME encodeCommitMessage    INPUT  FEATURE_TYPE encodeWorkspaceName_OUTPUT    ACTION URL_ENCODE    RESULT_ATTR "encoded.commitMessage"    VALUE_TO_ENCODE "@EvaluateExpression(FDIV,STRING_ENCODED,Auto<space>Commit<space>|<space>Workspace<space>Last<space>Saved:<space><at>Value<openparen>lastSaveDate<closeparen><space>|<space>Workspace<space>Last<space>Published:<space><at>Value<openparen>lastPublishDate<closeparen>,encodeCommitMessage)"    OUTPUT OUTPUT FEATURE_TYPE encodeCommitMessage_OUTPUT
 # -------------------------------------------------------------------------
 FACTORY_DEF * HTTPFactory    FACTORY_NAME postCommit       INPUT  FEATURE_TYPE encodeCommitMessage_OUTPUT    TARGET_URL "@EvaluateExpression(FDIV,STRING_ENCODED,$(FMEServerURL$encode)<solidus>fmerest<solidus>v3<solidus>versioncontrol<solidus>local<solidus>commit<solidus><at>Value<openparen>encoded.repositoryName<closeparen><solidus><at>Value<openparen>encoded.workspaceName<closeparen>,postCommit)"    HTTP_METHOD POST    SAVE_FILE NO    OUTPUT_FILENAME "<Unused>"    OUTPUT_DIRECTORY "<Unused>"    FILE_EXTENSION "<Unused>"    TARGET_ATTR "_response_body"    FILE_PATH_ATTR "<Unused>"    UPLOAD_FILE "<Unused>"    UPLOAD_BODY "@EvaluateExpression(FDIV,STRING_ENCODED,commitMessage=<at>Value<openparen>encoded.commitMessage<closeparen><amp>itemName=<at>Value<openparen>encoded.workspaceName<closeparen>,postCommit)"    MULTIPART_UPLOAD NO    UPLOAD_CONTENT_TYPE "application/x-www-form-urlencoded"    COMBINED_MULTIPART_TABLE    REQUEST_HEADER_TABLE Content-Type;application<solidus>x-www-form-urlencoded Accept;application<solidus>json<comma><space>text<solidus>plain<comma><space>*<solidus>* Authorization;@EvaluateExpression(FDIV,STRING_ENCODED,fmetoken<space>token=$(FMEToken),postCommit)    ADDITIONAL_URL_PARAMETERS    AUTH_USERNAME "<Unused>"    AUTH_PASSWORD "<Unused>"    AUTH_METHOD "<Unused>"    TARGET_ATTRIBUTE_ENCODING auto-detect    RESPONSE_HEADER_LIST_ATTR ""    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    CONNECTION_TIMEOUT_LENGTH 60    TRANSFER_TIMEOUT_LENGTH 90    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    NAMED_CONNECTION "<Unused>"    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE postCommit_Output    OUTPUT REJECTED FEATURE_TYPE postCommit_<REJECTED>
-FACTORY_DEF * TeeFactory   FACTORY_NAME "postCommit_Output Disabled Nuker -1 32"   INPUT FEATURE_TYPE postCommit_Output
 # -------------------------------------------------------------------------
-# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
-DEFAULT_MACRO WORKSPACE_TEMP_DIR
-INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {commit_errors} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
-FACTORY_DEF {*} InspectorFactory    FACTORY_NAME commit_errors_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE postCommit_<REJECTED>    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY {  }    GROUP_ATTRIBUTE_PREFIX { commit_errors }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
-# Now route all the features into the recorder, changing their
-# feature type to the transformer name so that they view nicely
-DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
-DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
-# [PR#45549] The Data Inspector will limit the maximum number of features
-# it reads on WIN32, so we will correspondingly limit the number of
-# features we record here using the MAX_FEATURES_TO_RECORD directive.
-FACTORY_DEF * RecorderFactory    FACTORY_NAME commit_errors_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA _creation_instance,varchar<openparen>255<closeparen>,_response_body,varchar<openparen>255<closeparen>,_http_status_code,varchar<openparen>255<closeparen>,items,varchar<openparen>255<closeparen>,description,varchar<openparen>255<closeparen>,name,varchar<openparen>255<closeparen>,owner,varchar<openparen>255<closeparen>,sharable,varchar<openparen>255<closeparen>,_element_index,varchar<openparen>255<closeparen>,encoded.repositoryName,varchar<openparen>255<closeparen>,lastSaveDate,varchar<openparen>255<closeparen>,lastPublishDate,varchar<openparen>255<closeparen>,repositoryName,varchar<openparen>255<closeparen>,title,varchar<openparen>255<closeparen>,type,varchar<openparen>255<closeparen>,userName,varchar<openparen>255<closeparen>,encoded.workspaceName,varchar<openparen>255<closeparen>,encoded.commitMessage,varchar<openparen>255<closeparen>,_error,varchar<openparen>255<closeparen>,fme_rejection_code,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+FACTORY_DEF * TeeFactory   FACTORY_NAME "commit_errors (Disabled) Nuker"   INPUT FEATURE_TYPE postCommit_<REJECTED>
 # -------------------------------------------------------------------------
-DEFAULT_MACRO __StatisticsCalculator_3279409e_5320_4077_afe6_3b1c5b320baf9_GROUP_BY
-MACRO StatisticsCalculator_3279409e_5320_4077_afe6_3b1c5b320baf9_PORT_SPECIFIED no
-INCLUDE [puts_real {$(StatisticsCalculator_3279409e_5320_4077_afe6_3b1c5b320baf9_PORT_SPECIFIED)}
+DEFAULT_MACRO __StatisticsCalculator_89f860f6_459e_4c97_988a_0cab88b49ce93_GROUP_BY
+MACRO StatisticsCalculator_89f860f6_459e_4c97_988a_0cab88b49ce93_PORT_SPECIFIED no
 DYNAMIC_FUNCTION_CONFIGURATION Python FMEOBJECTS
 DYNAMIC_FUNCTION_CONFIGURATION Python import StatisticsCalculator
-DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    'StatisticsCalculator',{     'GROUP_BY_MACRO':'__StatisticsCalculator_3279409e_5320_4077_afe6_3b1c5b320baf9_GROUP_BY',     'STATS_ATTRS':'name',     'COUNT_ATTR':'_count',     'COMPUTE_HISTOGRAM':'NO',     'HISTO_ATTR':'<Unused>',     'PREPEND_ATTR_NAME':'No',     'encoded_result_attrs':True,     'cumulative_mode':'$(StatisticsCalculator_3279409e_5320_4077_afe6_3b1c5b320baf9_PORT_SPECIFIED)',     None:None})"
+DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    'StatisticsCalculator',{     'GROUP_BY_MACRO':'__StatisticsCalculator_89f860f6_459e_4c97_988a_0cab88b49ce93_GROUP_BY',     'STATS_ATTRS':'name',     'COUNT_ATTR':'_count',     'COMPUTE_HISTOGRAM':'NO',     'HISTO_ATTR':'<Unused>',     'PREPEND_ATTR_NAME':'No',     'encoded_result_attrs':True,     'cumulative_mode':'$(StatisticsCalculator_89f860f6_459e_4c97_988a_0cab88b49ce93_PORT_SPECIFIED)',     None:None})"
 FACTORY_DEF * TeeFactory    FACTORY_NAME StatisticsCalculator_InputProcessor    INPUT  FEATURE_TYPE postCommit_Output    OUTPUT FEATURE_TYPE __ORIGINAL__       @Python(StatisticsCalculator.recordFeature,StatisticsCalculator)
 FACTORY_DEF * TeeFactory    FACTORY_NAME StatisticsCalculator_UnneededInputNuker    INPUT FEATURE_TYPE __ORIGINAL__
 FACTORY_DEF * SortFactory    FACTORY_NAME StatisticsCalculator_CompleteOutputter    INPUT FEATURE_TYPE __UNUSED_INPUT_TO_GUARANTEE_FACTORY_DOESNT_CONSUME_EVERYTHING__
@@ -1214,8 +1234,3 @@ FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Corr
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
 
-# -------------------------------------------------------------------------
-
-DEFAULT_MACRO FME_LAUNCH_VIEWER_APP NO
-FACTORY_DEF * CreationFactory    FACTORY_NAME VisualizerProcessor   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if {{$(FME_LAUNCH_VIEWER_APP)} == {YES}} {  if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS \042$theFile\042 & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; }; ")
-FACTORY_DEF * TeeFactory    FACTORY_NAME VisualizerCleaner   INPUT FEATURE_TYPE __NUKEME__
