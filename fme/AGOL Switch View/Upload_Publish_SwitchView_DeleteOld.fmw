@@ -1,7 +1,7 @@
 #! <?xml version="1.0" encoding="UTF-8" ?>
 #! <WORKSPACE
 #    Command-line to run this workspace:
-#        C:\Apps\FME\20614\fme.exe C:\Users\drunne2\Desktop\Upload_Publish_SwitchView_DeleteOld.fmw
+#        C:\Apps\FME\20614\fme.exe "C:\Users\drunne2\Desktop\AGOL Switch View\Upload_Publish_SwitchView_DeleteOld.fmw"
 #              --FGDBZipLocation "C:<backslash>FME<backslash>AllRoutes.zip"
 #              --AGOL_User_Folder_ID "<solidus>"
 #              --AGOL_Connection "IowaDOT_GIS<at>AGOL"
@@ -9,8 +9,8 @@
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
 #!   BEGIN_TCL=""
-#!   CATEGORY="SkyFire"
-#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This workspace copies data from PRAMS over to PGIS for use by SkyFire. &lt;/p&gt;&#10;"
+#!   CATEGORY="Web"
+#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This transformer was developed to provide an easier method to update large feature views hosted on ArcGIS Online.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1) Uploads a specified file geodatabase&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2) Publishes the file geodatabase item as a service&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3) Deletes the file geodatabase item&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4) Updates the specified view to point to the newly published service&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5) Deletes the old service &lt;/p&gt;&#10;"
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
 #!   DOC_EXTENTS="6055.55 1504.1"
@@ -19,17 +19,17 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20614"
-#!   FME_DOCUMENT_GUID="de739971-9b1a-4f3b-8790-2bee3baf8a6a"
-#!   FME_DOCUMENT_PRIORGUID="a5ff3a30-3cca-4c25-bd74-1a6c526cf366,6792f2da-b10e-4229-8ccb-457e949f25d3,704d588f-9306-4c8a-b796-d75e24f7d012,7aef27ca-3865-4bea-a868-6dd3e84eed65,68c2f9a3-38c5-4741-8bc6-c10ecae1ea5e,65400f5e-9763-412e-8f7b-51193fa66bf5,e1ee8917-7207-4900-89a9-a42ca2d6c35d,bc997114-67fe-4e70-aae7-0fb379e80288,879acc61-add9-4a64-ab1e-3b837dd340e8,8f782447-a96e-43ee-b3e9-694a1590c379,9d8eedf4-4cc4-4b9a-a742-82277b386604,00013291-6ca9-45fb-b912-6f1f26a4d11b,5c59a3f3-f542-4c56-a9fa-cd82e6d2ab62,dea26080-097f-4208-a636-411f4a06d144,0618f82f-a12c-4273-9c4a-ccfe47b5b28f,b69126ff-ffb6-4f2a-b08f-b9b84d4c2a66,effb5b1d-c91c-4101-8acc-42fb6f294603,f80aeb22-5ae7-4906-8a35-b722f8dac404,5626bd58-a59e-4d9d-b3d6-5da1dc7b2e9c,b9f9ddc1-c4d8-4b00-b72f-dfd2cd3ce343,9c51a944-652d-413f-b049-b88f18e49ad6,19177c1e-1dfc-47dd-bc98-d3053947231b,9d5e0b68-882b-4299-89ab-a2b8a608a151,fbdaca73-1541-4fa8-9aec-8011597da0a5,c8c7ebf1-4672-408f-a592-5551805b6fb7,c223ae77-b4e8-413d-b869-a9356f8da5d4,2b70a889-da63-4c31-b4f4-d6b0db625229,aad995d3-1ef8-4417-8ed3-0c5e2c9e11e5,8ded5e8f-13b6-493f-be66-40a5b14a375a,005d113e-60ba-4e9c-b1fe-82df90e1dc80,d173d1b0-742c-49c4-abe2-b2e9b4dd16fd,6f4f90ea-b310-4091-a381-cc203d30e07a,83eed0cc-2ef4-4967-b0f5-e9d91d127b6d,22d6186d-ea0b-46da-bf47-c26307c91b4d,cdd9db58-f9f5-434b-bd9e-6bc583de48f1,5c246720-ce32-47c2-9cd1-55f1df4b4566,07455ee7-9e27-42f8-876d-209cdf7f53c1,c8ef3f90-52d1-438d-a9b8-c9642bf7081c,7edac604-0a8e-433f-802b-b4f612e61914,b847070c-8bde-4c07-98a5-527b87e8d7ec,a182eaa8-95d0-46ab-a895-aac284229eb6,237da5da-8f9f-4724-96ff-6a1520a67da2,eb7afeed-d8e5-4da6-9d25-550c469518e9,b79c4aae-275b-4260-ab3e-f01eb8719ff4,6c1afa20-7111-46de-96da-7f83b32636fe,b9168e6c-50c4-47de-8cd4-eb8016648374,6b55e908-ab41-4be2-81c0-04b3fbac4217,6dcd2300-5f64-44a0-ae84-1e499b0b17db,1628394c-e516-4394-adfc-946ac727101b,ff0e3409-71a5-414c-9edb-a87430418c09,b7539cff-f919-4c82-b728-1e1e51b0c5ed,9a23d8e1-72c3-4d34-bb82-4d85ca2a0edc,127cb1ca-4378-4016-9f30-32f2c7ca929f,8bea701b-b94b-44fc-94e1-91e58e1dcc48,34392326-25df-4fdd-bccd-dd0106c5a10f,6b34c224-ecf6-4690-a1f0-558ca771fcd1,c88a6e9a-6ed5-4965-8c8b-92c08915c709,da3e4610-dca6-4794-a4c7-ef1c7a85745f,1537e03f-f395-4363-9d4f-c20295355f44,e98c167e-81fc-4562-8d64-491ca3284ccb,1418897b-b802-4dac-ad41-7e27e2a2ba72"
+#!   FME_DOCUMENT_GUID="b50de035-295d-447c-825f-a9cb3e98876e"
+#!   FME_DOCUMENT_PRIORGUID="a5ff3a30-3cca-4c25-bd74-1a6c526cf366,6792f2da-b10e-4229-8ccb-457e949f25d3,704d588f-9306-4c8a-b796-d75e24f7d012,7aef27ca-3865-4bea-a868-6dd3e84eed65,68c2f9a3-38c5-4741-8bc6-c10ecae1ea5e,65400f5e-9763-412e-8f7b-51193fa66bf5,e1ee8917-7207-4900-89a9-a42ca2d6c35d,bc997114-67fe-4e70-aae7-0fb379e80288,879acc61-add9-4a64-ab1e-3b837dd340e8,8f782447-a96e-43ee-b3e9-694a1590c379,9d8eedf4-4cc4-4b9a-a742-82277b386604,00013291-6ca9-45fb-b912-6f1f26a4d11b,5c59a3f3-f542-4c56-a9fa-cd82e6d2ab62,dea26080-097f-4208-a636-411f4a06d144,0618f82f-a12c-4273-9c4a-ccfe47b5b28f,b69126ff-ffb6-4f2a-b08f-b9b84d4c2a66,effb5b1d-c91c-4101-8acc-42fb6f294603,f80aeb22-5ae7-4906-8a35-b722f8dac404,5626bd58-a59e-4d9d-b3d6-5da1dc7b2e9c,b9f9ddc1-c4d8-4b00-b72f-dfd2cd3ce343,9c51a944-652d-413f-b049-b88f18e49ad6,19177c1e-1dfc-47dd-bc98-d3053947231b,9d5e0b68-882b-4299-89ab-a2b8a608a151,fbdaca73-1541-4fa8-9aec-8011597da0a5,c8c7ebf1-4672-408f-a592-5551805b6fb7,c223ae77-b4e8-413d-b869-a9356f8da5d4,2b70a889-da63-4c31-b4f4-d6b0db625229,aad995d3-1ef8-4417-8ed3-0c5e2c9e11e5,8ded5e8f-13b6-493f-be66-40a5b14a375a,005d113e-60ba-4e9c-b1fe-82df90e1dc80,d173d1b0-742c-49c4-abe2-b2e9b4dd16fd,6f4f90ea-b310-4091-a381-cc203d30e07a,83eed0cc-2ef4-4967-b0f5-e9d91d127b6d,22d6186d-ea0b-46da-bf47-c26307c91b4d,cdd9db58-f9f5-434b-bd9e-6bc583de48f1,5c246720-ce32-47c2-9cd1-55f1df4b4566,07455ee7-9e27-42f8-876d-209cdf7f53c1,c8ef3f90-52d1-438d-a9b8-c9642bf7081c,7edac604-0a8e-433f-802b-b4f612e61914,b847070c-8bde-4c07-98a5-527b87e8d7ec,a182eaa8-95d0-46ab-a895-aac284229eb6,237da5da-8f9f-4724-96ff-6a1520a67da2,eb7afeed-d8e5-4da6-9d25-550c469518e9,b79c4aae-275b-4260-ab3e-f01eb8719ff4,6c1afa20-7111-46de-96da-7f83b32636fe,b9168e6c-50c4-47de-8cd4-eb8016648374,6b55e908-ab41-4be2-81c0-04b3fbac4217,6dcd2300-5f64-44a0-ae84-1e499b0b17db,1628394c-e516-4394-adfc-946ac727101b,ff0e3409-71a5-414c-9edb-a87430418c09,b7539cff-f919-4c82-b728-1e1e51b0c5ed,9a23d8e1-72c3-4d34-bb82-4d85ca2a0edc,127cb1ca-4378-4016-9f30-32f2c7ca929f,8bea701b-b94b-44fc-94e1-91e58e1dcc48,34392326-25df-4fdd-bccd-dd0106c5a10f,6b34c224-ecf6-4690-a1f0-558ca771fcd1,c88a6e9a-6ed5-4965-8c8b-92c08915c709,da3e4610-dca6-4794-a4c7-ef1c7a85745f,1537e03f-f395-4363-9d4f-c20295355f44,e98c167e-81fc-4562-8d64-491ca3284ccb,1418897b-b802-4dac-ad41-7e27e2a2ba72,de739971-9b1a-4f3b-8790-2bee3baf8a6a"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
 #!   FME_SERVER_SERVICES=""
 #!   FME_STROKE_MAX_DEVIATION="0"
-#!   HISTORY="06&lt;solidus&gt;29&lt;solidus&gt;2017,D&lt;space&gt;Runneals,Created,07&lt;solidus&gt;17&lt;solidus&gt;2017,D&lt;space&gt;Runneals,Added&lt;space&gt;Mark&lt;apos&gt;s&lt;space&gt;Winter&lt;space&gt;Route&lt;space&gt;Short&lt;space&gt;Name&lt;space&gt;Field,07&lt;solidus&gt;18&lt;solidus&gt;2017,D&lt;space&gt;Runneals,Updated&lt;space&gt;writer&lt;space&gt;to&lt;space&gt;GEOLIBRARY.RAMS_DEFCON,8&lt;solidus&gt;4&lt;solidus&gt;2017,D&lt;space&gt;Runneals,Updated&lt;space&gt;to&lt;space&gt;2017.1,8&lt;solidus&gt;8&lt;solidus&gt;2018,MGM,Had&lt;space&gt;to&lt;space&gt;replace&lt;space&gt;both&lt;space&gt;PGIS&lt;space&gt;writers&lt;space&gt;due&lt;space&gt;to&lt;space&gt;ORA&lt;space&gt;Table&lt;space&gt;Not&lt;space&gt;Found&lt;space&gt;Errors.,8&lt;solidus&gt;15&lt;solidus&gt;2018,MGM,Had&lt;space&gt;to&lt;space&gt;fix&lt;space&gt;the&lt;space&gt;OFFICIAL_COMMON_NAME&lt;space&gt;due&lt;space&gt;to&lt;space&gt;incorrect&lt;space&gt;&lt;quote&gt;-&lt;quote&gt;&lt;space&gt;for&lt;space&gt;US&lt;space&gt;and&lt;space&gt;IA&lt;space&gt;Routes.,8&lt;solidus&gt;30&lt;solidus&gt;2018,DR,Upgraded&lt;space&gt;to&lt;space&gt;2018.1,8&lt;solidus&gt;31&lt;solidus&gt;2018,DR,Merged&lt;space&gt;PGIS&lt;space&gt;writers&lt;space&gt;together&lt;comma&gt;&lt;space&gt;switched&lt;space&gt;winter&lt;space&gt;route&lt;space&gt;name&lt;space&gt;formatting&lt;space&gt;to&lt;space&gt;use&lt;space&gt;string&lt;space&gt;pair&lt;space&gt;replacers,6&lt;solidus&gt;30&lt;solidus&gt;2020,tsamson,Re-enabled&lt;space&gt;AGOL&lt;space&gt;writer.&lt;space&gt;&lt;space&gt;Collaboartions&lt;space&gt;is&lt;space&gt;not&lt;space&gt;working&lt;space&gt;as&lt;space&gt;expected.,9&lt;solidus&gt;29&lt;solidus&gt;2020,tsamson,Deleted&lt;space&gt;and&lt;space&gt;reconnected&lt;space&gt;AGOL&lt;space&gt;writer.,10&lt;solidus&gt;2&lt;solidus&gt;200,tsamson,Disabled&lt;space&gt;AGOL&lt;space&gt;writer."
+#!   HISTORY="20210702,DR,Version&lt;space&gt;1"
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.1.1.1 (20200817 - Build 20614 - WIN64)"
-#!   LAST_SAVE_DATE="2021-07-02T13:14:38"
+#!   LAST_SAVE_DATE="2021-07-02T13:26:41"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -45,7 +45,7 @@
 #!   SOURCE="NONE"
 #!   SOURCE_ROUTING_FILE=""
 #!   TERMINATE_REJECTED="YES"
-#!   TITLE="PRAMS Pull for SkyFire"
+#!   TITLE="AGOL Update View Snippet"
 #!   USAGE=""
 #!   USE_MARKDOWN="NO"
 #!   VIEW_POSITION="7047.26 280.615"
@@ -67,7 +67,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="fme_start_angle real64 fme_text_size real64 fme_color char(50) fme_dataset char(50) fme_text_string char(50) fme_feature_type char(50) fme_sweep_angle real64 fme_primary_axis real64 fme_geometry char(50) fme_secondary_axis real64 fme_basename char(50) fme_type char(50) fme_fill_color char(50) fme_rotation real64"
+#!   EXPOSABLE_ATTRS="fme_secondary_axis real64 fme_color char(50) fme_basename char(50) fme_text_string char(50) fme_feature_type char(50) fme_primary_axis real64 fme_text_size real64 fme_fill_color char(50) fme_rotation real64 fme_dataset char(50) fme_type char(50) fme_geometry char(50) fme_sweep_angle real64 fme_start_angle real64"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -570,32 +570,32 @@
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI IGNORE STRING_OR_ATTR_ENCODED AGOL_Username AGOL Username:"
+#!   GUI_LINE="GUI IGNORE OPTIONAL STRING_OR_ATTR_ENCODED AGOL_Username AGOL Username:"
 #!   DEFAULT_VALUE="Username"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI IGNORE PASSWORD_OR_ATTR AGOL_Password AGOL Password:"
+#!   GUI_LINE="GUI IGNORE OPTIONAL PASSWORD_OR_ATTR AGOL_Password AGOL Password:"
 #!   DEFAULT_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszuF518fvGMsmWjchRQUYUsLex43B/EtluuK9Fqgi1UMztziS240m3ArpIDjiua7yq4c5OsSAcS/RckNyGRF4eYa3Db8fkFVhatU1C9sM40tLhSzD+/ouE9zGUyyUFJt//69iuqcJvj4Rlgo5WXtaDxpJkZJUeSA23f2rUr3VvvkrwU1r8+DkbNjYFX5nReb/gUbx/sj8EZjcIDeNFyLJqC/jHPBN0Cn0uMqESFK1Jk4WaC68+pyKq7Hz3jIiAE0FEw1RYFTEqtx/rLjec8Isa0/6L4AvaNeaHffZ8R0rqN4zV5BJaOsAuwnkjjk9PiArdqxdBfddiP+dGehiuOtJ8UHegyQTyDEij)"
 #!   IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI IGNORE TEXT_OR_ATTR ServiceBaseURL Service Base URL:"
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_OR_ATTR ServiceBaseURL Service Base URL:"
 #!   DEFAULT_VALUE="https://services.arcgis.com/8lRhdTsQyJpO52F1"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI IGNORE TEXT_OR_ATTR View_Name Name of the View Service on ArcGIS Online:"
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_OR_ATTR View_Name Name of the View Service on ArcGIS Online:"
 #!   DEFAULT_VALUE="All_Routes_View"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI IGNORE TEXT_OR_ATTR View_Layer0_Name View Layer 0 Name:"
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_OR_ATTR View_Layer0_Name View Layer 0 Name:"
 #!   DEFAULT_VALUE="All Routes"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI IGNORE TEXT_EDIT_OR_NUM_MULTI_FEATURE ItemName MAX%MAX Base Name for AGOL Items:"
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_EDIT_OR_NUM_MULTI_FEATURE ItemName MAX%MAX Base Name for AGOL Items:"
 #!   DEFAULT_VALUE="AllRoutes"
 #!   IS_STAND_ALONE="false"
 #! />
@@ -661,7 +661,7 @@
 #!   BOUNDING_RECT="6779.4045287391646 -60.587340567283213 5452.8606510554882 1352.0543368698998"
 #!   STICKY="true"
 #!   COLOUR="0.62352941176470589,0.5725490196078431,0.8784313725490196,1"
-#!   CONTENTS="146 134 158 133 103 128 153 160 162 164 132 143 149 170 141 159 129 151 145 154 152 126 163 171 144 161 147 117 119 130 118 155 137 127 165 156 148 "
+#!   CONTENTS="133 151 132 170 160 154 159 134 129 137 119 118 147 153 163 158 126 103 145 149 152 162 130 143 156 164 144 171 141 155 148 146 165 128 127 117 161 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -675,7 +675,7 @@
 #!   BOUNDING_RECT="7876.3542737468179 -901.06168330221772 2313.1415314153155 354.5"
 #!   STICKY="true"
 #!   COLOUR="0.59607843137254901,0.91764705882352937,0.72549019607843135,1"
-#!   CONTENTS="149 155 154 151 152 153 156 "
+#!   CONTENTS="155 149 151 152 154 153 156 "
 #! >
 #! </BOOKMARK>
 #! </BOOKMARKS>
@@ -1729,36 +1729,6 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="162"
-#!   SOURCE_NODE="129"
-#!   TARGET_NODE="118"
-#!   SOURCE_PORT_DESC="fo 1 AllRoutes"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   COLOUR="0,0,0,1"
-#!   PEN_WIDTH="4"
-#!   PEN_STYLE="1"
-#!   LINK_STYLE_NAME="&lt;Default&gt;"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="165"
-#!   SOURCE_NODE="129"
-#!   TARGET_NODE="133"
-#!   SOURCE_PORT_DESC="fo 1 AllRoutes"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="1"
-#!   HIDDEN="false"
-#!   COLOUR="0,0,0,1"
-#!   PEN_WIDTH="4"
-#!   PEN_STYLE="1"
-#!   LINK_STYLE_NAME="&lt;Default&gt;"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
 #!   IDENTIFIER="145"
 #!   SOURCE_NODE="103"
 #!   TARGET_NODE="137"
@@ -1788,6 +1758,36 @@
 #!   LINK_STYLE_NAME="&lt;Default&gt;"
 #!   EXTRA_POINTS=""
 #! />
+#! <FEAT_LINK
+#!   IDENTIFIER="162"
+#!   SOURCE_NODE="129"
+#!   TARGET_NODE="118"
+#!   SOURCE_PORT_DESC="fo 1 AllRoutes"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="165"
+#!   SOURCE_NODE="129"
+#!   TARGET_NODE="133"
+#!   SOURCE_PORT_DESC="fo 1 AllRoutes"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
 #! </FEAT_LINKS>
 #! <BREAKPOINTS>
 #! </BREAKPOINTS>
@@ -1808,26 +1808,20 @@ GUI WEB_SELECT_ENCODED AGOL_User_Folder_ID SERVICE:Esri<space>ArcGIS<space>Onlin
 DEFAULT_MACRO AGOL_Connection IowaDOT_GIS<at>AGOL
 GUI NAMED_CONNECTION_ENCODED AGOL_Connection "Esri ArcGIS Online"% ArcGIS Online Connection:
 DEFAULT_MACRO AGOL_Username Username
-GUI IGNORE STRING_ENCODED AGOL_Username AGOL Username:
+GUI IGNORE OPTIONAL STRING_ENCODED AGOL_Username AGOL Username:
 DEFAULT_MACRO AGOL_Password fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszuF518fvGMsmWjchRQUYUsLex43B/EtluuK9Fqgi1UMztziS240m3ArpIDjiua7yq4c5OsSAcS/RckNyGRF4eYa3Db8fkFVhatU1C9sM40tLhSzD+/ouE9zGUyyUFJt//69iuqcJvj4Rlgo5WXtaDxpJkZJUeSA23f2rUr3VvvkrwU1r8+DkbNjYFX5nReb/gUbx/sj8EZjcIDeNFyLJqC/jHPBN0Cn0uMqESFK1Jk4WaC68+pyKq7Hz3jIiAE0FEw1RYFTEqtx/rLjec8Isa0/6L4AvaNeaHffZ8R0rqN4zV5BJaOsAuwnkjjk9PiArdqxdBfddiP+dGehiuOtJ8UHegyQTyDEij)
-GUI IGNORE PASSWORD AGOL_Password AGOL Password:
+GUI IGNORE OPTIONAL PASSWORD AGOL_Password AGOL Password:
 DEFAULT_MACRO ServiceBaseURL https://services.arcgis.com/8lRhdTsQyJpO52F1
-GUI IGNORE TEXT ServiceBaseURL Service Base URL:
+GUI IGNORE OPTIONAL TEXT ServiceBaseURL Service Base URL:
 DEFAULT_MACRO View_Name All_Routes_View
-GUI IGNORE TEXT View_Name Name of the View Service on ArcGIS Online:
+GUI IGNORE OPTIONAL TEXT View_Name Name of the View Service on ArcGIS Online:
 DEFAULT_MACRO View_Layer0_Name All Routes
-GUI IGNORE TEXT View_Layer0_Name View Layer 0 Name:
+GUI IGNORE OPTIONAL TEXT View_Layer0_Name View Layer 0 Name:
 DEFAULT_MACRO ItemName AllRoutes
-GUI IGNORE TEXT_EDIT_OR_NUM_MULTI_FEATURE ItemName MAX%MAX Base Name for AGOL Items:
+GUI IGNORE OPTIONAL TEXT_EDIT_OR_NUM_MULTI_FEATURE ItemName MAX%MAX Base Name for AGOL Items:
 INCLUDE [ if {{$(FGDBZipLocation)} == {}} { puts_real {Parameter 'FGDBZipLocation' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(AGOL_User_Folder_ID)} == {}} { puts_real {Parameter 'AGOL_User_Folder_ID' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(AGOL_Connection)} == {}} { puts_real {Parameter 'AGOL_Connection' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(AGOL_Username)} == {}} { puts_real {Parameter 'AGOL_Username' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(AGOL_Password)} == {}} { puts_real {Parameter 'AGOL_Password' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(ServiceBaseURL)} == {}} { puts_real {Parameter 'ServiceBaseURL' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(View_Name)} == {}} { puts_real {Parameter 'View_Name' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(View_Layer0_Name)} == {}} { puts_real {Parameter 'View_Layer0_Name' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(ItemName)} == {}} { puts_real {Parameter 'ItemName' must be given a value.}; exit 1; }; ]
 #! START_HEADER
 #! START_WB_HEADER
 READER_TYPE MULTI_READER
@@ -1935,7 +1929,7 @@ FME_REPROJECTION_ENGINE FME
 FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
 FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
-MAPPING_FILE_ID PRAMS<space>Pull<space>for<space>SkyFire
+MAPPING_FILE_ID AGOL<space>Update<space>View<space>Snippet
 DEFAULT_MACRO DATASET_KEYWORD_FFS_1 FFS_1
 FME_PASSWORD_PARAMETER_LIST AGOL_Password
 # -------------------------------------------------------------------------
