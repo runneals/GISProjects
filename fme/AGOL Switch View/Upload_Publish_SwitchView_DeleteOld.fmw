@@ -1,0 +1,1963 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        C:\Apps\FME\20614\fme.exe "C:\Users\drunne2\Desktop\AGOL Switch View\Upload_Publish_SwitchView_DeleteOld.fmw"
+#              --FGDBZipLocation "C:<backslash>FME<backslash>AllRoutes.zip"
+#              --AGOL_User_Folder_ID "<solidus>"
+#              --AGOL_Connection "IowaDOT_GIS<at>AGOL"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY="Web"
+#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This transformer was developed to provide an easier method to update large feature views hosted on ArcGIS Online.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1) Uploads a specified file geodatabase&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2) Publishes the file geodatabase item as a service&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3) Deletes the file geodatabase item&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4) Updates the specified view to point to the newly published service&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5) Deletes the old service &lt;/p&gt;&#10;"
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="6055.55 1504.1"
+#!   DOC_TOP_LEFT="6176.72 -1564.68"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="20614"
+#!   FME_DOCUMENT_GUID="b50de035-295d-447c-825f-a9cb3e98876e"
+#!   FME_DOCUMENT_PRIORGUID="a5ff3a30-3cca-4c25-bd74-1a6c526cf366,6792f2da-b10e-4229-8ccb-457e949f25d3,704d588f-9306-4c8a-b796-d75e24f7d012,7aef27ca-3865-4bea-a868-6dd3e84eed65,68c2f9a3-38c5-4741-8bc6-c10ecae1ea5e,65400f5e-9763-412e-8f7b-51193fa66bf5,e1ee8917-7207-4900-89a9-a42ca2d6c35d,bc997114-67fe-4e70-aae7-0fb379e80288,879acc61-add9-4a64-ab1e-3b837dd340e8,8f782447-a96e-43ee-b3e9-694a1590c379,9d8eedf4-4cc4-4b9a-a742-82277b386604,00013291-6ca9-45fb-b912-6f1f26a4d11b,5c59a3f3-f542-4c56-a9fa-cd82e6d2ab62,dea26080-097f-4208-a636-411f4a06d144,0618f82f-a12c-4273-9c4a-ccfe47b5b28f,b69126ff-ffb6-4f2a-b08f-b9b84d4c2a66,effb5b1d-c91c-4101-8acc-42fb6f294603,f80aeb22-5ae7-4906-8a35-b722f8dac404,5626bd58-a59e-4d9d-b3d6-5da1dc7b2e9c,b9f9ddc1-c4d8-4b00-b72f-dfd2cd3ce343,9c51a944-652d-413f-b049-b88f18e49ad6,19177c1e-1dfc-47dd-bc98-d3053947231b,9d5e0b68-882b-4299-89ab-a2b8a608a151,fbdaca73-1541-4fa8-9aec-8011597da0a5,c8c7ebf1-4672-408f-a592-5551805b6fb7,c223ae77-b4e8-413d-b869-a9356f8da5d4,2b70a889-da63-4c31-b4f4-d6b0db625229,aad995d3-1ef8-4417-8ed3-0c5e2c9e11e5,8ded5e8f-13b6-493f-be66-40a5b14a375a,005d113e-60ba-4e9c-b1fe-82df90e1dc80,d173d1b0-742c-49c4-abe2-b2e9b4dd16fd,6f4f90ea-b310-4091-a381-cc203d30e07a,83eed0cc-2ef4-4967-b0f5-e9d91d127b6d,22d6186d-ea0b-46da-bf47-c26307c91b4d,cdd9db58-f9f5-434b-bd9e-6bc583de48f1,5c246720-ce32-47c2-9cd1-55f1df4b4566,07455ee7-9e27-42f8-876d-209cdf7f53c1,c8ef3f90-52d1-438d-a9b8-c9642bf7081c,7edac604-0a8e-433f-802b-b4f612e61914,b847070c-8bde-4c07-98a5-527b87e8d7ec,a182eaa8-95d0-46ab-a895-aac284229eb6,237da5da-8f9f-4724-96ff-6a1520a67da2,eb7afeed-d8e5-4da6-9d25-550c469518e9,b79c4aae-275b-4260-ab3e-f01eb8719ff4,6c1afa20-7111-46de-96da-7f83b32636fe,b9168e6c-50c4-47de-8cd4-eb8016648374,6b55e908-ab41-4be2-81c0-04b3fbac4217,6dcd2300-5f64-44a0-ae84-1e499b0b17db,1628394c-e516-4394-adfc-946ac727101b,ff0e3409-71a5-414c-9edb-a87430418c09,b7539cff-f919-4c82-b728-1e1e51b0c5ed,9a23d8e1-72c3-4d34-bb82-4d85ca2a0edc,127cb1ca-4378-4016-9f30-32f2c7ca929f,8bea701b-b94b-44fc-94e1-91e58e1dcc48,34392326-25df-4fdd-bccd-dd0106c5a10f,6b34c224-ecf6-4690-a1f0-558ca771fcd1,c88a6e9a-6ed5-4965-8c8b-92c08915c709,da3e4610-dca6-4794-a4c7-ef1c7a85745f,1537e03f-f395-4363-9d4f-c20295355f44,e98c167e-81fc-4562-8d64-491ca3284ccb,1418897b-b802-4dac-ad41-7e27e2a2ba72,de739971-9b1a-4f3b-8790-2bee3baf8a6a"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY="20210702,DR,Version&lt;space&gt;1"
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2020.1.1.1 (20200817 - Build 20614 - WIN64)"
+#!   LAST_SAVE_DATE="2021-07-02T13:26:41"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="37"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="No"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE="AGOL Update View Snippet"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="7047.26 280.615"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="98"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="FFS"
+#!   DATASET="C:\FME\$(ItemName).ffs"
+#!   KEYWORD="FFS_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="4000"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_secondary_axis real64 fme_color char(50) fme_basename char(50) fme_text_string char(50) fme_feature_type char(50) fme_primary_axis real64 fme_text_size real64 fme_fill_color char(50) fme_rotation real64 fme_dataset char(50) fme_type char(50) fme_geometry char(50) fme_sweep_angle real64 fme_start_angle real64"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   FTTR_TYPE=""
+#!   GENERATE_FME_BUILD_NUM="20596"
+#!   COORDSYS=""
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="ffs file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the FFS file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the FFS file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="buffer"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="binary(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varbinary(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="binarybuffer"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="datetime"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="time"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="real64"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="real32"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int32"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="uint32"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int64"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="uint64"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int16"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="uint16"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int8"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="uint8"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="FFS"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_area"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_surface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_solid"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_feature_table"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_geom"
+#!   FME_TYPE="TARGET_GEOMTYPE"
+#!   FORMAT="FFS"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="AllRoutes"
+#!   FEATURE_TYPE_NAME="$(ItemName)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="128"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="11640.825351926989 -328.44716202264078"
+#!   BOUNDING_RECT="11640.825351926989 -328.44716202264078 430 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="false"
+#!   KEYWORD="FFS_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="0"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="id.OldService" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="_creation_instance" ATTR_TYPE="uint64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#!   NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#!   NAME="ETL"
+#! />
+#! <ITEM
+#!   NAME="PRAMS to PGIS - SkyFire All Routes.fmw"
+#! />
+#! <MODIFICATIONS>
+#! <MODIFICATION
+#!   UID=":DatasetMgr_FFS_1:DestDataset_FFS_1"
+#!   VALUE="\\ntgeofme\FMEData\AGOL\$(ItemName).ffs"
+#! />
+#! <MODIFICATION
+#!   UID=":DatasetMgr_GEODATABASE_SDE_1:GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1"
+#!   VALUE="\\ntgeofme\FMEData\SDE\PRAMS_RAMSGDO_QAQC.sde"
+#! />
+#! <MODIFICATION
+#!   UID=":DatasetMgr_GEODATABASE_SDE_2:GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2"
+#!   VALUE="\\ntgeofme\FMEData\SDE\PGIS_GEOLIBRARY.sde"
+#! />
+#! <MODIFICATION
+#!   UID=":DatasetMgr_GEODATABASE_SDE_2:GEODATABASE_SDE_OUT_FFS_DUMP_FILE_GEODATABASE_SDE_2"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":DatasetMgr_GEODATABASE_SDE_2:GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_2"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SERVER_DEST_DIR"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_BACKUP"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_DASHBOARD"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_DATA"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_ENGINE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_LOG"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_SYSTEM"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_TEMP"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_TOPIC_MESSAGE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:DESTINATION_ROUTING_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:LOG_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:SOURCE_ROUTING_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_103:PARAMETER_SETUP::_FME_SOURCE_FILE"
+#!   VALUE="&lt;backslash&gt;&lt;backslash&gt;ntgeofme&lt;backslash&gt;FMEData&lt;backslash&gt;AGOL&lt;backslash&gt;AllRoutes.zip"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_104:DATASET"
+#!   VALUE="&lt;backslash&gt;&lt;backslash&gt;ntgeofme&lt;backslash&gt;FMEData&lt;backslash&gt;AGOL&lt;backslash&gt;AllRoutes.zip&lt;backslash&gt;AllRoutes.gdb"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_104:GEODATABASE_FILE_FFS_DUMP_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_104:GEODATABASE_FILE_TEMPLATEFILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_129:DATASET"
+#!   VALUE="&lt;backslash&gt;&lt;backslash&gt;ntgeofme&lt;backslash&gt;FMEData&lt;backslash&gt;AGOL&lt;backslash&gt;$(ItemName).ffs"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_149:OUTPUT_DIRNAME"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_149:OUTPUT_FILENAME"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_149:UPLOAD_FILE"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_151:FILEPATH_OR_URL"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_152:OUTPUT_DIRNAME"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_152:OUTPUT_FILENAME"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_152:UPLOAD_FILE"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_153:OUTPUT_DIRNAME"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_153:OUTPUT_FILENAME"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_153:UPLOAD_FILE"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! </MODIFICATIONS>
+#! <READER_DATASETS>
+#! <DATASET
+#!   NAME="ReadFFSwithCurrentServiceID"
+#!   OVERRIDE="--FeatureReaderDataset_ReadFFSwithCurrentServiceID"
+#!   DATASET="ReadFFSwithCurrentServiceID/AllRoutes.ffs"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET
+#!   NAME="FFS_1"
+#!   OVERRIDE="-FFS_1_DATASET"
+#!   DATASET="FFS_1/AllRoutes.ffs"
+#! />
+#! <DATASET
+#!   NAME="FeatureWriter"
+#!   OVERRIDE="--FeatureWriterDataset_FeatureWriter"
+#!   DATASET="FeatureWriter/AllRoutes.gdb"
+#! />
+#! </WRITER_DATASETS>
+#! <DEPENDENCIES>
+#! <PACKAGES>
+#! <PACKAGE
+#!   NAME="safe.esri-agol"
+#!   VERSION="0.0.19"
+#! />
+#! </PACKAGES>
+#! </DEPENDENCIES>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME_MUSTEXIST_ENCODED FGDBZipLocation All_Files(*)|* FGDB File to Upload:"
+#!   DEFAULT_VALUE="C:&lt;backslash&gt;FME&lt;backslash&gt;AllRoutes.zip"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI WEB_SELECT_ENCODED AGOL_User_Folder_ID SERVICE:Esri&lt;space&gt;ArcGIS&lt;space&gt;Online%DEPENDENT_PARAMETERS:__arcgisonlineconnector_connection%KEYVALS:mode,folders_only,is_folder,yes%SHOWID%SELECTION:CONTAINERS_ONLY%PROMPTFORTITLE%NO_SEARCH%MODULE:fmepy_esri_agol User Content Folder ID:"
+#!   DEFAULT_VALUE="&lt;solidus&gt;"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI NAMED_CONNECTION_ENCODED AGOL_Connection &quot;Esri ArcGIS Online&quot;% ArcGIS Online Connection:"
+#!   DEFAULT_VALUE="IowaDOT_GIS&lt;at&gt;AGOL"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI IGNORE OPTIONAL STRING_OR_ATTR_ENCODED AGOL_Username AGOL Username:"
+#!   DEFAULT_VALUE="Username"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI IGNORE OPTIONAL PASSWORD_OR_ATTR AGOL_Password AGOL Password:"
+#!   DEFAULT_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszuF518fvGMsmWjchRQUYUsLex43B/EtluuK9Fqgi1UMztziS240m3ArpIDjiua7yq4c5OsSAcS/RckNyGRF4eYa3Db8fkFVhatU1C9sM40tLhSzD+/ouE9zGUyyUFJt//69iuqcJvj4Rlgo5WXtaDxpJkZJUeSA23f2rUr3VvvkrwU1r8+DkbNjYFX5nReb/gUbx/sj8EZjcIDeNFyLJqC/jHPBN0Cn0uMqESFK1Jk4WaC68+pyKq7Hz3jIiAE0FEw1RYFTEqtx/rLjec8Isa0/6L4AvaNeaHffZ8R0rqN4zV5BJaOsAuwnkjjk9PiArdqxdBfddiP+dGehiuOtJ8UHegyQTyDEij)"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_OR_ATTR ServiceBaseURL Service Base URL:"
+#!   DEFAULT_VALUE="https://services.arcgis.com/8lRhdTsQyJpO52F1"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_OR_ATTR View_Name Name of the View Service on ArcGIS Online:"
+#!   DEFAULT_VALUE="All_Routes_View"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_OR_ATTR View_Layer0_Name View Layer 0 Name:"
+#!   DEFAULT_VALUE="All Routes"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_EDIT_OR_NUM_MULTI_FEATURE ItemName MAX%MAX Base Name for AGOL Items:"
+#!   DEFAULT_VALUE="AllRoutes"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="164"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Disable this connection when running for the first time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="8576.6106832624373 -684.27059386444682"
+#!   TOP_LEFT="8576.6106832624373 -684.27059386444682"
+#!   BOTTOM_RIGHT="9083.4060558782276 -826.77171887569693"
+#!   BOUNDING_RECT="8576.6106832624373 -684.27059386444682 506.79537261579026 142.50112501125011"
+#!   ORDER="500000000000179"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.62352941176470589,0.5725490196078431,0.8784313725490196,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="134"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="171"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enable this connection when running for the first time to populate the ffs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="9114.0798199308265 -267.93924490265329"
+#!   TOP_LEFT="9114.0798199308265 -267.93924490265329"
+#!   BOTTOM_RIGHT="9758.4719426211177 -410.4403699139034"
+#!   BOUNDING_RECT="9114.0798199308265 -267.93924490265329 644.39212269029122 142.50112501125011"
+#!   ORDER="500000000000178"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.62352941176470589,0.5725490196078431,0.8784313725490196,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="170"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="131"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check Private Parameters when troubleshooting!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="6524.2999368769188 -1514.6835141820802"
+#!   TOP_LEFT="6524.2999368769188 -1514.6835141820802"
+#!   BOTTOM_RIGHT="7274.2999368769188 -1564.6835141820802"
+#!   BOUNDING_RECT="6524.2999368769188 -1514.6835141820802 750 50"
+#!   ORDER="500000000000185"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="true"
+#!   COLOUR="1,0,0,1"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="116"
+#!   NAME="AGOL"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="6779.4045287391646 -60.587340567283213"
+#!   ORDER="500000000000025"
+#!   PALETTE_COLOR="Color8"
+#!   BOTTOM_RIGHT="12232.265179794653 -1412.641677437183"
+#!   BOUNDING_RECT="6779.4045287391646 -60.587340567283213 5452.8606510554882 1352.0543368698998"
+#!   STICKY="true"
+#!   COLOUR="0.62352941176470589,0.5725490196078431,0.8784313725490196,1"
+#!   CONTENTS="133 151 132 170 160 154 159 134 129 137 119 118 147 153 163 158 126 103 145 149 152 162 130 143 156 164 144 171 141 155 148 146 165 128 127 117 161 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="159"
+#!   NAME="Switch the view from the old service to the new service"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="7876.3542737468179 -901.06168330221772"
+#!   ORDER="500000000000173"
+#!   PALETTE_COLOR="Color5"
+#!   BOTTOM_RIGHT="10189.495805162132 -1255.5616833022177"
+#!   BOUNDING_RECT="7876.3542737468179 -901.06168330221772 2313.1415314153155 354.5"
+#!   STICKY="true"
+#!   COLOUR="0.59607843137254901,0.91764705882352937,0.72549019607843135,1"
+#!   CONTENTS="155 149 151 152 154 153 156 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="103"
+#!   TYPE="safe.esri-agol.ArcGISOnlineConnector"
+#!   VERSION="1"
+#!   POSITION="7190.7606831170351 -159.4403699139034"
+#!   BOUNDING_RECT="7190.7606831170351 -159.4403699139034 500.00106825772946 71"
+#!   ORDER="500000000000018"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_private_url" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="Initiator"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_conflicting_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="CONNECTION" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OPERATION_TYPE" PARM_VALUE="Upload"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETER_SETUP" PARM_VALUE="_FME_SOURCE_TYPE]File]_FME_SOURCE_FILE]$(FGDBZipLocation)]_FME_DATA_TO_UPLOAD]&lt;Unused&gt;]_UPLOAD_FILE_TITLE]&lt;at&gt;Value&lt;openparen&gt;BaseName.FGDB&lt;closeparen&gt;]FILE_ITEM_TYPE]File&lt;space&gt;Geodatabase]_UPLOAD_FILE_TAGS]FMEFGDB]_FME_UPLOAD_DESTINATION_PATH]$(AGOL_User_Folder_ID)]_FME_UPLOAD_ATTR_FILENAME]&lt;Unused&gt;]_UPLOAD_FME_ATTRIBUTES_TO_ADD]&quot;_id _private_url&quot;]FME_CONTROLLER_QUERY_FILE]esri_agol_deps&lt;solidus&gt;Upload.fme"/>
+#!     <XFORM_PARM PARM_NAME="REQUEST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="UploadFGDBtoAGOL"/>
+#!     <XFORM_PARM PARM_NAME="__arcgisonlineconnector_connection" PARM_VALUE="$(AGOL_Connection)"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="104"
+#!   TYPE="FeatureWriter"
+#!   VERSION="0"
+#!   POSITION="6176.7199304646101 -114.79706633801055"
+#!   BOUNDING_RECT="6176.7199304646101 -114.79706633801055 430 71"
+#!   ORDER="500000000000019"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="SUMMARY"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="C:&lt;backslash&gt;FME&lt;backslash&gt;AllRoutes.zip&lt;backslash&gt;AllRoutes.gdb"/>
+#!     <XFORM_PARM PARM_NAME="DATASET_ATTR" PARM_VALUE="_dataset"/>
+#!     <XFORM_PARM PARM_NAME="DYNGROUP_0" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FEATURE_TYPES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FEATURE_TYPE_LIST_ATTR" PARM_VALUE="_feature_type"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_FILE"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE="RUNTIME_MACROS,OVERWRITE_GEODB&lt;comma&gt;NO&lt;comma&gt;DATASET_TEMPLATE&lt;comma&gt;&lt;comma&gt;TEMPLATEFILE&lt;comma&gt;&lt;comma&gt;TRANSACTION_TYPE&lt;comma&gt;NONE&lt;comma&gt;SIMPLIFY_GEOM&lt;comma&gt;No&lt;comma&gt;X_ORIGIN&lt;comma&gt;0&lt;comma&gt;Y_ORIGIN&lt;comma&gt;0&lt;comma&gt;XY_SCALE&lt;comma&gt;0&lt;comma&gt;HAS_Z_VALUES&lt;comma&gt;auto_detect&lt;comma&gt;Z_ORIGIN&lt;comma&gt;0&lt;comma&gt;Z_SCALE&lt;comma&gt;0&lt;comma&gt;GRID_1&lt;comma&gt;0&lt;comma&gt;GEODB_SHARED_WRT_ADV_PARM_GROUP&lt;comma&gt;FME_DISCLOSURE_OPEN&lt;comma&gt;REQUESTED_GEODATABASE_VERSION&lt;comma&gt;CURRENT&lt;comma&gt;DEFAULT_Z_VALUE&lt;comma&gt;0&lt;comma&gt;TRANSACTION&lt;comma&gt;0&lt;comma&gt;TRANSACTION_INTERVAL&lt;comma&gt;5000&lt;comma&gt;IGNORE_FAILED_FEATURE_ENTRY&lt;comma&gt;no&lt;comma&gt;MAX_NUMBER_FAILED_FEATURES&lt;comma&gt;-1&lt;comma&gt;DUMP_FAILED_FEATURES&lt;comma&gt;no&lt;comma&gt;FFS_DUMP_FILE&lt;comma&gt;&lt;comma&gt;ANNOTATION_UNITS&lt;comma&gt;unknown_units&lt;comma&gt;HAS_MEASURES&lt;comma&gt;no&lt;comma&gt;COMPRESS_AT_END&lt;comma&gt;no&lt;comma&gt;ENABLE_FAST_DELETES&lt;comma&gt;yes&lt;comma&gt;VALIDATE_FEATURES&lt;comma&gt;no&lt;comma&gt;SIMPLIFY_NETWORK_FEATURES&lt;comma&gt;no&lt;comma&gt;BEGIN_SQL&lt;opencurly&gt;0&lt;closecurly&gt;&lt;comma&gt;&lt;comma&gt;END_SQL&lt;opencurly&gt;0&lt;closecurly&gt;&lt;comma&gt;&lt;comma&gt;DESTINATION_DATASETTYPE_VALIDATION&lt;comma&gt;Yes&lt;comma&gt;COORDINATE_SYSTEM_GRANULARITY&lt;comma&gt;FEATURE_TYPE,METAFILE,GEODATABASE_FILE"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_FILE_TRANSACTION_INTERVAL,&quot;OPTIONAL INTEGER&quot;,GEODATABASE_FILE&lt;space&gt;Features&lt;space&gt;Per&lt;space&gt;Transaction,GEODATABASE_FILE_GRID_1,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEODATABASE_FILE&lt;space&gt;,GEODATABASE_FILE_IGNORE_FAILED_FEATURE_ENTRY,&quot;OPTIONAL CHOICE yes%no&quot;,GEODATABASE_FILE&lt;space&gt;Ignore&lt;space&gt;Failed&lt;space&gt;Features:,GEODATABASE_FILE_REQUESTED_GEODATABASE_VERSION,&quot;OPTIONAL LOOKUP_CHOICE Current,CURRENT%10.0%9.3&quot;,GEODATABASE_FILE&lt;space&gt;Geodatabase&lt;space&gt;Version:,GEODATABASE_FILE_COMPRESS_AT_END,&quot;OPTIONAL CHOICE yes%no&quot;,GEODATABASE_FILE&lt;space&gt;Compact&lt;space&gt;Database&lt;space&gt;When&lt;space&gt;Done:,GEODATABASE_FILE_HAS_MEASURES,&quot;OPTIONAL CHOICE yes%no&quot;,GEODATABASE_FILE&lt;space&gt;Contains&lt;space&gt;Measures,GEODATABASE_FILE_XY_SCALE,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEODATABASE_FILE&lt;space&gt;,GEODATABASE_FILE_TRANSACTION_TYPE,&quot;OPTIONAL LOOKUP_CHOICE Edit&lt;space&gt;Session,EDIT_SESSION%Transactions,TRANSACTIONS%None,NONE&quot;,GEODATABASE_FILE&lt;space&gt;Transaction&lt;space&gt;Type:,GEODATABASE_FILE_HAS_Z_VALUES,&quot;OPTIONAL LOOKUP_CHOICE Yes,yes%No,no%Auto&lt;space&gt;Detect,auto_detect&quot;,GEODATABASE_FILE&lt;space&gt;Contains&lt;space&gt;Z&lt;space&gt;Values:,GEODATABASE_FILE_TEMPLATEFILE,&quot;OPTIONAL FILENAME_MUSTEXIST XML_Geodatabase_Files(*.xml)|*.xml|(*.zip)|*.zip|(*.z)|*.z|All_files(*)|*&quot;,GEODATABASE_FILE&lt;space&gt;Import&lt;space&gt;XML&lt;space&gt;Workspace&lt;space&gt;Document&lt;space&gt;&lt;openparen&gt;Schema&lt;space&gt;Only&lt;closeparen&gt;:,GEODATABASE_FILE_END_SQL{0},&quot;OPTIONAL TEXT_EDIT_SQL_CFG_ENCODED MODE,SQL;FORMAT,GEODATABASE_FILE&quot;,GEODATABASE_FILE&lt;space&gt;SQL&lt;space&gt;To&lt;space&gt;Run&lt;space&gt;After&lt;space&gt;Write,GEODATABASE_FILE_TRANSACTION,&quot;OPTIONAL INTEGER&quot;,GEODATABASE_FILE&lt;space&gt;Transaction&lt;space&gt;Number:,GEODATABASE_FILE_DEFAULT_Z_VALUE,&quot;OPTIONAL FLOAT&quot;,GEODATABASE_FILE&lt;space&gt;Default&lt;space&gt;Z&lt;space&gt;Value:,GEODATABASE_FILE_COORDINATE_SYSTEM_GRANULARITY,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEODATABASE_FILE&lt;space&gt;,GEODATABASE_FILE_MAX_NUMBER_FAILED_FEATURES,&quot;OPTIONAL INTEGER&quot;,GEODATABASE_FILE&lt;space&gt;Max&lt;space&gt;number&lt;space&gt;of&lt;space&gt;features&lt;space&gt;to&lt;space&gt;ignore:,GEODATABASE_FILE_DESTINATION_DATASETTYPE_VALIDATION,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEODATABASE_FILE&lt;space&gt;,GEODATABASE_FILE_Y_ORIGIN,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEODATABASE_FILE&lt;space&gt;,GEODATABASE_FILE_Z_ORIGIN,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEODATABASE_FILE&lt;space&gt;,GEODATABASE_FILE_FFS_DUMP_FILE,&quot;OPTIONAL FILENAME FME_Feature_Store_Files(*.ffs)|*.ffs|All_files(*)|*&quot;,GEODATABASE_FILE&lt;space&gt;Failed&lt;space&gt;Feature&lt;space&gt;Dump&lt;space&gt;filename:,GEODATABASE_FILE_VALIDATE_FEATURES,&quot;OPTIONAL CHOICE yes%no&quot;,GEODATABASE_FILE&lt;space&gt;Validate&lt;space&gt;Features&lt;space&gt;to&lt;space&gt;Write:,GEODATABASE_FILE_GEODB_SHARED_WRT_ADV_PARM_GROUP,&quot;OPTIONAL DISCLOSUREGROUP REQUESTED_GEODATABASE_VERSION%DEFAULT_Z_VALUE%TRANSACTION%TRANSACTION_INTERVAL%IGNORE_FAILED_FEATURE_ENTRY%MAX_NUMBER_FAILED_FEATURES%DUMP_FAILED_FEATURES%FFS_DUMP_FILE%ANNOTATION_UNITS%HAS_MEASURES%MEASURES_ORIGIN%MEASURES_SCALE%COMPRESS_AT_END%ENABLE_FAST_DELETES%VALIDATE_FEATURES%SIMPLIFY_NETWORK_FEATURES%BEGIN_SQL{0}%END_SQL{0}&quot;,GEODATABASE_FILE&lt;space&gt;Advanced,GEODATABASE_FILE_SIMPLIFY_GEOM,&quot;OPTIONAL LOOKUP_CHOICE Yes%No&quot;,GEODATABASE_FILE&lt;space&gt;Simplify&lt;space&gt;Geometry:,GEODATABASE_FILE_BEGIN_SQL{0},&quot;OPTIONAL TEXT_EDIT_SQL_CFG_ENCODED MODE,SQL;FORMAT,GEODATABASE_FILE&quot;,GEODATABASE_FILE&lt;space&gt;SQL&lt;space&gt;To&lt;space&gt;Run&lt;space&gt;Before&lt;space&gt;Write,GEODATABASE_FILE_X_ORIGIN,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEODATABASE_FILE&lt;space&gt;,GEODATABASE_FILE_Z_SCALE,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEODATABASE_FILE&lt;space&gt;,GEODATABASE_FILE_SIMPLIFY_NETWORK_FEATURES,&quot;OPTIONAL CHOICE yes%no&quot;,GEODATABASE_FILE&lt;space&gt;Simplify&lt;space&gt;Network&lt;space&gt;Features:,GEODATABASE_FILE_OVERWRITE_GEODB,&quot;OPTIONAL ACTIVECHECK YES%NO,DATASET_TEMPLATE&quot;,GEODATABASE_FILE&lt;space&gt;Overwrite&lt;space&gt;Existing&lt;space&gt;Geodatabase,GEODATABASE_FILE_ANNOTATION_UNITS,&quot;OPTIONAL LOOKUP_CHOICE &quot;&quot;Unknown Units&quot;&quot;,unknown_units%&quot;&quot;Decimal Degrees&quot;&quot;,decimal_degrees%Inches,inches%Points,points%Feet,feet%Yards,yards%Miles,miles%&quot;&quot;Nautical Miles&quot;&quot;,nautical_miles%Millimeters,millimeters%Centimeters,centimeters%Meters,meters%Kilometers,kilometers%Decimeters,decimeters&quot;,GEODATABASE_FILE&lt;space&gt;Annotation&lt;space&gt;Units:,GEODATABASE_FILE_ENABLE_FAST_DELETES,&quot;OPTIONAL CHOICE yes%no&quot;,GEODATABASE_FILE&lt;space&gt;Enable&lt;space&gt;Fast&lt;space&gt;Deletes:,GEODATABASE_FILE_DUMP_FAILED_FEATURES,&quot;OPTIONAL CHOICE yes%no&quot;,GEODATABASE_FILE&lt;space&gt;Dump&lt;space&gt;Failed&lt;space&gt;Features&lt;space&gt;to&lt;space&gt;File:"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_ANNOTATION_UNITS" PARM_VALUE="unknown_units"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_BEGIN_SQL{0}" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_COMPRESS_AT_END" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_COORDINATE_SYSTEM_GRANULARITY" PARM_VALUE="FEATURE_TYPE"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_DEFAULT_Z_VALUE" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_DESTINATION_DATASETTYPE_VALIDATION" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_DUMP_FAILED_FEATURES" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_ENABLE_FAST_DELETES" PARM_VALUE="yes"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_END_SQL{0}" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_FFS_DUMP_FILE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_GEODB_SHARED_WRT_ADV_PARM_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_GRID_1" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_HAS_MEASURES" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_HAS_Z_VALUES" PARM_VALUE="auto_detect"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_IGNORE_FAILED_FEATURE_ENTRY" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_MAX_NUMBER_FAILED_FEATURES" PARM_VALUE="-1"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_OVERWRITE_GEODB" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_REQUESTED_GEODATABASE_VERSION" PARM_VALUE="CURRENT"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_SIMPLIFY_GEOM" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_SIMPLIFY_NETWORK_FEATURES" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_TEMPLATEFILE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_TRANSACTION" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_TRANSACTION_INTERVAL" PARM_VALUE="5000"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_TRANSACTION_TYPE" PARM_VALUE="NONE"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_VALIDATE_FEATURES" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_XY_SCALE" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_X_ORIGIN" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_Y_ORIGIN" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_Z_ORIGIN" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="GEODATABASE_FILE_Z_SCALE" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="MORE_SUMMARY_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NO_OUTPUT_PORTS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUTPORTS_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS" PARM_VALUE="&quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS_MODE" PARM_VALUE="NO_OUTPUT_PORTS"/>
+#!     <XFORM_PARM PARM_NAME="PER_EACH_INPUT" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SELECTED_PORTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SUMMARY_ATTRS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TOTAL_FEATURES_WRITTEN_ATTR" PARM_VALUE="_total_features_written"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_DIRECTIVES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_FEATURE_TYPE_PARAMS" PARM_VALUE="All_Routes:Reprojected,ftp_feature_type_name,All_Routes,ftp_writer,GEODATABASE_FILE,ftp_geometry,geodb_polyline,ftp_dynamic_schema,no,ftp_dynamic_feature_type_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_geometry_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_def_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_sources,&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;,ftp_attribute_source,0,ftp_format_parameters,fme_configuration_group&lt;comma&gt;&lt;comma&gt;fme_configuration_common_group&lt;comma&gt;&lt;comma&gt;fme_feature_operation&lt;comma&gt;INSERT&lt;comma&gt;fme_table_handling&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;fme_update_geometry&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_selection_group&lt;comma&gt;&lt;comma&gt;fme_selection_method&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_match_columns&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_where_builder_clause&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_table_creation_group&lt;comma&gt;&lt;comma&gt;GEODB_ORIGIN_GROUP&lt;comma&gt;&lt;comma&gt;GEODB_ANNO_GROUP&lt;comma&gt;&lt;comma&gt;GEODB_ADVANCED_GROUP&lt;comma&gt;&lt;comma&gt;GEODB_XY_GROUP&lt;comma&gt;&lt;comma&gt;GEODB_Z_GROUP&lt;comma&gt;&lt;comma&gt;GEODB_MEASURES_GROUP&lt;comma&gt;&lt;comma&gt;GEODB_OBJECT_ID_NAME&lt;comma&gt;OBJECTID&lt;comma&gt;GEODB_OBJECT_ID_ALIAS&lt;comma&gt;OBJECTID&lt;comma&gt;GEODB_SHAPE_NAME&lt;comma&gt;SHAPE&lt;comma&gt;GEODB_SHAPE_ALIAS&lt;comma&gt;SHAPE&lt;comma&gt;GEODB_CONFIG_KEYWORD&lt;comma&gt;DEFAULTS&lt;comma&gt;GEODB_FEATURE_DATASET&lt;comma&gt;&lt;comma&gt;GEODB_GRID&lt;opencurly&gt;1&lt;closecurly&gt;&lt;comma&gt;&lt;comma&gt;GEODB_AVG_NUM_POINTS&lt;comma&gt;&lt;comma&gt;GEODB_XORIGIN&lt;comma&gt;&lt;comma&gt;GEODB_YORIGIN&lt;comma&gt;&lt;comma&gt;GEODB_XYSCALE&lt;comma&gt;&lt;comma&gt;GEODB_HAS_Z_VALUES&lt;comma&gt;&lt;comma&gt;GEODB_ZORIGIN&lt;comma&gt;&lt;comma&gt;GEODB_ZSCALE&lt;comma&gt;&lt;comma&gt;GEODB_HAS_MEASURES&lt;comma&gt;&lt;comma&gt;GEODB_MEASURES_ORIGIN&lt;comma&gt;&lt;comma&gt;GEODB_MEASURES_SCALE&lt;comma&gt;&lt;comma&gt;GEODB_ANNO_REFERENCE_SCALE&lt;comma&gt;"/>
+#!     <XFORM_PARM PARM_NAME="WRITER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_METAFILE" PARM_VALUE="ATTRIBUTE_CASE,ANY_FIRST_NONNUMERIC,ATTRIBUTE_INVALID_CHARS,:.&lt;space&gt;%-#&lt;openbracket&gt;&lt;closebracket&gt;&lt;quote&gt;&lt;openparen&gt;&lt;closeparen&gt;!?*&lt;apos&gt;&lt;amp&gt;+&lt;backslash&gt;&lt;solidus&gt;&lt;opencurly&gt;&lt;closecurly&gt;|=,ATTRIBUTE_LENGTH,64,ATTR_TYPE_MAP,char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;fme_varchar&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;fme_char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;char&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_buffer&lt;comma&gt;char&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_xml&lt;comma&gt;char&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_json&lt;comma&gt;blob&lt;comma&gt;fme_binarybuffer&lt;comma&gt;blob&lt;comma&gt;fme_varbinary&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;blob&lt;comma&gt;fme_binary&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;globalid&lt;comma&gt;fme_buffer&lt;comma&gt;guid&lt;comma&gt;fme_buffer&lt;comma&gt;date&lt;comma&gt;fme_datetime&lt;comma&gt;date&lt;comma&gt;fme_date&lt;comma&gt;date&lt;comma&gt;fme_time&lt;comma&gt;integer&lt;comma&gt;fme_int32&lt;comma&gt;integer&lt;comma&gt;fme_uint16&lt;comma&gt;smallint&lt;comma&gt;fme_int16&lt;comma&gt;smallint&lt;comma&gt;fme_int8&lt;comma&gt;smallint&lt;comma&gt;fme_uint8&lt;comma&gt;float&lt;comma&gt;fme_real32&lt;comma&gt;double&lt;comma&gt;fme_real64&lt;comma&gt;double&lt;comma&gt;fme_uint32&lt;comma&gt;char&lt;openparen&gt;20&lt;closeparen&gt;&lt;comma&gt;fme_int64&lt;comma&gt;char&lt;openparen&gt;20&lt;closeparen&gt;&lt;comma&gt;fme_uint64&lt;comma&gt;boolean&lt;comma&gt;fme_boolean&lt;comma&gt;&lt;quote&gt;double&lt;openparen&gt;width&lt;comma&gt;decimal&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;&lt;quote&gt;fme_decimal&lt;openparen&gt;width&lt;comma&gt;decimal&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;subtype&lt;openparen&gt;stringset&lt;closeparen&gt;&lt;comma&gt;fme_char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;subtype_codes&lt;openparen&gt;stringmap&lt;closeparen&gt;&lt;comma&gt;fme_char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;range_domain&lt;openparen&gt;range_domain&lt;closeparen&gt;&lt;comma&gt;fme_char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;coded_domain&lt;openparen&gt;coded_domain&lt;closeparen&gt;&lt;comma&gt;fme_char&lt;openparen&gt;width&lt;closeparen&gt;,DEST_ILLEGAL_ATTR_LIST,,FEATURE_TYPE_CASE,ANY_FIRST_NONNUMERIC,FEATURE_TYPE_INVALID_CHARS,&lt;backslash&gt;&lt;backslash&gt;&lt;solidus&gt;&lt;quote&gt;:?*&lt;lt&gt;&lt;gt&gt;|&lt;openbracket&gt;%#&lt;space&gt;&lt;apos&gt;&lt;amp&gt;+-&lt;closebracket&gt;.^~&lt;dollar&gt;&lt;comma&gt;&lt;closeparen&gt;&lt;openparen&gt;,FEATURE_TYPE_LENGTH,160,FEATURE_TYPE_LENGTH_INCLUDES_PREFIX,false,FEATURE_TYPE_RESERVED_WORDS,,FORMAT_METAFILE,$(FME_HOME_ENCODED)metafile&lt;backslash&gt;GEODATABASE_FILE.fmf,FORMAT_NAME,GEODATABASE_FILE,GEOM_MAP,geodb_point&lt;comma&gt;fme_point&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_polygon&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_rounded_rectangle&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_line&lt;comma&gt;geodb_multipoint&lt;comma&gt;fme_point&lt;comma&gt;geodb_table&lt;comma&gt;fme_no_geom&lt;comma&gt;geodb_table&lt;comma&gt;fme_collection&lt;comma&gt;geodb_arc&lt;comma&gt;fme_arc&lt;comma&gt;geodb_ellipse&lt;comma&gt;fme_ellipse&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_rectangle&lt;comma&gt;geodb_annotation&lt;comma&gt;fme_text&lt;comma&gt;geodb_pro_annotation&lt;comma&gt;fme_text&lt;comma&gt;geodb_dimension&lt;comma&gt;fme_point&lt;comma&gt;geodb_simple_junction&lt;comma&gt;fme_point&lt;comma&gt;geodb_simple_edge&lt;comma&gt;fme_line&lt;comma&gt;geodb_complex_junction&lt;comma&gt;fme_point&lt;comma&gt;geodb_complex_edge&lt;comma&gt;fme_line&lt;comma&gt;geodb_attributed_relationship&lt;comma&gt;fme_no_geom&lt;comma&gt;geodb_relationship&lt;comma&gt;fme_no_geom&lt;comma&gt;geodb_undefined&lt;comma&gt;fme_no_geom&lt;comma&gt;geodb_metadata&lt;comma&gt;fme_polygon&lt;comma&gt;geodb_multipatch&lt;comma&gt;fme_surface&lt;comma&gt;geodb_multipatch&lt;comma&gt;fme_solid&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_raster&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_point_cloud&lt;comma&gt;geodb_table&lt;comma&gt;fme_feature_table,READER_ATTR_INDEX_TYPES,,READER_USES_DEF,yes,SOURCE,no,SUPPORTS_FEAT_TYPE_FANOUT,yes,SUPPORTS_MULTI_GEOM,no,WORKBENCH_CANNED_SCHEMA,,WRITER,GEODATABASE_FILE,WRITER_ATTR_INDEX_TYPES,,WRITER_DEFLINE_PARMS,&lt;quote&gt;GUI&lt;space&gt;NAMEDGROUP&lt;space&gt;fme_configuration_group&lt;space&gt;fme_configuration_common_group%fme_spatial_group%fme_advanced_group%oracle_advanced_group&lt;space&gt;Table&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;NAMEDGROUP&lt;space&gt;fme_configuration_common_group&lt;space&gt;fme_feature_operation%fme_table_handling%mie_pack%oracle_model%fme_update_geometry%fme_selection_group%fme_table_creation_group&lt;space&gt;General&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;ACTIVECHOICE_LOOKUP&lt;space&gt;fme_feature_operation&lt;space&gt;Insert&lt;comma&gt;INSERT&lt;comma&gt;fme_update_geometry&lt;comma&gt;fme_selection_group&lt;comma&gt;mie_pack%Update&lt;comma&gt;UPDATE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN%Delete&lt;comma&gt;DELETE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;fme_update_geometry&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN&lt;comma&gt;fme_spatial_group&lt;comma&gt;fme_advanced_group&lt;comma&gt;oracle_sequenced_cols%&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_db_operation&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;MULTIPLE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN&lt;space&gt;Feature&lt;space&gt;Operation&lt;quote&gt;&lt;comma&gt;INSERT&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;ACTIVECHOICE_LOOKUP&lt;space&gt;fme_table_handling&lt;space&gt;Use&lt;lt&gt;space&lt;gt&gt;Existing&lt;comma&gt;USE_EXISTING&lt;comma&gt;fme_table_creation_group%Create&lt;lt&gt;space&lt;gt&gt;If&lt;lt&gt;space&lt;gt&gt;Needed&lt;comma&gt;CREATE_IF_MISSING%Drop&lt;lt&gt;space&lt;gt&gt;and&lt;lt&gt;space&lt;gt&gt;Create&lt;comma&gt;DROP_CREATE%Truncate&lt;lt&gt;space&lt;gt&gt;Existing&lt;comma&gt;TRUNCATE_EXISTING&lt;comma&gt;fme_table_creation_group&lt;space&gt;Table&lt;space&gt;Handling&lt;quote&gt;&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;LOOKUP_CHOICE&lt;space&gt;fme_update_geometry&lt;space&gt;Yes&lt;comma&gt;YES%No&lt;comma&gt;NO&lt;space&gt;Update&lt;space&gt;Spatial&lt;space&gt;Column&lt;openparen&gt;s&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;YES&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;fme_selection_group&lt;space&gt;fme_selection_method&lt;space&gt;Row&lt;space&gt;Selection&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;RADIOPARAMETERGROUP&lt;space&gt;fme_selection_method&lt;space&gt;fme_match_columns&lt;comma&gt;MATCH_COLUMNS%fme_where_builder_clause&lt;comma&gt;BUILDER&lt;space&gt;Row&lt;space&gt;Selection&lt;space&gt;Method&lt;quote&gt;&lt;comma&gt;MATCH_COLUMNS&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;ATTRLIST_COMMAS&lt;space&gt;fme_match_columns&lt;space&gt;Match&lt;space&gt;Columns&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;TEXT_EDIT_SQL_CFG_OR_ATTR&lt;space&gt;fme_where_builder_clause&lt;space&gt;MODE&lt;comma&gt;WHERE&lt;space&gt;WHERE&lt;space&gt;Clause&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;fme_table_creation_group&lt;space&gt;FME_DISCLOSURE_OPEN%GEODB_FEATURE_DATASET%GEODB_HAS_Z_VALUES%GEODB_HAS_MEASURES%GEODB_ORIGIN_GROUP%GEODB_ANNO_GROUP%GEODB_ADVANCED_GROUP&lt;space&gt;Table&lt;space&gt;Creation&lt;space&gt;Parameters&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;GEODB_ORIGIN_GROUP&lt;space&gt;GEODB_XY_GROUP%GEODB_Z_GROUP%GEODB_MEASURES_GROUP&lt;space&gt;Origin&lt;space&gt;and&lt;space&gt;Scale&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;GEODB_ANNO_GROUP&lt;space&gt;GEODB_ANNO_REFERENCE_SCALE&lt;space&gt;Annotation&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;GEODB_ADVANCED_GROUP&lt;space&gt;GEODB_OBJECT_ID_NAME%GEODB_OBJECT_ID_ALIAS%GEODB_SHAPE_NAME%GEODB_SHAPE_ALIAS%GEODB_CONFIG_KEYWORD%GEODB_GRID&lt;opencurly&gt;1&lt;closecurly&gt;%GEODB_AVG_NUM_POINTS&lt;space&gt;Advanced&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;GEODB_XY_GROUP&lt;space&gt;GEODB_XORIGIN%GEODB_YORIGIN%GEODB_XYSCALE&lt;space&gt;X&lt;solidus&gt;Y&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;GEODB_Z_GROUP&lt;space&gt;GEODB_ZORIGIN%GEODB_ZSCALE&lt;space&gt;Z&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;GEODB_MEASURES_GROUP&lt;space&gt;GEODB_MEASURES_ORIGIN%GEODB_MEASURES_SCALE&lt;space&gt;Measures&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;GEODB_OBJECT_ID_NAME&lt;space&gt;Object&lt;space&gt;ID&lt;space&gt;Field&lt;quote&gt;&lt;comma&gt;OBJECTID&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;GEODB_OBJECT_ID_ALIAS&lt;space&gt;Object&lt;space&gt;ID&lt;space&gt;Alias&lt;quote&gt;&lt;comma&gt;OBJECTID&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;GEODB_SHAPE_NAME&lt;space&gt;Shape&lt;space&gt;Field&lt;quote&gt;&lt;comma&gt;SHAPE&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;GEODB_SHAPE_ALIAS&lt;space&gt;Shape&lt;space&gt;Alias&lt;quote&gt;&lt;comma&gt;SHAPE&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;GEODB_CONFIG_KEYWORD&lt;space&gt;Configuration&lt;space&gt;Keyword&lt;quote&gt;&lt;comma&gt;DEFAULTS&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;TEXT&lt;space&gt;GEODB_FEATURE_DATASET&lt;space&gt;Feature&lt;space&gt;Dataset&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_GRID&lt;opencurly&gt;1&lt;closecurly&gt;&lt;space&gt;Grid&lt;space&gt;1&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;INTEGER&lt;space&gt;GEODB_AVG_NUM_POINTS&lt;space&gt;Average&lt;space&gt;Number&lt;space&gt;of&lt;space&gt;Points&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_XORIGIN&lt;space&gt;X&lt;space&gt;Origin&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_YORIGIN&lt;space&gt;Y&lt;space&gt;Origin&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_XYSCALE&lt;space&gt;X&lt;solidus&gt;Y&lt;space&gt;Scale&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;CHOICE&lt;space&gt;GEODB_HAS_Z_VALUES&lt;space&gt;yes%no&lt;space&gt;Contains&lt;space&gt;Z&lt;space&gt;Values&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_ZORIGIN&lt;space&gt;Z&lt;space&gt;Origin&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_ZSCALE&lt;space&gt;Z&lt;space&gt;Scale&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;CHOICE&lt;space&gt;GEODB_HAS_MEASURES&lt;space&gt;yes%no&lt;space&gt;Contains&lt;space&gt;Measures&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_MEASURES_ORIGIN&lt;space&gt;Measure&lt;space&gt;Origin&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_MEASURES_SCALE&lt;space&gt;Measure&lt;space&gt;Scale&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;GEODB_ANNO_REFERENCE_SCALE&lt;space&gt;Annotation&lt;space&gt;Reference&lt;space&gt;Scale&lt;quote&gt;&lt;comma&gt;,WRITER_DEF_LINE_TEMPLATE,&lt;opencurly&gt;FME_GEN_GROUP_NAME&lt;closecurly&gt;&lt;comma&gt;geodb_type&lt;comma&gt;&lt;opencurly&gt;FME_GEN_GEOMETRY&lt;closecurly&gt;&lt;comma&gt;GEODB_UPDATE_KEY_COLUMNS&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;GEODB_DROP_TABLE&lt;comma&gt;NO&lt;comma&gt;GEODB_TRUNCATE_TABLE&lt;comma&gt;NO&lt;comma&gt;fme_feature_operation&lt;comma&gt;INSERT&lt;comma&gt;fme_table_handling&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;fme_selection_method&lt;comma&gt;MATCH_COLUMNS&lt;comma&gt;fme_match_columns&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;fme_where_builder_clause&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;fme_update_geometry&lt;comma&gt;YES&lt;comma&gt;GEODB_OBJECT_ID_NAME&lt;comma&gt;OBJECTID&lt;comma&gt;GEODB_OBJECT_ID_ALIAS&lt;comma&gt;OBJECTID&lt;comma&gt;GEODB_SHAPE_NAME&lt;comma&gt;SHAPE&lt;comma&gt;GEODB_SHAPE_ALIAS&lt;comma&gt;SHAPE&lt;comma&gt;GEODB_CONFIG_KEYWORD&lt;comma&gt;DEFAULTS&lt;comma&gt;GEODB_FEATURE_DATASET&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;GEODB_GRID&lt;opencurly&gt;1&lt;closecurly&gt;&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;GEODB_AVG_NUM_POINTS&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;GEODB_HAS_Z_VALUES&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;GEODB_HAS_MEASURES&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;GEODB_ANNO_REFERENCE_SCALE&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;,WRITER_FORMAT_PARAMETER,ADVANCED_PARMS&lt;comma&gt;&lt;quote&gt;_GEODBOverwriteGEODB&lt;space&gt;_GEODBOutTransactionType&lt;space&gt;_GEODBOutSimplifyGeometry&lt;space&gt;_GEODBOutXOrigin&lt;space&gt;_GEODBOutYOrigin&lt;space&gt;_GEODBOutScale&lt;space&gt;_GEODBOutZOrigin&lt;space&gt;_GEODBOutZScale&lt;space&gt;_GEODBOutGrid1&lt;space&gt;_TRANSLATE_SPATIAL_DATA_ONLY&lt;space&gt;_GEODBInResolveDomains&lt;space&gt;_GEODBInResolveSubtypeNames&lt;space&gt;_GEODBInIgnoreNetworkInfo&lt;space&gt;_GEODBInIgnoreRelationshipInfo&lt;space&gt;_GEODBInSplitComplexEdges&lt;space&gt;_GEODBInWhereClause&lt;space&gt;NULL_IN_SPLIT_COMPLEX_ANNOS&lt;space&gt;NULL_IN_CACHE_MULTIPATCH_TEXTURES&lt;space&gt;NULL_IN_SEARCH_METHOD&lt;space&gt;NULL_IN_SEARCH_ORDER&lt;space&gt;NULL_IN_SEARCH_FEATURE&lt;space&gt;NULL_IN_CHECK_SIMPLE_GEOM&lt;space&gt;NULL_IN_MERGE_FEAT_LINKED_ANNOS&lt;space&gt;NULL_IN_BEGIN_SQL&lt;opencurly&gt;0&lt;closecurly&gt;&lt;space&gt;NULL_IN_END_SQL&lt;opencurly&gt;0&lt;closecurly&gt;&lt;space&gt;_GEODB_IN_ALIAS_MODE&lt;space&gt;GEODATABASE_FILE_OUT_REQUESTED_GEODATABASE_VERSION&lt;space&gt;GEODATABASE_FILE_OUT_DEFAULT_Z_VALUE&lt;space&gt;GEODATABASE_FILE_OUT_WRITER_MODE&lt;space&gt;GEODATABASE_FILE_OUT_TRANSACTION&lt;space&gt;GEODATABASE_FILE_OUT_TRANSACTION_INTERVAL&lt;space&gt;GEODATABASE_FILE_OUT_IGNORE_FAILED_FEATURE_ENTRY&lt;space&gt;GEODATABASE_FILE_OUT_MAX_NUMBER_FAILED_FEATURES&lt;space&gt;GEODATABASE_FILE_OUT_DUMP_FAILED_FEATURES&lt;space&gt;GEODATABASE_FILE_OUT_FFS_DUMP_FILE&lt;space&gt;GEODATABASE_FILE_OUT_ANNOTATION_UNITS&lt;space&gt;GEODATABASE_FILE_OUT_HAS_MEASURES&lt;space&gt;GEODATABASE_FILE_OUT_MEASURES_ORIGIN&lt;space&gt;GEODATABASE_FILE_OUT_MEASURES_SCALE&lt;space&gt;GEODATABASE_FILE_OUT_COMPRESS_AT_END&lt;space&gt;GEODATABASE_FILE_OUT_VALIDATE_FEATURES&lt;space&gt;GEODATABASE_FILE_OUT_SIMPLIFY_NETWORK_FEATURES&lt;space&gt;GEODATABASE_FILE_OUT_BEGIN_SQL&lt;opencurly&gt;0&lt;closecurly&gt;&lt;space&gt;GEODATABASE_FILE_OUT_END_SQL&lt;opencurly&gt;0&lt;closecurly&gt;&lt;quote&gt;&lt;comma&gt;PARAMS_TO_NOT_PROPAGATE_ON_INSPECT&lt;comma&gt;&lt;quote&gt;BEGIN_SQL&lt;opencurly&gt;0&lt;closecurly&gt;&lt;space&gt;END_SQL&lt;opencurly&gt;0&lt;closecurly&gt;&lt;quote&gt;&lt;comma&gt;ATTRIBUTE_READING&lt;comma&gt;DEFLINE&lt;comma&gt;ATTRIBUTE_READING_HISTORIC&lt;comma&gt;ALL&lt;comma&gt;DATASET_NAME&lt;comma&gt;&lt;quote&gt;gdb&lt;space&gt;file&lt;quote&gt;&lt;comma&gt;FEATURE_TYPE_NAME&lt;comma&gt;&lt;quote&gt;Feature&lt;space&gt;Class&lt;space&gt;or&lt;space&gt;Table&lt;quote&gt;&lt;comma&gt;FEATURE_TYPE_DEFAULT_NAME&lt;comma&gt;FeatureClass1&lt;comma&gt;SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME&lt;comma&gt;NO&lt;comma&gt;READER_DATASET_HINT&lt;comma&gt;&lt;quote&gt;Specify&lt;space&gt;the&lt;space&gt;Esri&lt;space&gt;File&lt;space&gt;Geodatabase&lt;quote&gt;&lt;comma&gt;WRITER_DATASET_HINT&lt;comma&gt;&lt;quote&gt;Specify&lt;space&gt;the&lt;space&gt;Esri&lt;space&gt;File&lt;space&gt;Geodatabase&lt;quote&gt;,WRITER_HAS_DEFLINE_ATTRS,yes,WRITER_USES_DEF,yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureWriter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="126"
+#!   TYPE="safe.esri-agol.ArcGISOnlineConnector"
+#!   VERSION="1"
+#!   POSITION="7876.3542737468179 -159.4403699139034"
+#!   BOUNDING_RECT="7876.3542737468179 -159.4403699139034 606.00106825772946 71"
+#!   ORDER="500000000000018"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_private_url" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="Initiator"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_conflicting_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="CONNECTION" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OPERATION_TYPE" PARM_VALUE="Publish"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETER_SETUP" PARM_VALUE="_FME_FILEID]@Value(id.FGDB)]_PUBLISH_FILE_TITLE]&lt;at&gt;Value&lt;openparen&gt;BaseName.Service&lt;closeparen&gt;]_PUBLISH_FILE_TAGS]FMEService]FILE_COORD_SYSTEM]SPHERICAL_MERCATOR]WAIT_BEHAVIOUR]Yes]WAIT_TIMEOUT]600]_PUBLISH_FME_ATTRIBUTES_TO_ADD]&quot;_id _private_url&quot;]FME_CONTROLLER_QUERY_FILE]esri_agol_deps&lt;solidus&gt;Publish.fme"/>
+#!     <XFORM_PARM PARM_NAME="REQUEST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PublishNewServicetoAGOL"/>
+#!     <XFORM_PARM PARM_NAME="__arcgisonlineconnector_connection" PARM_VALUE="$(AGOL_Connection)"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="130"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="11616.825351926989 -153.06275511734725"
+#!   BOUNDING_RECT="11616.825351926989 -153.06275511734725 454 71"
+#!   ORDER="500000000000022"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.OldService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="id.FGDB id.FGDB  REMOVE BaseName BaseName  REMOVE BaseName.FGDB BaseName.FGDB  REMOVE BaseName.Service BaseName.Service  REMOVE _response_body _response_body  REMOVE _http_status_code _http_status_code  REMOVE token token  REMOVE id.OldService id.OldService  REMOVE id.NewService id.OldService  RENAME_SET_VALUE"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="118"
+#!   TYPE="safe.esri-agol.ArcGISOnlineConnector"
+#!   VERSION="1"
+#!   POSITION="10904.700383738524 -328.44716202264078"
+#!   BOUNDING_RECT="10904.700383738524 -328.44716202264078 440.00106825772946 71"
+#!   ORDER="500000000000018"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.OldService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="Initiator"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.OldService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="id.OldService" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_conflicting_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="CONNECTION" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OPERATION_TYPE" PARM_VALUE="Delete"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETER_SETUP" PARM_VALUE="_FME_FILEID]@Value(id.OldService)]FME_CONTROLLER_QUERY_FILE]esri_agol_deps&lt;solidus&gt;Delete.fme"/>
+#!     <XFORM_PARM PARM_NAME="REQUEST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DeleteOldService"/>
+#!     <XFORM_PARM PARM_NAME="__arcgisonlineconnector_connection" PARM_VALUE="$(AGOL_Connection)"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="129"
+#!   TYPE="FeatureReader"
+#!   VERSION="11"
+#!   POSITION="10088.365689779341 -153.06275511734725"
+#!   BOUNDING_RECT="10088.365689779341 -153.06275511734725 668.00106825772946 71"
+#!   ORDER="500000000000023"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="&lt;SCHEMA&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attribute{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attribute{}.fme_data_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attribute{}.native_data_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_format_short_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_format_long_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_schema_handling" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="AllRoutes"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.OldService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="INITIATOR"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="4"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_reader_error" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="AllRoutes,&quot;id.OldService,_creation_instance&quot;"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_TYPES" PARM_VALUE="AllRoutes,&quot;varchar(200),uint64&quot;"/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_EXPOSE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Merge Initiator and Result"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Result"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="_FEATUREREADER_OPTIONAL_FTTR_%AllRoutes"/>
+#!     <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Use Result"/>
+#!     <XFORM_PARM PARM_NAME="CONSTRAINTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="C:&lt;backslash&gt;FME&lt;backslash&gt;$(ItemName).ffs"/>
+#!     <XFORM_PARM PARM_NAME="DYNGROUP_0" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="$(ItemName)"/>
+#!     <XFORM_PARM PARM_NAME="FFS_CONSTRAINT_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_EXPOSE_ATTRS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_FFS_EXPOSE_FORMAT_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_PASSPHRASE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_SEARCH_CLOSEST_POINT_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_SEARCH_CLOSEST_POINT_MAX_DIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_SEARCH_CLOSEST_POINT_X" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_SEARCH_CLOSEST_POINT_Y" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_TABLELIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FFS_USE_SEARCH_ENVELOPE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="FFS"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_ATTRIBUTE_TYPES" PARM_VALUE="AllRoutes,&quot;varchar(200),uint64&quot;"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE="META_MACROS,SourcePASSPHRASE&lt;comma&gt;&lt;comma&gt;SourceCONSTRAINT_GROUP&lt;comma&gt;&lt;comma&gt;SourceSEARCH_CLOSEST_POINT_GROUP&lt;comma&gt;&lt;comma&gt;SourceSEARCH_CLOSEST_POINT_X&lt;comma&gt;&lt;comma&gt;SourceSEARCH_CLOSEST_POINT_Y&lt;comma&gt;&lt;comma&gt;SourceSEARCH_CLOSEST_POINT_MAX_DIST&lt;comma&gt;&lt;comma&gt;SourceUSE_SEARCH_ENVELOPE&lt;comma&gt;NO&lt;comma&gt;SourceSEARCH_ENVELOPE_MINX&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MINY&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MAXX&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MAXY&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_COORDINATE_SYSTEM&lt;comma&gt;&lt;comma&gt;SourceCLIP_TO_ENVELOPE&lt;comma&gt;NO&lt;comma&gt;SourceEXPOSE_ATTRS_GROUP&lt;comma&gt;&lt;comma&gt;SourceFFS_EXPOSE_FORMAT_ATTRS&lt;comma&gt;,METAFILE,FFS"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="FFS_SEARCH_CLOSEST_POINT_GROUP,&quot;OPTIONAL DISCLOSUREGROUP SEARCH_CLOSEST_POINT_X%SEARCH_CLOSEST_POINT_Y%SEARCH_CLOSEST_POINT_MAX_DIST&quot;,FFS&lt;space&gt;Search&lt;space&gt;Closest&lt;space&gt;Point,FFS_USE_SEARCH_ENVELOPE,&quot;OPTIONAL ACTIVEDISCLOSUREGROUP SEARCH_ENVELOPE_MINX%SEARCH_ENVELOPE_MINY%SEARCH_ENVELOPE_MAXX%SEARCH_ENVELOPE_MAXY%SEARCH_ENVELOPE_COORDINATE_SYSTEM%CLIP_TO_ENVELOPE%SEARCH_METHOD%SEARCH_METHOD_FILTER%SEARCH_ORDER%SEARCH_FEATURE%DUMMY_SEARCH_ENVELOPE_PARAMETER&quot;,FFS&lt;space&gt;Use&lt;space&gt;Search&lt;space&gt;Envelope,FFS_TABLELIST,&quot;IGNORE TEXT&quot;,FFS&lt;space&gt;Feature&lt;space&gt;Types:,FFS_EXPOSE_ATTRS_GROUP,&quot;OPTIONAL DISCLOSUREGROUP FFS_EXPOSE_FORMAT_ATTRS&quot;,FFS&lt;space&gt;Schema&lt;space&gt;Attributes,FFS_FFS_EXPOSE_FORMAT_ATTRS,&quot;OPTIONAL LITERAL EXPOSED_ATTRS FFS%Source&quot;,FFS&lt;space&gt;Additional&lt;space&gt;Attributes&lt;space&gt;to&lt;space&gt;Expose:,FFS_PASSPHRASE,&quot;OPTIONAL PASSWORD_ENCODED&quot;,FFS&lt;space&gt;Password:,FFS_SEARCH_CLOSEST_POINT_Y,&quot;OPTIONAL FLOAT&quot;,FFS&lt;space&gt;Search&lt;space&gt;Closest&lt;space&gt;Point&lt;space&gt;Y,FFS_SEARCH_CLOSEST_POINT_MAX_DIST,&quot;OPTIONAL FLOAT&quot;,FFS&lt;space&gt;Search&lt;space&gt;Closest&lt;space&gt;Max&lt;space&gt;Distance,FFS_CONSTRAINT_GROUP,&quot;OPTIONAL DISCLOSUREGROUP TABLELIST%SEARCH_CLOSEST_POINT_GROUP%USE_SEARCH_ENVELOPE&quot;,FFS&lt;space&gt;Constraints&lt;space&gt;-&lt;space&gt;Spatial&lt;space&gt;Index&lt;space&gt;&lt;openparen&gt;.fsi&lt;closeparen&gt;&lt;space&gt;Required,FFS_SEARCH_CLOSEST_POINT_X,&quot;OPTIONAL FLOAT&quot;,FFS&lt;space&gt;Search&lt;space&gt;Closest&lt;space&gt;Point&lt;space&gt;X"/>
+#!     <XFORM_PARM PARM_NAME="FTTR_SEPARATOR" PARM_VALUE="SPACE"/>
+#!     <XFORM_PARM PARM_NAME="GENERIC_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE="&lt;No Spatial Filter&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MAX_FEATURES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MERGE_HANDLING_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUTPORTS_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FEATURES_DISPLAY" PARM_VALUE="Schema and Data Features"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FEATURES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS_MODE" PARM_VALUE="PORTS_FROM_FTTR"/>
+#!     <XFORM_PARM PARM_NAME="PORTS_FROM_FTTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="READER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="READ_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SELECTED_PORTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SINGLE_PORT" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ReadFFSwithCurrentServiceID"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="141"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="7236.7617513747646 -449.62184315720697"
+#!   BOUNDING_RECT="7236.7617513747646 -449.62184315720697 454 71"
+#!   ORDER="500000000000171"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="_feature_type&lt;opencurly&gt;&lt;closecurly&gt;.count _feature_type&lt;opencurly&gt;&lt;closecurly&gt;.count  REMOVE _feature_type&lt;opencurly&gt;&lt;closecurly&gt;.name _feature_type&lt;opencurly&gt;&lt;closecurly&gt;.name  REMOVE _dataset _dataset  REMOVE _total_features_written _total_features_written  REMOVE _id id.FGDB  RENAME_SET_VALUE _private_url _private_url  REMOVE BaseName BaseName  NO_OP BaseName.FGDB BaseName.FGDB  NO_OP BaseName.Service BaseName.Service  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="143"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="7940.4672680217664 -449.62184315720697"
+#!   BOUNDING_RECT="7940.4672680217664 -449.62184315720697 454 71"
+#!   ORDER="500000000000171"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="_id id.NewService  RENAME_SET_VALUE _private_url _private_url  REMOVE id.FGDB id.FGDB  NO_OP BaseName BaseName  NO_OP BaseName.FGDB BaseName.FGDB  NO_OP BaseName.Service BaseName.Service  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_4"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="117"
+#!   TYPE="safe.esri-agol.ArcGISOnlineConnector"
+#!   VERSION="1"
+#!   POSITION="8653.4023605542097 -153.06275511734725"
+#!   BOUNDING_RECT="8653.4023605542097 -153.06275511734725 430 71"
+#!   ORDER="500000000000018"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="Initiator"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_conflicting_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="CONNECTION" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OPERATION_TYPE" PARM_VALUE="Delete"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETER_SETUP" PARM_VALUE="_FME_FILEID]@Value(id.FGDB)]FME_CONTROLLER_QUERY_FILE]esri_agol_deps&lt;solidus&gt;Delete.fme"/>
+#!     <XFORM_PARM PARM_NAME="REQUEST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DeleteFGDB"/>
+#!     <XFORM_PARM PARM_NAME="__arcgisonlineconnector_connection" PARM_VALUE="$(AGOL_Connection)"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="149"
+#!   TYPE="HTTPCaller"
+#!   VERSION="2"
+#!   POSITION="8006.3542737468179 -1029.5616833022177"
+#!   BOUNDING_RECT="8006.3542737468179 -1029.5616833022177 430 71"
+#!   ORDER="500000000000002"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_URL_PARAMETERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_REQUEST_PARAMETERS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_RESPONSE_PARAMETERS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_METHOD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_NAMED_CONNECTION" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_PASSWORD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_USERNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CONNECTION_TIMEOUT_LENGTH" PARM_VALUE="60"/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="ERROR_ATTR" PARM_VALUE="_error"/>
+#!     <XFORM_PARM PARM_NAME="FILE_PATH_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILE_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FOLLOW_REDIRECTS" PARM_VALUE="FOLLOW_WITH_GET"/>
+#!     <XFORM_PARM PARM_NAME="HTTPURL_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_METHOD" PARM_VALUE="POST"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_RESPONSE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MULTIPARTS" PARM_VALUE="username StringUpload SOURCE_EXPRESSION;$(AGOL_Username);MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme password StringUpload SOURCE_EXPRESSION;$(AGOL_Password);MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme referer StringUpload SOURCE_EXPRESSION;https:&lt;solidus&gt;&lt;solidus&gt;www.arcgis.com;MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme f StringUpload SOURCE_EXPRESSION;json;MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPART_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_DIRNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FILENAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="REDIRECT_AUTH" PARM_VALUE="ORIGINAL_DOMAIN_ONLY"/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_FILE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_HEADER_LIST_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SAVE_FILE" PARM_VALUE="Attribute"/>
+#!     <XFORM_PARM PARM_NAME="SAVE_MULTI" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="STATUS_CODE_ATTR" PARM_VALUE="_http_status_code"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR" PARM_VALUE="_response_body"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR_ENCODING" PARM_VALUE="auto-detect"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_URL" PARM_VALUE="https:&lt;solidus&gt;&lt;solidus&gt;arcgis.com&lt;solidus&gt;sharing&lt;solidus&gt;rest&lt;solidus&gt;generateToken"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFER_TIMEOUT_LENGTH" PARM_VALUE="90"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_BODY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_CONTENT_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_FILE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_TYPE" PARM_VALUE="Multipart / Form Data"/>
+#!     <XFORM_PARM PARM_NAME="USE_COOKIES" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CreateToken"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="151"
+#!   TYPE="JSONFlattener"
+#!   VERSION="6"
+#!   POSITION="8565.7348675527574 -1029.5616833022177"
+#!   BOUNDING_RECT="8565.7348675527574 -1029.5616833022177 454 71"
+#!   ORDER="500000000000004"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20596"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_json_error{}.message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_json_error{}.line" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_json_error{}.column" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_json_error{}.severity" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ERROR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ERROR_LIST_ATTR" PARM_VALUE="_json_error"/>
+#!     <XFORM_PARM PARM_NAME="FILEPATH_OR_URL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FLATTEN_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="INPUT_SETTINGS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="JSON_DOCUMENT" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;_response_body&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE="token"/>
+#!     <XFORM_PARM PARM_NAME="PREFIX_STRING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="READ_FROM_FILE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="RECURSIVE" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONFlattener"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="152"
+#!   TYPE="HTTPCaller"
+#!   VERSION="2"
+#!   POSITION="9709.4958051621325 -1029.5616833022177"
+#!   BOUNDING_RECT="9709.4958051621325 -1029.5616833022177 430 71"
+#!   ORDER="500000000000005"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_URL_PARAMETERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_REQUEST_PARAMETERS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_RESPONSE_PARAMETERS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_METHOD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_NAMED_CONNECTION" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_PASSWORD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_USERNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CONNECTION_TIMEOUT_LENGTH" PARM_VALUE="60"/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="ERROR_ATTR" PARM_VALUE="_error"/>
+#!     <XFORM_PARM PARM_NAME="FILE_PATH_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILE_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FOLLOW_REDIRECTS" PARM_VALUE="FOLLOW_WITH_GET"/>
+#!     <XFORM_PARM PARM_NAME="HTTPURL_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_METHOD" PARM_VALUE="POST"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_RESPONSE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MULTIPARTS" PARM_VALUE="addToDefinition StringUpload SOURCE_EXPRESSION;&lt;opencurly&gt;&lt;quote&gt;layers&lt;quote&gt;:&lt;openbracket&gt;&lt;opencurly&gt;&lt;quote&gt;adminLayerInfo&lt;quote&gt;:&lt;opencurly&gt;&lt;quote&gt;geometryField&lt;quote&gt;:&lt;opencurly&gt;&lt;quote&gt;name&lt;quote&gt;:&lt;quote&gt;Shape&lt;quote&gt;&lt;closecurly&gt;&lt;comma&gt;&lt;quote&gt;xssTrustedFields&lt;quote&gt;:&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;&lt;quote&gt;viewLayerDefinition&lt;quote&gt;:&lt;opencurly&gt;&lt;quote&gt;sourceServiceName&lt;quote&gt;:&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;BaseName.Service&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;&lt;quote&gt;sourceLayerId&lt;quote&gt;:0&lt;comma&gt;&lt;quote&gt;sourceLayerFields&lt;quote&gt;:&lt;quote&gt;*&lt;quote&gt;&lt;closecurly&gt;&lt;closecurly&gt;&lt;comma&gt;&lt;quote&gt;id&lt;quote&gt;:0&lt;comma&gt;&lt;quote&gt;name&lt;quote&gt;:&lt;quote&gt;$(View_Layer0_Name)&lt;quote&gt;&lt;closecurly&gt;&lt;closebracket&gt;&lt;closecurly&gt;;MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme async StringUpload SOURCE_EXPRESSION;false;MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme f StringUpload SOURCE_EXPRESSION;json;MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPART_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_DIRNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FILENAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="REDIRECT_AUTH" PARM_VALUE="ORIGINAL_DOMAIN_ONLY"/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_FILE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_HEADER_LIST_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SAVE_FILE" PARM_VALUE="Attribute"/>
+#!     <XFORM_PARM PARM_NAME="SAVE_MULTI" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="STATUS_CODE_ATTR" PARM_VALUE="_http_status_code"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR" PARM_VALUE="_response_body"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR_ENCODING" PARM_VALUE="auto-detect"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_URL" PARM_VALUE="$(ServiceBaseURL)&lt;solidus&gt;arcgis&lt;solidus&gt;rest&lt;solidus&gt;admin&lt;solidus&gt;services&lt;solidus&gt;$(View_Name)&lt;solidus&gt;FeatureServer&lt;solidus&gt;addToDefinition?f=pjson&lt;amp&gt;token=&lt;at&gt;Value&lt;openparen&gt;token&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFER_TIMEOUT_LENGTH" PARM_VALUE="90"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_BODY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_CONTENT_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_FILE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_TYPE" PARM_VALUE="Multipart / Form Data"/>
+#!     <XFORM_PARM PARM_NAME="USE_COOKIES" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AddLayers"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="153"
+#!   TYPE="HTTPCaller"
+#!   VERSION="2"
+#!   POSITION="9159.4898051021337 -1029.5616833022177"
+#!   BOUNDING_RECT="9159.4898051021337 -1029.5616833022177 430 71"
+#!   ORDER="500000000000005"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id.NewService" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="id.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="token" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_URL_PARAMETERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_REQUEST_PARAMETERS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_RESPONSE_PARAMETERS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_METHOD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_NAMED_CONNECTION" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_PASSWORD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_USERNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CONNECTION_TIMEOUT_LENGTH" PARM_VALUE="60"/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="ERROR_ATTR" PARM_VALUE="_error"/>
+#!     <XFORM_PARM PARM_NAME="FILE_PATH_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILE_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FOLLOW_REDIRECTS" PARM_VALUE="FOLLOW_WITH_GET"/>
+#!     <XFORM_PARM PARM_NAME="HTTPURL_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_METHOD" PARM_VALUE="POST"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_RESPONSE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MULTIPARTS" PARM_VALUE="deleteFromDefinition StringUpload SOURCE_EXPRESSION;&lt;opencurly&gt;&lt;quote&gt;layers&lt;quote&gt;:&lt;openbracket&gt;&lt;opencurly&gt;&lt;quote&gt;id&lt;quote&gt;:&lt;space&gt;0&lt;closecurly&gt;&lt;closebracket&gt;&lt;closecurly&gt;;MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme async StringUpload SOURCE_EXPRESSION;false;MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme f StringUpload SOURCE_EXPRESSION;json;MIME_TYPE;text&lt;solidus&gt;plain;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;http&lt;solidus&gt;StringUpload.fme"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPART_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_DIRNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FILENAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="REDIRECT_AUTH" PARM_VALUE="ORIGINAL_DOMAIN_ONLY"/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_FILE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_HEADER_LIST_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SAVE_FILE" PARM_VALUE="Attribute"/>
+#!     <XFORM_PARM PARM_NAME="SAVE_MULTI" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="STATUS_CODE_ATTR" PARM_VALUE="_http_status_code"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR" PARM_VALUE="_response_body"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR_ENCODING" PARM_VALUE="auto-detect"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_URL" PARM_VALUE="$(ServiceBaseURL)&lt;solidus&gt;arcgis&lt;solidus&gt;rest&lt;solidus&gt;admin&lt;solidus&gt;services&lt;solidus&gt;$(View_Name)&lt;solidus&gt;FeatureServer&lt;solidus&gt;deleteFromDefinition?f=pjson&lt;amp&gt;token=&lt;at&gt;Value&lt;openparen&gt;token&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFER_TIMEOUT_LENGTH" PARM_VALUE="90"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_BODY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_CONTENT_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_FILE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_TYPE" PARM_VALUE="Multipart / Form Data"/>
+#!     <XFORM_PARM PARM_NAME="USE_COOKIES" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DeleteLayers"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="160"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="7059.4156557565602 -771.69139038329149"
+#!   BOUNDING_RECT="7059.4156557565602 -771.69139038329149 454 71"
+#!   ORDER="500000000000177"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.FGDB" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseName.Service" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="_creation_instance _creation_instance  NO_OP _feature_type&lt;opencurly&gt;&lt;closecurly&gt;.count _feature_type&lt;opencurly&gt;&lt;closecurly&gt;.count  NO_OP _feature_type&lt;opencurly&gt;&lt;closecurly&gt;.name _feature_type&lt;opencurly&gt;&lt;closecurly&gt;.name  NO_OP _dataset _dataset  NO_OP _total_features_written _total_features_written  NO_OP  BaseName $(ItemName) SET_TO  BaseName.FGDB $(ItemName)FGDB&lt;at&gt;Left&lt;openparen&gt;&lt;at&gt;DateTimeNow&lt;openparen&gt;&lt;closeparen&gt;&lt;comma&gt;12&lt;closeparen&gt; SET_TO  BaseName.Service $(ItemName)FS&lt;at&gt;Left&lt;openparen&gt;&lt;at&gt;DateTimeNow&lt;openparen&gt;&lt;closeparen&gt;&lt;comma&gt;12&lt;closeparen&gt; SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_6"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="137"
+#!   TYPE="Terminator"
+#!   VERSION="3"
+#!   POSITION="7190.7606831170351 -615.43982786766639"
+#!   BOUNDING_RECT="7190.7606831170351 -615.43982786766639 454 71"
+#!   ORDER="500000000000184"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <XFORM_PARM PARM_NAME="MESSAGE" PARM_VALUE="AGOL&lt;space&gt;ERROR:&lt;space&gt;There&lt;space&gt;is&lt;space&gt;already&lt;space&gt;an&lt;space&gt;existing&lt;space&gt;item&lt;space&gt;with&lt;space&gt;the&lt;space&gt;same&lt;space&gt;item&lt;space&gt;name&lt;space&gt;OR&lt;space&gt;same&lt;space&gt;file&lt;space&gt;name&lt;space&gt;on&lt;space&gt;ArcGIS&lt;space&gt;Online.&lt;space&gt;Rename&lt;space&gt;your&lt;space&gt;file&lt;space&gt;and&lt;space&gt;try&lt;space&gt;again."/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Terminator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="146"
+#!   TYPE="Terminator"
+#!   VERSION="3"
+#!   POSITION="7915.3893183829778 -589.92936868144182"
+#!   BOUNDING_RECT="7915.3893183829778 -589.92936868144182 454 71"
+#!   ORDER="500000000000184"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <XFORM_PARM PARM_NAME="MESSAGE" PARM_VALUE="AGOL&lt;space&gt;ERROR:&lt;space&gt;Failed&lt;space&gt;publishing&lt;space&gt;the&lt;space&gt;new&lt;space&gt;service"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Terminator_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="133"
+#!   TYPE="Inspector"
+#!   VERSION="5"
+#!   POSITION="10894.366758037071 -632.94716202264078"
+#!   BOUNDING_RECT="10894.366758037071 -632.94716202264078 853.00106825772946 71"
+#!   ORDER="500000000000186"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20614"
+#! >
+#!     <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PEN_COLOR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINTCLOUD_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_NUM_COLS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_NUM_ROWS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_START_COL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_START_ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_VISUALIZATION_OPTION" PARM_VALUE="No Reduction"/>
+#!     <XFORM_PARM PARM_NAME="TACKATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="THINNER_INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_MAX_NUM_POINTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="No Thinning"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ReadFFSwithCurrentServiceID_AllRoutes"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="127"
+#!   SOURCE_NODE="103"
+#!   TARGET_NODE="141"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="115"
+#!   SOURCE_NODE="104"
+#!   TARGET_NODE="160"
+#!   SOURCE_PORT_DESC="fo 0 SUMMARY"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="134"
+#!   SOURCE_NODE="117"
+#!   TARGET_NODE="149"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="170"
+#!   SOURCE_NODE="117"
+#!   TARGET_NODE="130"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="false"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS="9560 -137"
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="163"
+#!   SOURCE_NODE="118"
+#!   TARGET_NODE="130"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="144"
+#!   SOURCE_NODE="126"
+#!   TARGET_NODE="143"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="132"
+#!   SOURCE_NODE="130"
+#!   TARGET_NODE="128"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="119"
+#!   SOURCE_NODE="141"
+#!   TARGET_NODE="126"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="148"
+#!   SOURCE_NODE="143"
+#!   TARGET_NODE="117"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="154"
+#!   SOURCE_NODE="149"
+#!   TARGET_NODE="151"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="155"
+#!   SOURCE_NODE="151"
+#!   TARGET_NODE="153"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="158"
+#!   SOURCE_NODE="152"
+#!   TARGET_NODE="129"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 INITIATOR"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="156"
+#!   SOURCE_NODE="153"
+#!   TARGET_NODE="152"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="161"
+#!   SOURCE_NODE="160"
+#!   TARGET_NODE="103"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="145"
+#!   SOURCE_NODE="103"
+#!   TARGET_NODE="137"
+#!   SOURCE_PORT_DESC="fo 2 &lt;lt&gt;REJECTED&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="147"
+#!   SOURCE_NODE="126"
+#!   TARGET_NODE="146"
+#!   SOURCE_PORT_DESC="fo 2 &lt;lt&gt;REJECTED&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="162"
+#!   SOURCE_NODE="129"
+#!   TARGET_NODE="118"
+#!   SOURCE_PORT_DESC="fo 1 AllRoutes"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="165"
+#!   SOURCE_NODE="129"
+#!   TARGET_NODE="133"
+#!   SOURCE_PORT_DESC="fo 1 AllRoutes"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 37
+GUI IGNORE DestDataset_FFS_1,FFS_OUT_FME_GROUP_NAMED1_FFS_1,FFS_OUT_PASSPHRASE_FFS_1,FFS_OUT_FME_GROUP_NAMED2_FFS_1,FFS_OUT_INDEXED_FFS_1,FFS_OUT_COMPRESSION_LEVEL_FFS_1,FFS_OUT_REQUIRES_FEATURE_TABLES_FFS_1,FFS_OUT_STORE_SCANNED_SCHEMA_FFS_1,FFS_OUT_ATTRIBUTE_TYPE_SCANNING_FFS_1,FFS_OUT_STORE_SCANNED_METADATA_FFS_1,FFS_OUT_ADVANCED_GROUP_FFS_1,FFS_OUT_MAX_FILE_SIZE_FFS_1
+DEFAULT_MACRO FGDBZipLocation C:<backslash>FME<backslash>AllRoutes.zip
+GUI FILENAME_EXISTING_ENCODED FGDBZipLocation All_Files(*)|* FGDB File to Upload:
+DEFAULT_MACRO AGOL_User_Folder_ID <solidus>
+GUI WEB_SELECT_ENCODED AGOL_User_Folder_ID SERVICE:Esri<space>ArcGIS<space>Online%DEPENDENT_PARAMETERS:__arcgisonlineconnector_connection%KEYVALS:mode,folders_only,is_folder,yes%SHOWID%SELECTION:CONTAINERS_ONLY%PROMPTFORTITLE%NO_SEARCH%MODULE:fmepy_esri_agol User Content Folder ID:
+DEFAULT_MACRO AGOL_Connection IowaDOT_GIS<at>AGOL
+GUI NAMED_CONNECTION_ENCODED AGOL_Connection "Esri ArcGIS Online"% ArcGIS Online Connection:
+DEFAULT_MACRO AGOL_Username Username
+GUI IGNORE OPTIONAL STRING_ENCODED AGOL_Username AGOL Username:
+DEFAULT_MACRO AGOL_Password fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszuF518fvGMsmWjchRQUYUsLex43B/EtluuK9Fqgi1UMztziS240m3ArpIDjiua7yq4c5OsSAcS/RckNyGRF4eYa3Db8fkFVhatU1C9sM40tLhSzD+/ouE9zGUyyUFJt//69iuqcJvj4Rlgo5WXtaDxpJkZJUeSA23f2rUr3VvvkrwU1r8+DkbNjYFX5nReb/gUbx/sj8EZjcIDeNFyLJqC/jHPBN0Cn0uMqESFK1Jk4WaC68+pyKq7Hz3jIiAE0FEw1RYFTEqtx/rLjec8Isa0/6L4AvaNeaHffZ8R0rqN4zV5BJaOsAuwnkjjk9PiArdqxdBfddiP+dGehiuOtJ8UHegyQTyDEij)
+GUI IGNORE OPTIONAL PASSWORD AGOL_Password AGOL Password:
+DEFAULT_MACRO ServiceBaseURL https://services.arcgis.com/8lRhdTsQyJpO52F1
+GUI IGNORE OPTIONAL TEXT ServiceBaseURL Service Base URL:
+DEFAULT_MACRO View_Name All_Routes_View
+GUI IGNORE OPTIONAL TEXT View_Name Name of the View Service on ArcGIS Online:
+DEFAULT_MACRO View_Layer0_Name All Routes
+GUI IGNORE OPTIONAL TEXT View_Layer0_Name View Layer 0 Name:
+DEFAULT_MACRO ItemName AllRoutes
+GUI IGNORE OPTIONAL TEXT_EDIT_OR_NUM_MULTI_FEATURE ItemName MAX%MAX Base Name for AGOL Items:
+INCLUDE [ if {{$(FGDBZipLocation)} == {}} { puts_real {Parameter 'FGDBZipLocation' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(AGOL_User_Folder_ID)} == {}} { puts_real {Parameter 'AGOL_User_Folder_ID' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(AGOL_Connection)} == {}} { puts_real {Parameter 'AGOL_Connection' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} FFS
+MULTI_WRITER_KEYWORD{0} FFS_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "FFS_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER FFS FFS_1
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# the destination for the FME Feature Store files.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_FFS_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER FFS FFS_1
+DEFAULT_MACRO DestDataset_FFS_1 C:\FME\$(ItemName).ffs
+GUI FILENAME DestDataset_FFS_1 FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|* Destination FME Feature Store (FFS) File:
+DEFAULT_MACRO FFS_OUT_FME_GROUP_NAMED1_FFS_1 
+GUI OPTIONAL DISCLOSUREGROUP FFS_OUT_FME_GROUP_NAMED1_FFS_1 FFS_OUT_PASSPHRASE_FFS_1 File Parameters
+# ============================================================================
+# Set the passphrase (which is optional)
+DEFAULT_MACRO FFS_OUT_PASSPHRASE_FFS_1 
+FFS_1_PASSPHRASE "$(FFS_OUT_PASSPHRASE_FFS_1)"
+GUI OPTIONAL PASSWORD_ENCODED FFS_OUT_PASSPHRASE_FFS_1 Password:
+DEFAULT_MACRO FFS_OUT_FME_GROUP_NAMED2_FFS_1 
+GUI OPTIONAL DISCLOSUREGROUP FFS_OUT_FME_GROUP_NAMED2_FFS_1 FFS_OUT_INDEXED_FFS_1%FFS_OUT_COMPRESSION_LEVEL_FFS_1%FFS_OUT_REQUIRES_FEATURE_TABLES_FFS_1%FFS_OUT_STORE_SCANNED_SCHEMA_FFS_1%FFS_OUT_ATTRIBUTE_TYPE_SCANNING_FFS_1%FFS_OUT_STORE_SCANNED_METADATA_FFS_1 Additional Parameters
+# ============================================================================
+# Ask if we should make a spatial index
+DEFAULT_MACRO FFS_OUT_INDEXED_FFS_1 no
+FFS_1_INDEXED "$(FFS_OUT_INDEXED_FFS_1)"
+GUI ACTIVECHOICE FFS_OUT_INDEXED_FFS_1 Yes,FFS_OUT_COMPRESSION_LEVEL_FFS_1%no Create Spatial Index:
+# ============================================================================
+# Set the compression level
+# BUG10851: Change default from 6 to 0.
+DEFAULT_MACRO FFS_OUT_COMPRESSION_LEVEL_FFS_1 0
+FFS_1_COMPRESSION_LEVEL "$(FFS_OUT_COMPRESSION_LEVEL_FFS_1)"
+GUI CHOICE FFS_OUT_COMPRESSION_LEVEL_FFS_1 0%1%2%3%4%5%6%7%8%9 Compression Level:
+# ========================================================================
+# The following parameter indicates if features should have all user
+# attributes not listed on the DEF line removed before they are saved.
+# If yes, the unlisted attributes are stripped.
+DEFAULT_MACRO FFS_OUT_REQUIRES_FEATURE_TABLES_FFS_1 No
+FFS_1_REQUIRES_FEATURE_TABLES "$(FFS_OUT_REQUIRES_FEATURE_TABLES_FFS_1)"
+GUI CHOICE FFS_OUT_REQUIRES_FEATURE_TABLES_FFS_1 Yes%No Enforce Strict Schema
+# ========================================================================
+# The following parameter indicates if we should store scanned
+# schema(s) of all input attributes not listed on the defline.
+DEFAULT_MACRO FFS_OUT_STORE_SCANNED_SCHEMA_FFS_1 No
+FFS_1_STORE_SCANNED_SCHEMA "$(FFS_OUT_STORE_SCANNED_SCHEMA_FFS_1)"
+GUI ACTIVECHOICE FFS_OUT_STORE_SCANNED_SCHEMA_FFS_1 Yes%No,FFS_OUT_ATTRIBUTE_TYPE_SCANNING_FFS_1 Store Scanned Schema
+# ========================================================================
+# The following parameter indicates how we should store scanned
+# types of all input attributes not listed on the defline.
+DEFAULT_MACRO FFS_OUT_ATTRIBUTE_TYPE_SCANNING_FFS_1 <Unused>
+FFS_1_ATTRIBUTE_TYPE_SCANNING "$(FFS_OUT_ATTRIBUTE_TYPE_SCANNING_FFS_1)"
+GUI LOOKUP_CHOICE FFS_OUT_ATTRIBUTE_TYPE_SCANNING_FFS_1 Yes,YES%No,NO Scan for Types
+# ========================================================================
+# The following parameter indicates if we should store scanned
+# metadata and store it with the dataset.
+DEFAULT_MACRO FFS_OUT_STORE_SCANNED_METADATA_FFS_1 No
+FFS_1_STORE_SCANNED_METADATA "$(FFS_OUT_STORE_SCANNED_METADATA_FFS_1)"
+GUI CHOICE FFS_OUT_STORE_SCANNED_METADATA_FFS_1 Yes%No Store Scanned Metadata
+DEFAULT_MACRO FFS_OUT_ADVANCED_GROUP_FFS_1 
+GUI OPTIONAL DISCLOSUREGROUP FFS_OUT_ADVANCED_GROUP_FFS_1 FME_DISCLOSURE_CLOSED%FFS_OUT_MAX_FILE_SIZE_FFS_1 Advanced
+# ========================================================================
+# The following parameter specifies the maximum size for FFS files. If
+# it is specified, the FFS writer will split up the output into multiple
+# FFS files.
+DEFAULT_MACRO FFS_OUT_MAX_FILE_SIZE_FFS_1 
+FFS_1_MAX_FILE_SIZE "$(FFS_OUT_MAX_FILE_SIZE_FFS_1)"
+GUI OPTIONAL INTEGER FFS_OUT_MAX_FILE_SIZE_FFS_1 Maximum FFS File Size, in Bytes
+# ============================================================================
+# Opt out of destination dataset type vs format type validation
+DEFAULT_MACRO FFS_OUT_DESTINATION_DATASETTYPE_VALIDATION_FFS_1 No
+FFS_1_DESTINATION_DATASETTYPE_VALIDATION "$(FFS_OUT_DESTINATION_DATASETTYPE_VALIDATION_FFS_1)"
+DEFAULT_MACRO FFS_OUT_COORDINATE_SYSTEM_GRANULARITY_FFS_1 FEATURE
+FFS_1_COORDINATE_SYSTEM_GRANULARITY "$(FFS_OUT_COORDINATE_SYSTEM_GRANULARITY_FFS_1)"
+DEFAULT_MACRO FFS_OUT_FILE_DEST_DATASET_FFS_1 yes
+FFS_1_FILE_DEST_DATASET "$(FFS_OUT_FILE_DEST_DATASET_FFS_1)"
+# ============================================================================ 
+FFS_1_GENERATE_FME_BUILD_NUM 20596
+FFS_1_FEATURE_TABLE_FORMAT_ATTRS fme_color fme_fill_color
+FFS_1_DATASET "$(DestDataset_FFS_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)Upload_Publish_SwitchView_DeleteOld.log"
+LOG_APPEND NO
+LOG_TIMINGS YES
+LOG_FILTER_MASK -17
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+MAPPING_FILE_ID AGOL<space>Update<space>View<space>Snippet
+DEFAULT_MACRO DATASET_KEYWORD_FFS_1 FFS_1
+FME_PASSWORD_PARAMETER_LIST AGOL_Password
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME Upload_Publish_SwitchView_DeleteOld
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC AttributeManager_2_OUTPUT TO FFS __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>AllRoutes<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(ItemName$encode$encode)<comma>AllRoutes<closeparen> GEOMETRY    ROUTE FME_GENERIC __WB_BYPASS_TERMINATOR__ <at>Tcl2<openparen>FME_StatMessage<space>818062<space><opencurly><at>Value<openparen>_wb_termination_message<closeparen><space><openparen><at>Value<openparen>_wb_termination_xformer<closeparen><closeparen><closecurly><space>818063<closeparen> TO FME_GENERIC __WB_BYPASS_TERMINATOR__ __wb_out_feat_type__,__WB_BYPASS_TERMINATOR__ GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO FME_LAUNCH_VIEWER_APP NO
+FACTORY_DEF * CreationFactory    FACTORY_NAME VisualizerProcessor   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if {{$(FME_LAUNCH_VIEWER_APP)} == {YES}} {  if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS \042$theFile\042 & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; }; ")
+FACTORY_DEF * TeeFactory    FACTORY_NAME VisualizerCleaner   INPUT FEATURE_TYPE __NUKEME__
+# -------------------------------------------------------------------------
+FFS_1_DEF AllRoutes   id.OldService                varchar(200)   _creation_instance           uint64
