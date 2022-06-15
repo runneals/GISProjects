@@ -7,7 +7,8 @@ Version 1.1
 - [Laying out your Workspace 2.0 by Lars de Vries/Omkeere](https://www.safe.com/presentations/laying-workspace-2-0/)
 - [Mark Ireland's Bookmark Color Palette](https://github.com/FMEEvangelist/FMECommunity/blob/main/BookmarkPalettes.zip)
 ### Best Practices
-- [Mark Ireland's FME Best Practice Validation Community Project](https://community.safe.com/s/question/0D54Q000080hQt7SAE/fme-best-practice-validation-project-you-can-help)
+- [Mark Ireland's FME Best Practice Validation Project - GitHub](https://github.com/FMEEvangelist/FMECommunity/tree/main/BestPractice)
+- [Mark Ireland's FME Best Practice Validation Project - FME Community Post](https://community.safe.com/s/question/0D54Q000080hQt7SAE/fme-best-practice-validation-project-you-can-help)
 - [Intro to FME Desktop 2019's Best Practice](https://s3.amazonaws.com/gitbook/Desktop-Basic-2019/DesktopBasic5BestPractice/5.00.BestPractice.html)
 ### Other Useful Tips/Links
 - [Performance Tuning FME](https://community.safe.com/s/article/performance-tuning-fme)
