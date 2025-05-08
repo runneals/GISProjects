@@ -21,3 +21,5 @@ Version 1.1
 - [rTest Automated Test Framework/Harness for FME by Veremes](https://en.veremes.com/products/rtest)
 - [DatasetValidator by Modern Geosystems](https://www.moderngeosystems.com/2022/introducing-the-datasetvalidator)
 - [SlimGIM Mass Maturity Model](https://www.slimgim.info/)
+### Community Links
+- [FME Form Best Practices](https://community.safe.com/data-7/fme-form-desktop-best-practices-and-style-20007) - Need to review this and add to best practices doc
