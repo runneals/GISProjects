@@ -16,7 +16,9 @@ Version 1.1
 - [Performance Tuning FME](https://community.safe.com/s/article/performance-tuning-fme)
 - [Mark Ireland's Code Smell Blog](https://www.safe.com/blog/2015/06/fmeevangelist136/)
 - [Letting the Database Do the Hardwork](https://community.safe.com/s/article/let-the-database-do-the-work-reading)
+- [Deployment Parameters](https://support.safe.com/hc/en-us/articles/25407416414349-Getting-Started-with-Deployment-Parameters)
 
+   
 ### Maturity
 - [rTest Automated Test Framework/Harness for FME by Veremes](https://en.veremes.com/products/rtest)
 - [DatasetValidator by Modern Geosystems](https://www.moderngeosystems.com/2022/introducing-the-datasetvalidator)
